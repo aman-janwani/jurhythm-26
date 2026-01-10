@@ -14,7 +14,7 @@ export default {
         delius: ['var(--font-delius)', 'Delius', 'cursive'],
       },
       colors: {
-        background: 'hsl(var(--background))',
+        background: 'hsl(var(--background))', 
         foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
