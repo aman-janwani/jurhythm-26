@@ -86,10 +86,60 @@ const page = () => {
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
       <Navbar />
+      
+      {/* Twinkling Stars Background */}
+      <div className="absolute inset-0 z-0">
+        {[...Array(100)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-white animate-twinkle"
+            style={{
+              width: `${Math.random() * 3}px`,
+              height: `${Math.random() * 3}px`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${Math.random() * 2 + 1}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Decorative Floating Lanterns */}
+      <div className="absolute top-32 left-10 w-16 h-24 opacity-45 animate-pulse z-10" style={{ animationDuration: '3.6s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#F4C542] to-[#FFB84D] rounded-lg shadow-[0_0_30px_rgba(244,197,66,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-0.5 h-8 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#F4C542] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
+      <div className="absolute top-1/3 right-16 w-14 h-22 opacity-40 animate-pulse z-10" style={{ animationDuration: '4.3s', animationDelay: '1s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#FFA726] to-[#F4C542] rounded-lg shadow-[0_0_30px_rgba(255,167,38,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-0.5 h-6 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#FFA726] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-40 left-1/4 w-12 h-20 opacity-35 animate-pulse z-10" style={{ animationDuration: '3.8s', animationDelay: '0.5s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#FFB84D] to-[#FFA726] rounded-lg shadow-[0_0_30px_rgba(255,184,77,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-0.5 h-7 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#FFB84D] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto pt-24 relative z-10 px-3 pb-20">
         {/* Secretaries Section */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(255,107,53,0.6)]">
+          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
             Meet the Secretaries
           </h2>
         </div>
@@ -111,7 +161,7 @@ const page = () => {
         {/* Core Team Section */}
         <div className="bg-white/10 p-5 rounded-2xl my-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(255,107,53,0.6)]">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
               Core Team
             </h2>
             <p className="text-lg text-gray-400 font-delius">

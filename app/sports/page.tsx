@@ -6,12 +6,44 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black relative overflow-hidden">
       <Navbar />
-      <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16">
+      
+      {/* Decorative Floating Lanterns - Sports themed colors */}
+      <div className="absolute top-28 left-16 w-16 h-24 opacity-50 animate-pulse z-10" style={{ animationDuration: '3.4s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#10b981] to-[#34d399] rounded-lg shadow-[0_0_30px_rgba(16,185,129,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-0.5 h-8 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#10b981] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
+      <div className="absolute top-1/2 right-24 w-14 h-22 opacity-45 animate-pulse z-10" style={{ animationDuration: '4.5s', animationDelay: '1.2s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#F4C542] to-[#FFB84D] rounded-lg shadow-[0_0_30px_rgba(244,197,66,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-0.5 h-6 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#F4C542] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-32 left-1/3 w-12 h-20 opacity-40 animate-pulse z-10" style={{ animationDuration: '3.9s', animationDelay: '0.6s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#f59e0b] to-[#fbbf24] rounded-lg shadow-[0_0_30px_rgba(245,158,11,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-0.5 h-7 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#f59e0b] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
+      <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
         {/* Funky Title with breathing space */}
         <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">
-          <h1 className="text-[#ff6b35] font-new-amsterdam text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(255,107,53,0.5)]">
+          <h1 className="text-[#F4C542] font-new-amsterdam text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(244,197,66,0.5)]">
             Sports
           </h1>
           <p className="text-white font-delius text-2xl sm:text-3xl md:text-4xl text-center tracking-widest uppercase">
@@ -20,7 +52,7 @@ const page = () => {
         </div>
 
         {/* Vibrant Marquee with energetic colors */}
-        <div className="w-full bg-[#ff6b35] p-4 sm:p-5 flex gap-3 sm:gap-5 items-center justify-between overflow-hidden">
+        <div className="w-full bg-[#F4C542] p-4 sm:p-5 flex gap-3 sm:gap-5 items-center justify-between overflow-hidden">
           <div className="flex items-center gap-4 sm:gap-6 animate-marquee whitespace-nowrap">
             <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white animate-pulse" />
             <span className="text-white text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">

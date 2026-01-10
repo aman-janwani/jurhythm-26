@@ -27,10 +27,6 @@ function Hero() {
             <VortexDemoSecond />
           </div>
 
-          {/* Minimal Fireworks Effect */}
-          <div className="absolute inset-0 z-5">
-            <FireworksBackground intensity="low" autoStart={true} />
-          </div>
 
           {/* Hot Air Balloon 3D Model */}
           {show3D && (
@@ -95,23 +91,22 @@ function Hero() {
         </div>
         
         <div className="flex flex-col z-30 justify-end items-start gap-4 w-full">
-          <div className="relative w-full max-w-4xl">
+          <div className="relative w-full max-w-2xl">
             <Image 
-              src="/jurhythm-logo.png" 
+              src="/jurhythm.png" 
               alt="JURHYTHM'26" 
-              width={800}
-              height={300}
-              className="w-full h-auto drop-shadow-[0_0_40px_rgba(244,197,66,0.8)]"
+              width={400}
+              height={225}
+              className="w-full max-w-xl h-auto drop-shadow-[0_0_40px_rgba(244,197,66,0.8)]"
               priority
             />
           </div>
-          <p className="font-delius text-base md:text-lg max-w-2xl text-white line-clamp-2 md:line-clamp-3 tracking-wide leading-relaxed">
+          {/* <p className="font-delius text-base md:text-lg max-w-2xl text-white line-clamp-2 md:line-clamp-3 tracking-wide leading-relaxed">
             Experience the ultimate celebration of talent at JU Rhythm,
             where creativity meets competition. From cultural performances to 
             sports championships, technical innovations to media showcases,
-            join us in this spectacular fest of passion and excellence.
-          </p>
-          <h2 className="font-delius text-[#F4C542] text-xl md:text-3xl font-bold tracking-widest uppercase">9th - 11th October</h2>
+          </p> */}
+          {/* <h2 className="font-delius text-[#F4C542] text-xl md:text-3xl font-bold tracking-widest uppercase">9th - 11th October</h2> */}
           
           {/* Three Registration Buttons */}
           <div className="flex flex-wrap gap-4 mt-4">

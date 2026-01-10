@@ -58,21 +58,71 @@ export default function ContactUs() {
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
       <Navbar />
+      
+      {/* Twinkling Stars Background */}
+      <div className="absolute inset-0 z-0">
+        {[...Array(100)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-white animate-twinkle"
+            style={{
+              width: `${Math.random() * 3}px`,
+              height: `${Math.random() * 3}px`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${Math.random() * 2 + 1}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Decorative Floating Lanterns */}
+      <div className="absolute top-28 left-8 w-16 h-24 opacity-45 animate-pulse z-10" style={{ animationDuration: '3.5s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#F4C542] to-[#FFB84D] rounded-lg shadow-[0_0_30px_rgba(244,197,66,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-0.5 h-8 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#F4C542] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
+      <div className="absolute top-2/3 right-12 w-14 h-22 opacity-40 animate-pulse z-10" style={{ animationDuration: '4.1s', animationDelay: '1.1s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#FFA726] to-[#F4C542] rounded-lg shadow-[0_0_30px_rgba(255,167,38,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-0.5 h-6 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#FFA726] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-32 left-1/3 w-12 h-20 opacity-35 animate-pulse z-10" style={{ animationDuration: '3.9s', animationDelay: '0.6s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#FFB84D] to-[#FFA726] rounded-lg shadow-[0_0_30px_rgba(255,184,77,0.8)]"></div>
+          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
+          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-0.5 h-7 bg-[#8b4513]"></div>
+          <div className="absolute inset-0 bg-[#FFB84D] blur-xl opacity-40"></div>
+        </div>
+      </div>
+
       <div className="mx-auto mt-20 relative py-12 px-4 sm:px-6 lg:px-8 w-screen">
-        <h1 className="text-5xl sm:text-6xl font-bold text-center relative text-white mb-12 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(255,107,53,0.6)]">
+        <h1 className="text-5xl sm:text-6xl font-bold text-center relative text-white mb-12 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
           Contact Us
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 max-w-4xl mx-auto">
           {contacts.map((vertical, index) => (
             <div
               key={index}
-              className="bg-black backdrop-blur-lg border-2 border-gray-700 rounded-xl relative overflow-hidden group hover:border-[#ff6b35] transition-all duration-300"
+              className="bg-black backdrop-blur-lg border-2 border-gray-700 rounded-xl relative overflow-hidden group hover:border-[#F4C542] transition-all duration-300"
             >
               {/* Gradient glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#ff6b35] via-[#ff8c5a] to-[#ff6b35] rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-500 -z-10"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#F4C542] via-[#FFB84D] to-[#F4C542] rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-500 -z-10"></div>
               
-              <div className="bg-black rounded-t-xl p-6 border-b-2 border-gray-700 group-hover:border-[#ff6b35] transition-colors duration-300">
-                <h2 className="text-xl font-new-amsterdam text-[#ff6b35] tracking-widest uppercase drop-shadow-[0_0_15px_rgba(255,107,53,0.5)]">
+              <div className="bg-black rounded-t-xl p-6 border-b-2 border-gray-700 group-hover:border-[#F4C542] transition-colors duration-300">
+                <h2 className="text-xl font-new-amsterdam text-[#F4C542] tracking-widest uppercase drop-shadow-[0_0_15px_rgba(244,197,66,0.5)]">
                   {vertical.vertical} Heads
                 </h2>
               </div>
@@ -86,7 +136,7 @@ export default function ContactUs() {
                     <p className="text-white font-delius font-semibold">{contact.name}</p>
                     <a 
                       href={`tel:${contact.phone}`}
-                      className="text-gray-400 hover:text-[#ff6b35] transition-colors duration-200 font-delius"
+                      className="text-gray-400 hover:text-[#F4C542] transition-colors duration-200 font-delius"
                     >
                       {contact.phone}
                     </a>
