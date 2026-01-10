@@ -12,7 +12,7 @@ interface TeamCardProps {
 export const TeamCard = ({ name, position, image, className }: TeamCardProps) => {
   return (
     <motion.div
-      className={`group relative overflow-hidden rounded-xl bg-black border-2 border-[#ff6b35] hover:border-white transition-all duration-300 ${className || ''}`}
+      className={`group relative overflow-hidden rounded-xl bg-black border-2 border-[#fbbf24] hover:border-[#fde68a] transition-all duration-300 ${className || ''}`}
       whileHover={{ scale: 1.05, y: -10 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export const TeamCard = ({ name, position, image, className }: TeamCardProps) =>
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-        <h3 className="text-2xl font-new-amsterdam uppercase tracking-widest mb-1 text-[#ff6b35] drop-shadow-[0_0_20px_rgba(255,107,53,0.5)]">
+        <h3 className="text-2xl font-new-amsterdam uppercase tracking-widest mb-1 text-[#fbbf24] drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">
           {name}
         </h3>
         <p className="text-white font-delius font-semibold text-sm uppercase tracking-wider">
@@ -38,7 +38,7 @@ export const TeamCard = ({ name, position, image, className }: TeamCardProps) =>
         </p>
       </div>
       
-      <div className="absolute top-4 right-4 w-12 h-12 bg-[#ff6b35]/20 rounded-full blur-xl group-hover:bg-[#ff6b35]/40 transition-all duration-300" />
+      <div className="absolute top-4 right-4 w-12 h-12 bg-[#fbbf24]/20 rounded-full blur-xl group-hover:bg-[#fbbf24]/40 transition-all duration-300" />
     </motion.div>
   );
 };

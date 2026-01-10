@@ -113,9 +113,13 @@ function Hero() {
             <button 
               onClick={() => {
                 const element = document.getElementById('verticals');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                if (element) {
+                  const yOffset = -80; // Offset for navbar height
+                  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({ top: y, behavior: 'smooth' });
+                }
               }}
-              className="bg-[#F4C542] text-black border-2 border-[#F4C542] hover:bg-white hover:text-[#F4C542] duration-300 cursor-pointer font-new-amsterdam font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(244,197,66,0.5)] hover:shadow-[0_0_30px_rgba(244,197,66,0.8)]"
+              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-new-amsterdam font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
             >
               Register for Events
             </button>
@@ -125,7 +129,7 @@ function Hero() {
                 const element = document.getElementById('pronite');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-transparent text-[#F4C542] border-2 border-[#F4C542] hover:bg-[#F4C542] hover:text-black duration-300 cursor-pointer font-new-amsterdam font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(244,197,66,0.3)] hover:shadow-[0_0_30px_rgba(244,197,66,0.8)]"
+              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-new-amsterdam font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
             >
               Book Pronite
             </button>

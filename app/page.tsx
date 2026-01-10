@@ -8,6 +8,7 @@ import dynamic from "next/dynamic"
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import LazyComponent from "@/components/LazyComponent"
+import MarqueeBar from "@/components/MarqueeBar"
 
 // Lazy load heavy components
 const Footer = dynamic(() => import("@/components/Footer"), {
@@ -85,6 +86,9 @@ export default function Home() {
           <AboutSection />
         </LazyComponent>
         
+        {/* Animated Marquee Bar 1 */}
+        <MarqueeBar text="9TH - 11TH OCTOBER • JECRC UNIVERSITY • JAIPUR" direction="left" speed={25} className="my-12" />
+        
         {/* Stars Section */}
         <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>
           <StarsSection />
@@ -94,6 +98,9 @@ export default function Home() {
         <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>
           <VerticalsSection />
         </LazyComponent>
+        
+        {/* Animated Marquee Bar 2 */}
+        <MarqueeBar text="CULTURAL • TECHNICAL • SPORTS • MEDIA • JOIN THE CELEBRATION" direction="right" speed={28} className="my-12" />
         
         {/* Gallery Section */}
         <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>

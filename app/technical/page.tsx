@@ -2,6 +2,7 @@
 import Card from "@/components/domainscomponents/Card";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import MarqueeBar from "@/components/MarqueeBar";
 import React from "react";
 
 const page = () => {
@@ -43,7 +44,7 @@ const page = () => {
       <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
         {/* Funky Title with breathing space */}
         <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">
-          <h1 className="text-[#F4C542] font-new-amsterdam text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(244,197,66,0.5)]">
+          <h1 className="text-[#fbbf24] font-new-amsterdam text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
             Technical
           </h1>
           <p className="text-white font-delius text-2xl sm:text-3xl md:text-4xl text-center tracking-widest uppercase">
@@ -51,44 +52,8 @@ const page = () => {
           </p>
         </div>
 
-        {/* Vibrant Marquee with electric colors */}
-        <div className="w-full bg-[#F4C542] p-4 sm:p-5 flex gap-3 sm:gap-5 items-center justify-between overflow-hidden">
-          <div className="flex items-center gap-4 sm:gap-6 animate-marquee whitespace-nowrap">
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black animate-pulse" />
-            <span className="text-black text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">
-              Hackathon
-            </span>
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black animate-pulse" />
-            <span className="text-black text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">
-              Robo Wars
-            </span>
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black animate-pulse" />
-            <span className="text-black text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">
-              Code Sprint
-            </span>
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black animate-pulse" />
-            <span className="text-black text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">
-              Tech Quiz
-            </span>
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black animate-pulse" />
-            <span className="text-black text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">
-              Hackathon
-            </span>
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black animate-pulse" />
-            <span className="text-black text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">
-              Robo Wars
-            </span>
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black animate-pulse" />
-            <span className="text-black text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">
-              Code Sprint
-            </span>
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#0d0d0d] animate-pulse" />
-            <span className="text-[#0d0d0d] text-xl sm:text-2xl md:text-3xl font-new-amsterdam font-black tracking-widest text-nowrap uppercase">
-              Tech Quiz
-            </span>
-            <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#0d0d0d] animate-pulse" />
-          </div>
-        </div>
+        {/* Animated Marquee Bar */}
+        <MarqueeBar text="HACKATHON • ROBO WARS • CODE SPRINT • TECH QUIZ • AI/ML CHALLENGE" direction="left" speed={25} />
 
         {/* Cards with better spacing */}
         <div className="w-full px-6 sm:px-8 md:px-12 py-8 mt-12 sm:mt-16 md:mt-24 flex flex-wrap gap-8 sm:gap-10 md:gap-12 justify-center">

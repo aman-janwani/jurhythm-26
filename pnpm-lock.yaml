@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fireworks-js/react':
+        specifier: ^2.10.8
+        version: 2.10.8(@types/react@19.1.12)(react@19.2.3)
       '@next/third-parties':
         specifier: ^15.5.2
         version: 15.5.2(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
@@ -23,9 +26,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      fireworks-js:
-        specifier: ^2.10.8
-        version: 2.10.8
       framer-motion:
         specifier: ^12.23.12
         version: 12.23.12(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -168,6 +168,12 @@ packages:
   '@eslint/plugin-kit@0.3.5':
     resolution: {integrity: sha512-Z5kJ+wU3oA7MMIqVR9tyZRtjYPr4OC004Q4Rw7pgOKUOKkJfZ3O24nz3WYfGRpMDNmcOi3TwQOmgm7B7Tpii0w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fireworks-js/react@2.10.8':
+    resolution: {integrity: sha512-Qy/HSiTnph2IT2LHVzo9Ov+zifGQboTICjVLyrp/sWMHZoaodZiW0xrFxN1RfYI3R7j5bNZmf6S9EzqOWPfFWA==}
+    peerDependencies:
+      '@types/react': '>=16.8.0'
+      react: '>=16.8.0'
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -2600,6 +2606,12 @@ snapshots:
     dependencies:
       '@eslint/core': 0.15.2
       levn: 0.4.1
+
+  '@fireworks-js/react@2.10.8(@types/react@19.1.12)(react@19.2.3)':
+    dependencies:
+      '@types/react': 19.1.12
+      fireworks-js: 2.10.8
+      react: 19.2.3
 
   '@humanfs/core@0.19.1': {}
 

@@ -80,10 +80,10 @@ const SponsorGrid = () => {
             onMouseLeave={() => setHoveredId(null)}
           >
             {/* Card Container */}
-            <div className="relative h-full min-h-[200px] overflow-hidden rounded-2xl border border-neutral-800 bg-transparent p-8 transition-all duration-300 hover:border-neutral-700 hover:shadow-2xl hover:shadow-blue-500/10">
+            <div className="relative h-full min-h-[200px] overflow-hidden rounded-2xl border border-neutral-800 bg-transparent p-8 transition-all duration-300 hover:border-[#fbbf24] hover:shadow-2xl hover:shadow-[#fbbf24]/20">
               {/* Glow Effect on Hover */}
               {hoveredId === sponsor.id && (
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#fbbf24]/10 via-[#fde68a]/5 to-transparent pointer-events-none" />
               )}
 
               {/* Border Beam Animation */}
@@ -92,7 +92,7 @@ const SponsorGrid = () => {
                 delay={parseInt(sponsor.id) * 0.5}
                 size={400}
                 borderWidth={2}
-                className={`from-transparent via-blue-400 to-transparent ${
+                className={`from-transparent via-[#fbbf24] to-transparent ${
                   hoveredId === sponsor.id ? "opacity-100" : "opacity-0"
                 } transition-opacity duration-300`}
               />
@@ -144,7 +144,7 @@ const SponsorGrid = () => {
       {/* Become a Sponsor CTA */}
       <div className="mt-16 text-center">
         <div className="inline-block relative group">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fbbf24] to-[#fde68a] rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
           <button
             onClick={() => {
               const footerElement = document.getElementById('footer');
@@ -152,7 +152,7 @@ const SponsorGrid = () => {
                 footerElement.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="relative inline-flex items-center gap-2 bg-blue-600 text-white border-2 border-blue-600 hover:bg-transparent hover:border-white duration-300 font-delius tracking-wide py-3 px-8 text-lg rounded-full cursor-pointer"
+            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 font-new-amsterdam font-bold tracking-widest py-3 px-8 text-lg rounded-full cursor-pointer transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
           >
             <span>Become a Sponsor</span>
             <svg

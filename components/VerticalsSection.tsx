@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { Fireworks } from "@fireworks-js/react";
 
 const verticals = [
   {
@@ -48,6 +49,67 @@ export default function VerticalsSection() {
 
   return (
     <section id="verticals" className="relative z-0 md:min-h-screen py-24">
+      {/* Fireworks Background - Covering whole section */}
+      <Fireworks
+        options={{
+          opacity: 0.6,
+          acceleration: 1.05,
+          friction: 0.97,
+          gravity: 1.5,
+          particles: 80,
+          traceLength: 3,
+          traceSpeed: 10,
+          explosion: 5,
+          intensity: 20,
+          flickering: 50,
+          lineStyle: 'round',
+          hue: {
+            min: 40,
+            max: 50,
+          },
+          delay: {
+            min: 40,
+            max: 90,
+          },
+          rocketsPoint: {
+            min: 50,
+            max: 50,
+          },
+          lineWidth: {
+            explosion: {
+              min: 3,
+              max: 10,
+            },
+            trace: {
+              min: 0.5,
+              max: 1.5,
+            },
+          },
+          brightness: {
+            min: 50,
+            max: 80,
+          },
+          decay: {
+            min: 0.015,
+            max: 0.03,
+          },
+          mouse: {
+            click: true,
+            move: true,
+            max: 3,
+          },
+        }}
+        style={{
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          zIndex: 5,
+          pointerEvents: 'none',
+        }}
+      />
+
       {/* Decorative Floating Lanterns - Purple/Green theme */}
       <div className="absolute top-16 left-12 w-18 h-26 opacity-60 animate-pulse" style={{ animationDuration: '3.8s' }}>
         <div className="relative w-full h-full">
@@ -79,7 +141,7 @@ export default function VerticalsSection() {
         </div>
       </div>
 
-      {/* Twinkling Stars Background */}
+      {/* Twinkling Stars Background
       <div className="absolute inset-0">
         {[...Array(100)].map((_, i) => (
           <div
@@ -96,11 +158,11 @@ export default function VerticalsSection() {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className="relative z-10 px-4 w-full max-w-7xl flex flex-col items-center justify-center gap-16 mx-auto">
         <div className="w-fit relative group cursor-pointer">
-          <h2 className="text-5xl md:text-8xl duration-500 font-new-amsterdam tracking-wide font-bold text-center text-[#F4C542] drop-shadow-md uppercase">
+          <h2 className="text-5xl md:text-8xl duration-500 font-new-amsterdam tracking-wide font-bold text-center text-[#F4C542] drop-shadow-md uppercase relative z-20">
             Events
           </h2>
         </div>

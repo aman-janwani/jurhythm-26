@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MarqueeBar from "@/components/MarqueeBar";
 
 const contacts = [
   {
@@ -108,21 +109,34 @@ export default function ContactUs() {
         </div>
       </div>
 
-      <div className="mx-auto mt-20 relative py-12 px-4 sm:px-6 lg:px-8 w-screen">
-        <h1 className="text-5xl sm:text-6xl font-bold text-center relative text-white mb-12 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
-          Contact Us
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 max-w-4xl mx-auto">
+      <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
+        {/* Large Title with proper spacing */}
+        <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">
+          <h1 className="text-[#fbbf24] font-new-amsterdam text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
+            Contact
+          </h1>
+        </div>
+
+        {/* Marquee Bar */}
+        <div className="mb-12 w-full">
+          <MarqueeBar 
+            text="REACH OUT TO US • TECHNICAL • CULTURAL • SPORTS • MEDIA • SPONSORSHIP • PUBLIC RELATIONS" 
+            direction="right" 
+            speed={28} 
+          />
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 max-w-4xl mx-auto px-4">
           {contacts.map((vertical, index) => (
             <div
               key={index}
-              className="bg-black backdrop-blur-lg border-2 border-gray-700 rounded-xl relative overflow-hidden group hover:border-[#F4C542] transition-all duration-300"
+              className="bg-black backdrop-blur-lg border-2 border-gray-700 rounded-xl relative overflow-hidden group hover:border-[#fbbf24] transition-all duration-300"
             >
               {/* Gradient glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#F4C542] via-[#FFB84D] to-[#F4C542] rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-500 -z-10"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#fbbf24] via-[#fde68a] to-[#fbbf24] rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-500 -z-10"></div>
               
-              <div className="bg-black rounded-t-xl p-6 border-b-2 border-gray-700 group-hover:border-[#F4C542] transition-colors duration-300">
-                <h2 className="text-xl font-new-amsterdam text-[#F4C542] tracking-widest uppercase drop-shadow-[0_0_15px_rgba(244,197,66,0.5)]">
+              <div className="bg-black rounded-t-xl p-6 border-b-2 border-gray-700 group-hover:border-[#fbbf24] transition-colors duration-300">
+                <h2 className="text-xl font-new-amsterdam text-[#fbbf24] tracking-widest uppercase drop-shadow-[0_0_15px_rgba(251,191,36,0.6)]">
                   {vertical.vertical} Heads
                 </h2>
               </div>
@@ -136,7 +150,7 @@ export default function ContactUs() {
                     <p className="text-white font-delius font-semibold">{contact.name}</p>
                     <a 
                       href={`tel:${contact.phone}`}
-                      className="text-gray-400 hover:text-[#F4C542] transition-colors duration-200 font-delius"
+                      className="text-gray-400 hover:text-[#fbbf24] transition-colors duration-200 font-delius"
                     >
                       {contact.phone}
                     </a>

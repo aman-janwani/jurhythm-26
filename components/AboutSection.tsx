@@ -79,14 +79,14 @@ export default function AboutSection() {
       </div>
 
       <div className="relative z-10 flex flex-col lg:flex-row md:min-h-screen items-center w-full p-10 justify-center">
-        <div className="w-full h-[70vh] p-10 rounded-3xl gap-3 flex flex-col justify-center">
+        <div className="w-full h-[70vh] p-10 rounded-3xl gap-3 flex flex-col justify-center items-center">
           <div className="md:w-fit w-full text-center relative group cursor-pointer">
-            <h1 className="mb-6 text-3xl lg:text-5xl text-center duration-500 font-bold font-new-amsterdam uppercase w-full tracking-tight md:text-left text-[#F4C542] sm:text-7xl">
+            <h1 className="mb-6 text-3xl lg:text-5xl text-center duration-500 font-bold font-new-amsterdam uppercase w-full tracking-widest text-[#F4C542] sm:text-7xl">
               About JURHYTHM&apos;26
             </h1>
           </div>
 
-          <p className="w-full lg:max-w-xl text-center md:text-justify text-gray-200 font-light text-sm lg:text-lg font-delius">
+          <p className="w-full lg:max-w-xl text-center text-gray-200 font-light text-sm lg:text-lg font-delius">
             JURHYTHM is more than just a fest—it's a vibrant techno-cultural
             extravaganza that unites the brilliance of technology, the thrill of
             sports, the richness of culture, and the dynamism of media. It's a
