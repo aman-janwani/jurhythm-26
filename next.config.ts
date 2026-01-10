@@ -21,7 +21,6 @@ const nextConfig: NextConfig = {
   // Bundle optimization
   experimental: {
     optimizePackageImports: ['framer-motion', '@react-three/fiber', '@react-three/drei'],
-    turbo: undefined, // Remove deprecated turbo config
   },
 
   // Build optimization
