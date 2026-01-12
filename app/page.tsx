@@ -28,7 +28,7 @@ const VerticalsSection = dynamic(() => import("@/components/VerticalsSection"), 
   loading: () => <div className="h-96 bg-black animate-pulse" />
 })
 
-const Gallery = dynamic(() => import("@/components/Gallery"), {
+const OrbitalCarousel = dynamic(() => import("@/components/OrbitalCarousel"), {
   loading: () => <div className="h-96 bg-black animate-pulse" />
 })
 
@@ -106,9 +106,9 @@ export default function Home() {
         {/* Animated Marquee Bar 2 */}
         <MarqueeBar text="CULTURAL • TECHNICAL • SPORTS • MEDIA • JOIN THE CELEBRATION" direction="right" speed={28} className="my-12" />
         
-        {/* Gallery Section */}
+        {/* Glimpse Section - Orbital Carousel */}
         <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>
-          <Gallery />
+          <OrbitalCarousel />
         </LazyComponent>
       </div>
       

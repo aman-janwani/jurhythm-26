@@ -34,7 +34,48 @@ export default function ExpandingCards() {
   const [activeId, setActiveId] = useState(1);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black p-8 font-sans">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black p-8 font-sans relative overflow-hidden">
+      {/* Decorative Lanterns - Bigger, Fewer */}
+      <div className="absolute top-20 left-16 w-20 h-28 opacity-65 animate-pulse" style={{ animationDuration: '3s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#a855f7] to-[#9333ea] rounded-lg shadow-[0_0_35px_rgba(168,85,247,1)]"></div>
+          <div className="absolute inset-x-2.5 top-0 h-3 bg-[#581c87] rounded-t-lg"></div>
+          <div className="absolute inset-x-2.5 bottom-2 h-3 bg-[#581c87] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-1 h-8 bg-[#581c87]"></div>
+          <div className="absolute inset-0 bg-[#a855f7] blur-xl opacity-60"></div>
+        </div>
+      </div>
+
+      <div className="absolute top-1/3 right-20 w-18 h-26 opacity-60 animate-pulse" style={{ animationDuration: '4s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#4ade80] to-[#22c55e] rounded-lg shadow-[0_0_35px_rgba(74,222,128,1)]"></div>
+          <div className="absolute inset-x-2.5 top-0 h-3 bg-[#166534] rounded-t-lg"></div>
+          <div className="absolute inset-x-2.5 bottom-2 h-3 bg-[#166534] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-1 h-7 bg-[#166534]"></div>
+          <div className="absolute inset-0 bg-[#4ade80] blur-xl opacity-60"></div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-1/4 left-1/4 w-22 h-30 opacity-70 animate-pulse" style={{ animationDuration: '3.5s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#fb923c] to-[#f97316] rounded-lg shadow-[0_0_35px_rgba(251,146,60,1)]"></div>
+          <div className="absolute inset-x-2.5 top-0 h-3 bg-[#7c2d12] rounded-t-lg"></div>
+          <div className="absolute inset-x-2.5 bottom-2 h-3 bg-[#7c2d12] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-1 h-8 bg-[#7c2d12]"></div>
+          <div className="absolute inset-0 bg-[#fb923c] blur-xl opacity-60"></div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-32 right-1/3 w-18 h-26 opacity-60 animate-pulse" style={{ animationDuration: '3.8s' }}>
+        <div className="relative w-full h-full">
+          <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#fbbf24] to-[#f59e0b] rounded-lg shadow-[0_0_35px_rgba(251,191,36,1)]"></div>
+          <div className="absolute inset-x-2.5 top-0 h-3 bg-[#78350f] rounded-t-lg"></div>
+          <div className="absolute inset-x-2.5 bottom-2 h-3 bg-[#78350f] rounded-b-lg"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-1 h-7 bg-[#78350f]"></div>
+          <div className="absolute inset-0 bg-[#fbbf24] blur-xl opacity-60"></div>
+        </div>
+      </div>
+
       {/* Section Title */}
       <div className="w-fit relative group cursor-pointer mb-16">
         <h2 className="text-5xl md:text-8xl duration-500 font-new-amsterdam tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase relative z-20">
@@ -42,7 +83,8 @@ export default function ExpandingCards() {
         </h2>
       </div>
 
-      <div className="w-full max-w-6xl h-[600px] flex gap-2 md:gap-4">
+      {/* Desktop View - Expanding Cards */}
+      <div className="hidden md:flex w-full max-w-6xl h-[600px] gap-2 md:gap-4">
         {cards.map((card) => {
           const isActive = activeId === card.id;
 
@@ -114,6 +156,39 @@ export default function ExpandingCards() {
             </div>
           );
         })}
+      </div>
+
+      {/* Mobile View - Simple Square Cards in Column */}
+      <div className="md:hidden w-full max-w-md flex flex-col gap-6">
+        {cards.map((card) => (
+          <div
+            key={card.id}
+            className="relative w-full aspect-square rounded-2xl overflow-hidden"
+          >
+            {/* Background Image */}
+            <img
+              src={card.imageUrl}
+              alt={card.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-[#fbbf24]/20 to-transparent" />
+
+            {/* Content */}
+            <div className="relative z-10 w-full h-full flex flex-col justify-end p-6">
+              <h2 className="text-3xl font-bold text-[#fbbf24] uppercase tracking-wider font-new-amsterdam mb-3 drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">
+                {card.title}
+              </h2>
+              <p className="text-gray-300 text-sm leading-relaxed mb-4 font-delius">
+                {card.description}
+              </p>
+              <button className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-new-amsterdam uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.4)] w-fit">
+                Explore <ArrowUpRight size={14} />
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
