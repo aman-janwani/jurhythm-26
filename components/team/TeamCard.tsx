@@ -30,10 +30,10 @@ export const TeamCard = ({ name, position, image, className }: TeamCardProps) =>
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-        <h3 className="text-2xl font-new-amsterdam uppercase tracking-widest mb-1 text-[#fbbf24] drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">
+        <h3 className="text-2xl font-druk uppercase tracking-widest mb-1 text-[#fbbf24] drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">
           {name}
         </h3>
-        <p className="text-white font-delius font-semibold text-sm uppercase tracking-wider">
+        <p className="text-white font-pp-neue font-semibold text-sm uppercase tracking-wider">
           {position}
         </p>
       </div>

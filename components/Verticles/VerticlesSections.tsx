@@ -40,7 +40,6 @@ import { Model } from "./RotatingModal";
 // import { HoverBorderGradient } from "../ui/hover-border-gradient";
 // import { MovingBorder } from "../ui/moving-border";
 import { BorderBeam } from "../magicui/border-beam";
-import { DotBackgroundDemo } from "../dotbackground";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,7 +89,6 @@ const VerticlesSections = () => {
       ref={containerRef}
       className="w-full h-screen bg-black flex justify-center relative overflow-hidden"
     >
-      <DotBackgroundDemo>
         {/* 3D Model stays pinned */}
       <div className="w-full h-screen absolute inset-0 pointer-events-none">
         <RenderModel>
@@ -131,12 +129,11 @@ const VerticlesSections = () => {
             />
             <div className="absolute inset-0 bg-black/40" />
             <div className="absolute bottom-0 flex items-center justify-center p-6 w-full text-white">
-              <h2 className="text-4xl font-new-amsterdam tracking-widest text-[#F4C542] mb-2 uppercase">{i + 1 === 1 ? "Software" : i + 1 === 2 ? "Hardware" : "Esports"}</h2>
+              <h2 className="text-4xl font-druk tracking-widest text-[#F4C542] mb-2 uppercase">{i + 1 === 1 ? "Software" : i + 1 === 2 ? "Hardware" : "Esports"}</h2>
             </div>
           </div>
         ))}
       </div>
-      </DotBackgroundDemo>
     </section>
   );
 };

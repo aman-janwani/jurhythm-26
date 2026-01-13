@@ -113,7 +113,7 @@ const SponsorGrid = () => {
               {/* Sponsor Name Tooltip on Hover */}
               {hoveredId === sponsor.id && (
                 <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white font-delius uppercase tracking-wide text-sm text-center truncate">
+                  <p className="text-white font-pp-neue uppercase tracking-wide text-sm text-center truncate">
                     {sponsor.name}
                   </p>
                 </div>
@@ -152,7 +152,7 @@ const SponsorGrid = () => {
                 footerElement.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 font-new-amsterdam font-bold tracking-widest py-3 px-8 text-lg rounded-full cursor-pointer transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
+            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 font-druk font-bold tracking-widest py-3 px-8 text-lg rounded-full cursor-pointer transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
           >
             <span>Become a Sponsor</span>
             <svg

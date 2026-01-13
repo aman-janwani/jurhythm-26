@@ -12,11 +12,11 @@
 //   return (
 //     <div className='min-w-[20rem] max-w-[20rem] border-2 border-white/30 hover:border-blue-600 backdrop-blur-sm rounded-xl p-6 flex flex-col items-start space-y-4'>
 //         <Image src={"/posters/2.jpg"} alt={name} width={300} height={300} />
-//         <h1 className='text-white font-delius text-2xl uppercase'>{name}</h1>
-//         {/* <p className='text-white font-sans '>{description}</p> */}
+//         <h1 className='text-white font-pp-neue text-2xl uppercase'>{name}</h1>
+//         {/* <p className='text-white font-pp-neue '>{description}</p> */}
 //         <div className='w-full flex justify-between'>
-//           <button className='bg-blue-600 text-white border-blue-600 border-2 hover:bg-transparent hover:border-white duration-300 cursor-pointer font-delius tracking-wide py-2 px-5 rounded-full'>Register</button>
-//           <button className='bg-blue-600 text-white border-blue-600 border-2 hover:bg-transparent hover:border-white duration-300 cursor-pointer font-delius tracking-wide py-2 px-5 rounded-full'>Learn More</button>
+//           <button className='bg-blue-600 text-white border-blue-600 border-2 hover:bg-transparent hover:border-white duration-300 cursor-pointer font-pp-neue tracking-wide py-2 px-5 rounded-full'>Register</button>
+//           <button className='bg-blue-600 text-white border-blue-600 border-2 hover:bg-transparent hover:border-white duration-300 cursor-pointer font-pp-neue tracking-wide py-2 px-5 rounded-full'>Learn More</button>
 //         </div>
 //     </div>
 //   )
@@ -61,7 +61,7 @@ const Card = ({ name, description, image }: CardProps) => {
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
-        <h1 className="text-[#F4C542] font-new-amsterdam text-xl sm:text-2xl uppercase tracking-wider">{name}</h1>
+        <h1 className="text-[#F4C542] font-druk text-xl sm:text-2xl uppercase tracking-wider">{name}</h1>
 
         <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-0 sm:justify-between">
           <Link
@@ -70,7 +70,7 @@ const Card = ({ name, description, image }: CardProps) => {
             rel="noopener noreferrer"
           >
             <motion.button
-              className="bg-[#F4C542] text-black border-[#F4C542] border-2 hover:bg-white hover:text-[#F4C542] duration-300 cursor-pointer font-new-amsterdam tracking-widest py-2 px-4 sm:px-5 rounded-full text-sm sm:text-base w-full sm:w-auto uppercase"
+              className="bg-[#F4C542] text-black border-[#F4C542] border-2 hover:bg-white hover:text-[#F4C542] duration-300 cursor-pointer font-druk tracking-widest py-2 px-4 sm:px-5 rounded-full text-sm sm:text-base w-full sm:w-auto uppercase"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -81,7 +81,7 @@ const Card = ({ name, description, image }: CardProps) => {
             onClick={() => {
               setIsModalOpen(true);
             }}
-            className="bg-transparent text-[#F4C542] border-[#F4C542] border-2 hover:bg-[#F4C542] hover:text-black duration-300 cursor-pointer font-new-amsterdam tracking-widest py-2 px-4 sm:px-5 rounded-full text-sm sm:text-base w-full sm:w-auto uppercase"
+            className="bg-transparent text-[#F4C542] border-[#F4C542] border-2 hover:bg-[#F4C542] hover:text-black duration-300 cursor-pointer font-druk tracking-widest py-2 px-4 sm:px-5 rounded-full text-sm sm:text-base w-full sm:w-auto uppercase"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -137,7 +137,7 @@ const Card = ({ name, description, image }: CardProps) => {
                 transition={{ delay: 0.1, duration: 0.3 }}
                 className="mb-4 sm:mb-6"
               >
-                <h2 className="text-[#ff6b35] font-new-amsterdam text-2xl sm:text-3xl uppercase mb-3 sm:mb-4 tracking-wider">
+                <h2 className="text-[#ff6b35] font-druk text-2xl sm:text-3xl uppercase mb-3 sm:mb-4 tracking-wider">
                   {name}
                 </h2>
                 <div className="w-full h-48 sm:h-64 relative rounded-lg overflow-hidden mb-3 sm:mb-4">
@@ -161,7 +161,7 @@ const Card = ({ name, description, image }: CardProps) => {
                 className="space-y-4"
               >
                 <div>
-                  <h3 className="text-[#ff6b35] font-new-amsterdam text-lg sm:text-xl mb-2 uppercase tracking-wider">
+                  <h3 className="text-[#ff6b35] font-druk text-lg sm:text-xl mb-2 uppercase tracking-wider">
                     Description
                   </h3>
                   <div className="text-white leading-relaxed text-sm sm:text-base prose prose-invert prose-sm sm:prose-base max-w-none">
@@ -169,17 +169,17 @@ const Card = ({ name, description, image }: CardProps) => {
                       remarkPlugins={[remarkGfm]}
                       components={{
                         h1: ({ children }) => (
-                          <h1 className="text-[#ff6b35] font-new-amsterdam text-2xl sm:text-3xl uppercase tracking-wider mt-6 mb-4">
+                          <h1 className="text-[#ff6b35] font-druk text-2xl sm:text-3xl uppercase tracking-wider mt-6 mb-4">
                             {children}
                           </h1>
                         ),
                         h2: ({ children }) => (
-                          <h2 className="text-[#ff6b35] font-new-amsterdam text-xl sm:text-2xl uppercase tracking-wider mt-5 mb-3">
+                          <h2 className="text-[#ff6b35] font-druk text-xl sm:text-2xl uppercase tracking-wider mt-5 mb-3">
                             {children}
                           </h2>
                         ),
                         h3: ({ children }) => (
-                          <h3 className="text-[#ff6b35] font-new-amsterdam text-lg sm:text-xl uppercase tracking-wider mt-4 mb-2">
+                          <h3 className="text-[#ff6b35] font-druk text-lg sm:text-xl uppercase tracking-wider mt-4 mb-2">
                             {children}
                           </h3>
                         ),
@@ -231,7 +231,7 @@ const Card = ({ name, description, image }: CardProps) => {
                 </div>
 
                 {/* <div>
-                  <h3 className="text-blue-400 font-delius text-xl mb-2">Event Details</h3>
+                  <h3 className="text-blue-400 font-pp-neue text-xl mb-2">Event Details</h3>
                   <ul className="text-white/80 space-y-2">
                     <li>• Duration: Full Day Event</li>
                     <li>• Registration Required</li>
@@ -242,7 +242,7 @@ const Card = ({ name, description, image }: CardProps) => {
 
                 {/* {link && (
                   <div>
-                    <h3 className="text-blue-400 font-delius text-xl mb-2">More Information</h3>
+                    <h3 className="text-blue-400 font-pp-neue text-xl mb-2">More Information</h3>
                     <Link
                       href={link} 
                       target="_blank" 
@@ -268,7 +268,7 @@ const Card = ({ name, description, image }: CardProps) => {
                   rel="noopener noreferrer"
                 >
                   <motion.button
-                    className="bg-[#ff6b35] text-black border-[#ff6b35] border-2 hover:bg-white hover:text-[#ff6b35] duration-300 cursor-pointer font-new-amsterdam tracking-widest py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-base w-full sm:w-auto uppercase"
+                    className="bg-[#ff6b35] text-black border-[#ff6b35] border-2 hover:bg-white hover:text-[#ff6b35] duration-300 cursor-pointer font-druk tracking-widest py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-base w-full sm:w-auto uppercase"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -277,7 +277,7 @@ const Card = ({ name, description, image }: CardProps) => {
                 </Link>
                 <motion.button
                   onClick={closeModal}
-                  className="bg-transparent text-[#ff6b35] border-[#ff6b35] border-2 hover:bg-[#ff6b35] hover:text-black duration-300 cursor-pointer font-new-amsterdam tracking-widest py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-base w-full sm:w-auto uppercase"
+                  className="bg-transparent text-[#ff6b35] border-[#ff6b35] border-2 hover:bg-[#ff6b35] hover:text-black duration-300 cursor-pointer font-druk tracking-widest py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-base w-full sm:w-auto uppercase"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

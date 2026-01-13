@@ -81,7 +81,7 @@ export default function ContactUs() {
       <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
         {/* Large Title with proper spacing */}
         <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">
-          <h1 className="text-[#fbbf24] font-new-amsterdam text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
+          <h1 className="text-[#fbbf24] font-druk text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
             Contact
           </h1>
         </div>
@@ -105,7 +105,7 @@ export default function ContactUs() {
               <div className="absolute -inset-1 bg-gradient-to-r from-[#fbbf24] via-[#fde68a] to-[#fbbf24] rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-500 -z-10"></div>
               
               <div className="bg-black rounded-t-xl p-6 border-b-2 border-gray-700 group-hover:border-[#fbbf24] transition-colors duration-300">
-                <h2 className="text-xl font-new-amsterdam text-[#fbbf24] tracking-widest uppercase drop-shadow-[0_0_15px_rgba(251,191,36,0.6)]">
+                <h2 className="text-xl font-druk text-[#fbbf24] tracking-widest uppercase drop-shadow-[0_0_15px_rgba(251,191,36,0.6)]">
                   {vertical.vertical} Heads
                 </h2>
               </div>
@@ -116,10 +116,10 @@ export default function ContactUs() {
                     key={contactIndex}
                     className={contactIndex > 0 ? "mt-4 pt-4 border-t border-gray-800" : ""}
                   >
-                    <p className="text-white font-delius font-semibold">{contact.name}</p>
+                    <p className="text-white font-pp-neue font-semibold">{contact.name}</p>
                     <a 
                       href={`tel:${contact.phone}`}
-                      className="text-gray-400 hover:text-[#fbbf24] transition-colors duration-200 font-delius"
+                      className="text-gray-400 hover:text-[#fbbf24] transition-colors duration-200 font-pp-neue"
                     >
                       {contact.phone}
                     </a>

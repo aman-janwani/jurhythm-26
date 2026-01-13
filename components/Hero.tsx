@@ -37,8 +37,8 @@ function Hero() {
 
         </div>
         
-        <div className="flex flex-col z-30 justify-end items-start gap-4 w-full">
-          <div className="relative w-full max-w-2xl">
+        <div className="flex flex-col z-30 justify-center items-center gap-6 w-full h-full">
+          <div className="relative w-full max-w-2xl flex justify-center">
             <Image 
               src="/jurhythm.png" 
               alt="JURHYTHM'26" 
@@ -49,21 +49,8 @@ function Hero() {
             />
           </div>
           
-          {/* Tagline */}
-          <div className="relative w-full max-w-2xl">
-            <h2 className="font-delius text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest uppercase text-center drop-shadow-[0_0_30px_rgba(255,255,255,0.5)]">
-              Carnival of Creativity
-            </h2>
-          </div>
-          {/* <p className="font-delius text-base md:text-lg max-w-2xl text-white line-clamp-2 md:line-clamp-3 tracking-wide leading-relaxed">
-            Experience the ultimate celebration of talent at JU Rhythm,
-            where creativity meets competition. From cultural performances to 
-            sports championships, technical innovations to media showcases,
-          </p> */}
-          {/* <h2 className="font-delius text-[#F4C542] text-xl md:text-3xl font-bold tracking-widest uppercase">9th - 11th October</h2> */}
-          
           {/* Three Registration Buttons */}
-          <div className="flex flex-wrap gap-4 mt-4">
+          <div className="flex flex-wrap gap-4 justify-center">
             <button 
               onClick={() => {
                 const element = document.getElementById('verticals');
@@ -73,7 +60,7 @@ function Hero() {
                   window.scrollTo({ top: y, behavior: 'smooth' });
                 }
               }}
-              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-new-amsterdam font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
+              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-druk font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
             >
               Register for Events
             </button>
@@ -83,7 +70,7 @@ function Hero() {
                 const element = document.getElementById('pronite');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-new-amsterdam font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
+              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-druk font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
             >
               Book Pronite
             </button>
@@ -92,7 +79,7 @@ function Hero() {
               href="/Guidelines.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black duration-300 cursor-pointer font-new-amsterdam font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full inline-flex items-center gap-2 transition-all transform hover:scale-105 uppercase shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"
+              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black duration-300 cursor-pointer font-druk font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full inline-flex items-center gap-2 transition-all transform hover:scale-105 uppercase shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"
             >
               <span>Guidelines</span>
               <svg 

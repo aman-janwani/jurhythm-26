@@ -144,11 +144,11 @@ export default function ScrollingGallery() {
           >
             Here are a few glimpses of previous Rhythm
           </h2>
-          <p className="text-neutral-400 text-lg md:text-xl leading-relaxed mb-8 font-delius">
+          <p className="text-neutral-400 text-lg md:text-xl leading-relaxed mb-8 font-pp-neue">
             Experience the energy, creativity, and unforgettable moments that defined our past events. Each photograph
             captures the essence of what makes Rhythm truly special.
           </p>
-          <p className="text-neutral-500 text-base font-delius">
+          <p className="text-neutral-500 text-base font-pp-neue">
             From electrifying performances to intimate backstage moments, these glimpses tell the story of our journey
             together.
           </p>

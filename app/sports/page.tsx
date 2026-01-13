@@ -13,10 +13,10 @@ const page = () => {
       <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
         {/* Funky Title with breathing space */}
         <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">
-          <h1 className="text-[#fbbf24] font-new-amsterdam text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
+          <h1 className="text-[#fbbf24] font-druk text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
             Sports
           </h1>
-          <p className="text-white font-delius text-2xl sm:text-3xl md:text-4xl text-center tracking-widest uppercase">
+          <p className="text-white font-pp-neue text-2xl sm:text-3xl md:text-4xl text-center tracking-widest uppercase">
             Compete • Conquer • Champion
           </p>
         </div>

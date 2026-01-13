@@ -9,7 +9,7 @@ export function Equalizer() {
 
   useEffect(() => {
     const generateBars = () => {
-      const barCount = 200 // Reduced from 400 for better performance
+      const barCount = 100 // Reduced from 400 for better performance
       const newBars: number[] = []
 
       for (let i = 0; i < barCount; i++) {

@@ -52,7 +52,7 @@ function Navbar() {
                     strokeWidth={2}
                   />
                 </div>
-                <span className="text-[10px] font-new-amsterdam uppercase tracking-wider text-gray-500 group-hover:text-[#fbbf24] transition-colors duration-300">
+                <span className="text-[10px] font-druk uppercase tracking-wider text-gray-500 group-hover:text-[#fbbf24] transition-colors duration-300">
                   {item.label}
                 </span>
               </Link>
@@ -96,7 +96,7 @@ function Navbar() {
                   className="w-5 h-5 text-gray-400 group-hover:text-[#fbbf24] transition-colors duration-300" 
                   strokeWidth={2}
                 />
-                <span className="text-sm font-new-amsterdam uppercase tracking-wider text-gray-400 group-hover:text-[#fbbf24] transition-colors duration-300">
+                <span className="text-sm font-druk uppercase tracking-wider text-gray-400 group-hover:text-[#fbbf24] transition-colors duration-300">
                   {item.label}
                 </span>
               </Link>

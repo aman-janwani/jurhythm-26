@@ -127,7 +127,7 @@ const page = () => {
       <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
         {/* Large Title with proper spacing */}
         <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">
-          <h1 className="text-[#fbbf24] font-new-amsterdam text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
+          <h1 className="text-[#fbbf24] font-druk text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
             Team
           </h1>
         </div>
@@ -135,7 +135,7 @@ const page = () => {
       <div className="max-w-6xl mx-auto relative z-10 px-3 pb-20">
         {/* Secretaries Section */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
+          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4 font-druk tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
             Meet the Secretaries
           </h2>
         </div>
@@ -158,10 +158,10 @@ const page = () => {
         {/* Core Team Section */}
         <div className="bg-white/10 p-5 rounded-2xl my-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 font-new-amsterdam tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 font-druk tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
               Core Team
             </h2>
-            <p className="text-lg text-gray-400 font-delius">
+            <p className="text-lg text-gray-400 font-pp-neue">
               The amazing individuals who make everything possible
             </p>
           </div>
@@ -219,7 +219,7 @@ const page = () => {
 
             {/* Page Counter */}
             <div className="text-center mt-4">
-              <span className="text-[#fbbf24] font-new-amsterdam text-lg tracking-wider">
+              <span className="text-[#fbbf24] font-druk text-lg tracking-wider">
                 Page {currentPage + 1} of {totalPages}
               </span>
             </div>

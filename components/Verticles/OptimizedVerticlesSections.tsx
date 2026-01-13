@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dynamic from "next/dynamic";
 import { BorderBeam } from "../magicui/border-beam";
-import { DotBackgroundDemo } from "../dotbackground";
 
 // Lazy load heavy 3D components
 const OptimizedRenderModel = dynamic(() => import("../OptimizedRender"), {
@@ -162,7 +161,6 @@ const OptimizedVerticlesSections = () => {
       ref={containerRef}
       className="w-full h-screen bg-black flex justify-center relative overflow-hidden"
     >
-      <DotBackgroundDemo>
         {/* Performance indicator for debugging */}
         {process.env.NODE_ENV === 'development' && (
           <div className="absolute top-4 left-4 z-50 bg-black/80 text-white p-2 rounded text-xs">
@@ -227,14 +225,13 @@ const OptimizedVerticlesSections = () => {
               
               <div className="absolute inset-0 bg-black/40" />
               <div className="absolute bottom-0 flex items-center justify-center p-6 w-full text-white">
-                <h2 className="text-4xl font-delius tracking-wider text-white/40 mb-2">
+                <h2 className="text-4xl font-pp-neue tracking-wider text-white/40 mb-2">
                   {i + 1 === 1 ? "Software" : i + 1 === 2 ? "Hardware" : "Esports"}
                 </h2>
               </div>
             </div>
           ))}
         </div>
-      </DotBackgroundDemo>
     </section>
   );
 };

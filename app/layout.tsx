@@ -5,13 +5,13 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 const newAmsterdam = New_Amsterdam({
   weight: "400",
-  variable: "--font-new-amsterdam",
+  variable: "--font-druk",
   subsets: ["latin"],
 });
 
 const delius = Delius({
   weight: "400",
-  variable: "--font-delius",
+  variable: "--font-pp-neue",
   subsets: ["latin"],
 });
 
