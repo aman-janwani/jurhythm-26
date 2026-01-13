@@ -32,6 +32,10 @@ const OrbitalCarousel = dynamic(() => import("@/components/OrbitalCarousel"), {
   loading: () => <div className="h-96 bg-black animate-pulse" />
 })
 
+const ScrollingGallery = dynamic(() => import("@/components/ScrollingGallery"), {
+  loading: () => <div className="h-96 bg-black animate-pulse" />
+})
+
 const AfterMoviesCarousel = dynamic(() => import("@/components/AfterMoviesCarousel").then(mod => ({ default: mod.AfterMoviesCarousel })), {
   loading: () => <div className="h-screen bg-black animate-pulse" />
 })
@@ -111,6 +115,23 @@ export default function Home() {
           <OrbitalCarousel />
         </LazyComponent>
       </div>
+
+      {/* Transitional Gradient Section */}
+      <div className="relative h-64 -mt-32 overflow-hidden">
+        {/* Base gradient layer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fbbf24]/90 via-[#fbbf24]/80 via-30% to-transparent" />
+        {/* Middle blend layer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a1a1a]/50 via-50% to-[#0a0a0a]" />
+        {/* Blur overlay */}
+        <div className="absolute inset-0 backdrop-blur-xl bg-gradient-to-b from-[#fbbf24]/20 via-[#fbbf24]/5 to-transparent" />
+        {/* Final dark fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent from-40% via-black/60 via-70% to-black" />
+      </div>
+      
+      {/* Scrolling Gallery Section */}
+      <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>
+        <ScrollingGallery />
+      </LazyComponent>
       
       {/* AfterMovies Carousel Section */}
       <LazyComponent fallback={<div className="h-screen bg-black animate-pulse" />}>

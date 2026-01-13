@@ -42,47 +42,7 @@ export default function OrbitalCarousel() {
   const orbitTiltAngle = 15
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-black flex items-center justify-center py-20">
-      {/* Decorative Lanterns - Bigger, Fewer */}
-      <div className="absolute top-24 left-20 w-20 h-28 opacity-65 animate-pulse z-5" style={{ animationDuration: '3.8s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#a855f7] to-[#9333ea] rounded-lg shadow-[0_0_35px_rgba(168,85,247,1)]"></div>
-          <div className="absolute inset-x-2.5 top-0 h-3 bg-[#581c87] rounded-t-lg"></div>
-          <div className="absolute inset-x-2.5 bottom-2 h-3 bg-[#581c87] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-1 h-8 bg-[#581c87]"></div>
-          <div className="absolute inset-0 bg-[#a855f7] blur-xl opacity-60"></div>
-        </div>
-      </div>
-
-      <div className="absolute top-1/4 right-24 w-18 h-26 opacity-60 animate-pulse z-5" style={{ animationDuration: '4.3s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#4ade80] to-[#22c55e] rounded-lg shadow-[0_0_35px_rgba(74,222,128,1)]"></div>
-          <div className="absolute inset-x-2.5 top-0 h-3 bg-[#166534] rounded-t-lg"></div>
-          <div className="absolute inset-x-2.5 bottom-2 h-3 bg-[#166534] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-1 h-7 bg-[#166534]"></div>
-          <div className="absolute inset-0 bg-[#4ade80] blur-xl opacity-60"></div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-32 left-1/4 w-22 h-30 opacity-70 animate-pulse z-5" style={{ animationDuration: '3.3s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#fb923c] to-[#f97316] rounded-lg shadow-[0_0_35px_rgba(251,146,60,1)]"></div>
-          <div className="absolute inset-x-2.5 top-0 h-3 bg-[#7c2d12] rounded-t-lg"></div>
-          <div className="absolute inset-x-2.5 bottom-2 h-3 bg-[#7c2d12] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-1 h-8 bg-[#7c2d12]"></div>
-          <div className="absolute inset-0 bg-[#fb923c] blur-xl opacity-60"></div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-1/4 right-20 w-18 h-26 opacity-60 animate-pulse z-5" style={{ animationDuration: '4.5s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#fbbf24] to-[#f59e0b] rounded-lg shadow-[0_0_35px_rgba(251,191,36,1)]"></div>
-          <div className="absolute inset-x-2.5 top-0 h-3 bg-[#78350f] rounded-t-lg"></div>
-          <div className="absolute inset-x-2.5 bottom-2 h-3 bg-[#78350f] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-1 h-7 bg-[#78350f]"></div>
-          <div className="absolute inset-0 bg-[#fbbf24] blur-xl opacity-60"></div>
-        </div>
-      </div>
+    <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-gradient-to-b from-[#fbbf24] to-[#fbbf24]/90">
       
       {/* Fireworks Background */}
       <Fireworks
@@ -126,9 +86,10 @@ export default function OrbitalCarousel() {
           className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-bold leading-none"
           style={{ 
             fontFamily: "'New Amsterdam', sans-serif",
-            color: "#fbbf24",
-            textShadow: "0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.3)",
-            letterSpacing: "0.15em"
+            color: "#ffffff",
+            textShadow: "0 0 40px rgba(0, 0, 0, 0.8), 0 0 80px rgba(0, 0, 0, 0.5)",
+            letterSpacing: "0.15em",
+            WebkitTextStroke: "2px rgba(0, 0, 0, 0.3)"
           }}
         >
           <span className="invisible">GLI</span>
@@ -143,9 +104,10 @@ export default function OrbitalCarousel() {
           className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-bold leading-none"
           style={{ 
             fontFamily: "'New Amsterdam', sans-serif",
-            color: "#fbbf24",
-            textShadow: "0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.3)",
-            letterSpacing: "0.15em"
+            color: "#000000",
+            textShadow: "0 0 40px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.5)",
+            letterSpacing: "0.15em",
+            WebkitTextStroke: "2px rgba(255, 255, 255, 0.3)"
           }}
         >
           <span>GLI</span>
@@ -215,7 +177,7 @@ export default function OrbitalCarousel() {
                   </div>
                   <p 
                     className="text-sm font-light mt-2 text-center truncate"
-                    style={{ color: "#fcd34d" }}
+                    style={{ color: "#ffffff" }}
                   >
                     {item.name}
                   </p>
@@ -244,7 +206,7 @@ export default function OrbitalCarousel() {
             <div className="absolute bottom-0 left-0 right-0 p-3">
               <p 
                 className="text-xs font-light text-center"
-                style={{ color: "#fcd34d" }}
+                style={{ color: "#ffffff" }}
               >
                 {item.name}
               </p>

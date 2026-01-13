@@ -10,37 +10,6 @@ const page = () => {
     <div className="min-h-screen bg-black relative overflow-hidden">
       <Navbar />
       
-      {/* Decorative Floating Lanterns - Media themed colors */}
-      <div className="absolute top-36 right-20 w-16 h-24 opacity-50 animate-pulse z-10" style={{ animationDuration: '3.3s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#06b6d4] to-[#22d3ee] rounded-lg shadow-[0_0_30px_rgba(6,182,212,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-0.5 h-8 bg-[#8b4513]"></div>
-          <div className="absolute inset-0 bg-[#06b6d4] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
-      <div className="absolute top-2/3 left-12 w-14 h-22 opacity-45 animate-pulse z-10" style={{ animationDuration: '4.1s', animationDelay: '0.9s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#F4C542] to-[#FFB84D] rounded-lg shadow-[0_0_30px_rgba(244,197,66,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-0.5 h-6 bg-[#8b4513]"></div>
-          <div className="absolute inset-0 bg-[#F4C542] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-48 right-1/3 w-12 h-20 opacity-40 animate-pulse z-10" style={{ animationDuration: '3.7s', animationDelay: '0.4s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#8b5cf6] to-[#a78bfa] rounded-lg shadow-[0_0_30px_rgba(139,92,246,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#8b4513] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#8b4513] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-0.5 h-7 bg-[#8b4513]"></div>
-          <div className="absolute inset-0 bg-[#8b5cf6] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
       <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
         {/* Funky Title with breathing space */}
         <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">

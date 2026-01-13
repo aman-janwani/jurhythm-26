@@ -1,23 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import VortexDemoSecond from "./vortex-demo-2";
-import { Model } from "./models/Model";
-import RenderModel from "./Render";
 import FireworksBackground from "./FireworksBackground";
 
 function Hero() {
-  const [show3D, setShow3D] = useState(false);
-
-  useEffect(() => {
-    // Delay 3D model loading for better performance
-    const timer = setTimeout(() => {
-      setShow3D(true);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="w-full h-full flex flex-col justify-between items-center relative">
       <div className="w-full h-full flex px-10 py-10 flex-1">
@@ -26,16 +13,6 @@ function Hero() {
           <div className="absolute inset-0 z-0">
             <VortexDemoSecond />
           </div>
-
-
-          {/* Hot Air Balloon 3D Model */}
-          {show3D && (
-            <div className="absolute inset-0 z-10 pointer-events-none">
-              <RenderModel>
-                <Model />
-              </RenderModel>
-            </div>
-          )}
 
           {/* Firefly/Jugnoo Lights - Golden Yellow Glowing Particles */}
           <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden">
@@ -58,36 +35,6 @@ function Hero() {
             ))}
           </div>
 
-          {/* Decorative Lanterns around Balloon - Multi-colored */}
-          <div className="absolute top-16 right-1/4 w-12 h-18 opacity-60 animate-pulse z-15" style={{ animationDuration: '3.2s' }}>
-            <div className="relative w-full h-full">
-              <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#fbbf24] to-[#f59e0b] rounded-lg shadow-[0_0_25px_rgba(251,191,36,0.9)]"></div>
-              <div className="absolute inset-x-2.5 top-0 h-2 bg-[#78350f] rounded-t-lg"></div>
-              <div className="absolute inset-x-2.5 bottom-2 h-2 bg-[#78350f] rounded-b-lg"></div>
-              <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-0.5 h-6 bg-[#78350f]"></div>
-              <div className="absolute inset-0 bg-[#fbbf24] blur-lg opacity-50"></div>
-            </div>
-          </div>
-
-          <div className="absolute bottom-1/4 right-1/3 w-10 h-16 opacity-55 animate-pulse z-15" style={{ animationDuration: '3.8s', animationDelay: '0.8s' }}>
-            <div className="relative w-full h-full">
-              <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#fb923c] to-[#f97316] rounded-lg shadow-[0_0_25px_rgba(251,146,60,0.9)]"></div>
-              <div className="absolute inset-x-2.5 top-0 h-2 bg-[#7c2d12] rounded-t-lg"></div>
-              <div className="absolute inset-x-2.5 bottom-2 h-2 bg-[#7c2d12] rounded-b-lg"></div>
-              <div className="absolute left-1/2 -translate-x-1/2 -top-5 w-0.5 h-5 bg-[#7c2d12]"></div>
-              <div className="absolute inset-0 bg-[#fb923c] blur-lg opacity-50"></div>
-            </div>
-          </div>
-
-          <div className="absolute top-1/3 right-20 w-11 h-17 opacity-50 animate-pulse z-15" style={{ animationDuration: '4s', animationDelay: '1.5s' }}>
-            <div className="relative w-full h-full">
-              <div className="absolute inset-x-2 top-2 bottom-4 bg-gradient-to-b from-[#fde047] to-[#facc15] rounded-lg shadow-[0_0_25px_rgba(253,224,71,0.9)]"></div>
-              <div className="absolute inset-x-2.5 top-0 h-2 bg-[#854d0e] rounded-t-lg"></div>
-              <div className="absolute inset-x-2.5 bottom-2 h-2 bg-[#854d0e] rounded-b-lg"></div>
-              <div className="absolute left-1/2 -translate-x-1/2 -top-5 w-0.5 h-5 bg-[#854d0e]"></div>
-              <div className="absolute inset-0 bg-[#fde047] blur-lg opacity-50"></div>
-            </div>
-          </div>
         </div>
         
         <div className="flex flex-col z-30 justify-end items-start gap-4 w-full">
@@ -100,6 +47,13 @@ function Hero() {
               className="w-full max-w-xl h-auto drop-shadow-[0_0_40px_rgba(244,197,66,0.8)]"
               priority
             />
+          </div>
+          
+          {/* Tagline */}
+          <div className="relative w-full max-w-2xl">
+            <h2 className="font-delius text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest uppercase text-center drop-shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+              Carnival of Creativity
+            </h2>
           </div>
           {/* <p className="font-delius text-base md:text-lg max-w-2xl text-white line-clamp-2 md:line-clamp-3 tracking-wide leading-relaxed">
             Experience the ultimate celebration of talent at JU Rhythm,

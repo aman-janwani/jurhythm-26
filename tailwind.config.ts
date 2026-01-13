@@ -10,6 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        'druk': ['Druk Wide', 'var(--font-new-amsterdam)', 'New Amsterdam', 'sans-serif'],
+        'pp-neue': ['PP Neue Montreal', 'var(--font-delius)', 'Delius', 'sans-serif'],
         'new-amsterdam': ['var(--font-new-amsterdam)', 'New Amsterdam', 'serif'],
         delius: ['var(--font-delius)', 'Delius', 'cursive'],
       },

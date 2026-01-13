@@ -67,37 +67,6 @@ export default function VerticalsSection() {
         }}
       />
 
-      {/* Decorative Floating Lanterns */}
-      <div className="absolute top-16 left-12 w-18 h-26 opacity-60 animate-pulse" style={{ animationDuration: '3.8s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#a855f7] to-[#ec4899] rounded-lg shadow-[0_0_30px_rgba(168,85,247,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#4c1d95] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#4c1d95] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-9 w-0.5 h-9 bg-[#4c1d95]"></div>
-          <div className="absolute inset-0 bg-[#a855f7] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-20 right-14 w-16 h-24 opacity-50 animate-pulse" style={{ animationDuration: '4.2s', animationDelay: '1.2s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#10b981] to-[#06b6d4] rounded-lg shadow-[0_0_30px_rgba(16,185,129,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#065f46] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#065f46] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-0.5 h-8 bg-[#065f46]"></div>
-          <div className="absolute inset-0 bg-[#10b981] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
-      <div className="absolute top-1/3 right-8 w-14 h-22 opacity-55 animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#f59e0b] to-[#ef4444] rounded-lg shadow-[0_0_28px_rgba(245,158,11,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#78350f] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#78350f] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-0.5 h-7 bg-[#78350f]"></div>
-          <div className="absolute inset-0 bg-[#f59e0b] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
       {/* Expanding Cards Component */}
       <div className="relative z-10">
         <ExpandingCards />

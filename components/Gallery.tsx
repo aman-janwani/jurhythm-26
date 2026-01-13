@@ -39,37 +39,6 @@ const gridItems = [
 export default function Gallery() {
   return (
     <section id="glimpses" className="relative md:min-h-screen py-24 overflow-hidden">
-      {/* Decorative Floating Lanterns - Red/Pink theme */}
-      <div className="absolute top-20 left-16 w-16 h-24 opacity-50 animate-pulse" style={{ animationDuration: '3.6s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#ef4444] to-[#dc2626] rounded-lg shadow-[0_0_30px_rgba(239,68,68,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#7f1d1d] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#7f1d1d] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-0.5 h-8 bg-[#7f1d1d]"></div>
-          <div className="absolute inset-0 bg-[#ef4444] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-24 right-20 w-18 h-26 opacity-55 animate-pulse" style={{ animationDuration: '4.1s', animationDelay: '1s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#ec4899] to-[#db2777] rounded-lg shadow-[0_0_30px_rgba(236,72,153,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#831843] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#831843] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-9 w-0.5 h-9 bg-[#831843]"></div>
-          <div className="absolute inset-0 bg-[#ec4899] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
-      <div className="absolute top-1/2 left-10 w-14 h-20 opacity-45 animate-pulse" style={{ animationDuration: '3.3s', animationDelay: '0.7s' }}>
-        <div className="relative w-full h-full">
-          <div className="absolute inset-x-2 top-2 bottom-6 bg-gradient-to-b from-[#8b5cf6] to-[#6366f1] rounded-lg shadow-[0_0_28px_rgba(139,92,246,0.8)]"></div>
-          <div className="absolute inset-x-3 top-0 h-3 bg-[#4c1d95] rounded-t-lg"></div>
-          <div className="absolute inset-x-3 bottom-4 h-3 bg-[#4c1d95] rounded-b-lg"></div>
-          <div className="absolute left-1/2 -translate-x-1/2 -top-7 w-0.5 h-7 bg-[#4c1d95]"></div>
-          <div className="absolute inset-0 bg-[#8b5cf6] blur-xl opacity-40"></div>
-        </div>
-      </div>
-
       {/* Subtle Glow Background */}
       <div className="absolute inset-0 -z-10">
         {/* Radial glows */}
