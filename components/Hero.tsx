@@ -8,7 +8,7 @@ function Hero() {
 
   return (
     <div className="w-full h-full flex flex-col justify-between items-center relative">
-      <div className="w-full h-full flex px-10 py-10 flex-1">
+      <div className="w-full h-full flex px-4 sm:px-6 md:px-10 py-6 md:py-10 flex-1">
         <div className="absolute inset-0">
           {/* Background Video */}
           <video
@@ -48,20 +48,20 @@ function Hero() {
 
         </div>
         
-        <div className="flex flex-col z-30 justify-center items-center gap-6 w-full h-full">
-          <div className="relative w-full max-w-2xl flex justify-center">
+        <div className="flex flex-col z-30 justify-center items-center gap-4 sm:gap-6 w-full h-full">
+          <div className="relative w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl flex justify-center px-4">
             <Image 
               src={site.logo} 
               alt={`${site.name}'${site.year}`}
               width={400}
               height={225}
-              className="w-full max-w-xl h-auto drop-shadow-[0_0_40px_rgba(244,197,66,0.8)]"
+              className="w-full h-auto drop-shadow-[0_0_40px_rgba(244,197,66,0.8)]"
               priority
             />
           </div>
           
           {/* Three Registration Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center px-4 w-full sm:w-auto">
             <button 
               onClick={() => {
                 const scrollTo = hero.buttons[0].scrollTo;
@@ -74,7 +74,7 @@ function Hero() {
                   }
                 }
               }}
-              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-anton font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
+              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-anton font-bold tracking-widest py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] w-full sm:w-auto text-center"
             >
               {hero.buttons[0].text}
             </button>
@@ -87,7 +87,7 @@ function Hero() {
                   if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-anton font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
+              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-anton font-bold tracking-widest py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] w-full sm:w-auto text-center"
             >
               {hero.buttons[1].text}
             </button>
@@ -96,7 +96,7 @@ function Hero() {
               href={hero.buttons[2].href}
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black duration-300 cursor-pointer font-anton font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full inline-flex items-center gap-2 transition-all transform hover:scale-105 uppercase shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"
+              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black duration-300 cursor-pointer font-anton font-bold tracking-widest py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full inline-flex items-center justify-center gap-2 transition-all transform hover:scale-105 uppercase shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] w-full sm:w-auto"
             >
               <span>{hero.buttons[2].text}</span>
               <svg 

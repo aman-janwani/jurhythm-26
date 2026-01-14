@@ -35,14 +35,70 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Fireworks } from "fireworks-js";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const VerticlesSections = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
+  const fireworksRef = useRef<HTMLDivElement>(null);
+  const fireworksInstance = useRef<Fireworks | null>(null);
 
   useEffect(() => {
+    // Initialize fireworks
+    if (fireworksRef.current && !fireworksInstance.current) {
+      fireworksInstance.current = new Fireworks(fireworksRef.current, {
+        opacity: 0.5,
+        acceleration: 1.05,
+        friction: 0.97,
+        gravity: 1.5,
+        particles: 50,
+        traceLength: 3,
+        traceSpeed: 10,
+        explosion: 5,
+        intensity: 30,
+        flickering: 50,
+        lineStyle: 'round',
+        hue: {
+          min: 0,
+          max: 360
+        },
+        delay: {
+          min: 30,
+          max: 60
+        },
+        rocketsPoint: {
+          min: 50,
+          max: 50
+        },
+        lineWidth: {
+          explosion: {
+            min: 1,
+            max: 3
+          },
+          trace: {
+            min: 1,
+            max: 2
+          }
+        },
+        brightness: {
+          min: 50,
+          max: 80
+        },
+        decay: {
+          min: 0.015,
+          max: 0.03
+        },
+        mouse: {
+          click: false,
+          move: false,
+          max: 1
+        }
+      });
+      fireworksInstance.current.start();
+    }
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -69,7 +125,12 @@ const VerticlesSections = () => {
       });
     });
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      if (fireworksInstance.current) {
+        fireworksInstance.current.stop();
+      }
+    };
   }, []);
 
   const setRef = (el: HTMLDivElement | null, i: number) => {
@@ -84,6 +145,13 @@ const VerticlesSections = () => {
       ref={containerRef}
       className="w-full h-screen bg-black flex justify-center relative overflow-hidden"
     >
+      {/* Fireworks Background */}
+      <div 
+        ref={fireworksRef} 
+        className="absolute inset-0 w-full h-full"
+        style={{ pointerEvents: 'none' }}
+      />
+      
       {/* Cards */}
       <div className="relative z-10 flex items-center justify-center w-full h-full">
         {Array.from({ length: 3 }).map((_, i) => (

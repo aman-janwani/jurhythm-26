@@ -43,6 +43,65 @@ export default function OrbitalCarousel() {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-black py-24 px-4">
+      {/* Fireworks Background */}
+      <Fireworks
+        options={{
+          opacity: 0.5,
+          acceleration: 1.05,
+          friction: 0.97,
+          gravity: 1.5,
+          particles: 50,
+          traceLength: 3,
+          traceSpeed: 10,
+          explosion: 5,
+          intensity: 30,
+          flickering: 50,
+          lineStyle: 'round',
+          hue: {
+            min: 35,
+            max: 55
+          },
+          delay: {
+            min: 30,
+            max: 60
+          },
+          rocketsPoint: {
+            min: 50,
+            max: 50
+          },
+          lineWidth: {
+            explosion: {
+              min: 1,
+              max: 3
+            },
+            trace: {
+              min: 1,
+              max: 2
+            }
+          },
+          brightness: {
+            min: 50,
+            max: 80
+          },
+          decay: {
+            min: 0.015,
+            max: 0.03
+          },
+          mouse: {
+            click: false,
+            move: false,
+            max: 1
+          }
+        }}
+        style={{
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          zIndex: 1
+        }}
+      />
 
       
       {/* Back text layer - MPS sits behind cards */}
@@ -55,8 +114,8 @@ export default function OrbitalCarousel() {
         >
           <span className="invisible font-anton">GLI</span>
           <span className="font-anton text-[#fbbf24]" style={{
-            textShadow: "0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.4)",
-            WebkitTextStroke: "2px rgba(251, 191, 36, 0.3)"
+            textShadow: "0 0 15px rgba(251, 191, 36, 0.3), 0 0 25px rgba(251, 191, 36, 0.2)",
+            WebkitTextStroke: "1px rgba(251, 191, 36, 0.2)"
           }}>MPS</span>
           <span className="invisible font-anton">E</span>
         </h1>
@@ -71,13 +130,13 @@ export default function OrbitalCarousel() {
           }}
         >
           <span className="font-anton text-[#fbbf24]" style={{
-            textShadow: "0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.4)",
-            WebkitTextStroke: "2px rgba(251, 191, 36, 0.3)"
+            textShadow: "0 0 15px rgba(251, 191, 36, 0.3), 0 0 25px rgba(251, 191, 36, 0.2)",
+            WebkitTextStroke: "1px rgba(251, 191, 36, 0.2)"
           }}>GLI</span>
           <span className="invisible font-anton">MPS</span>
           <span className="font-anton text-[#fbbf24]" style={{
-            textShadow: "0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.4)",
-            WebkitTextStroke: "2px rgba(251, 191, 36, 0.3)"
+            textShadow: "0 0 15px rgba(251, 191, 36, 0.3), 0 0 25px rgba(251, 191, 36, 0.2)",
+            WebkitTextStroke: "1px rgba(251, 191, 36, 0.2)"
           }}>E</span>
         </h1>
       </div>

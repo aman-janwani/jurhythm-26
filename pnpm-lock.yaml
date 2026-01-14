@@ -26,6 +26,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      fireworks-js:
+        specifier: ^2.10.8
+        version: 2.10.8
       framer-motion:
         specifier: ^12.23.12
         version: 12.23.12(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
