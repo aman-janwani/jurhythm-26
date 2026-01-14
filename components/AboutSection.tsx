@@ -9,12 +9,12 @@ export default function AboutSection() {
         {/* Left Side - Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start space-y-6">
           <div className="w-full text-center lg:text-left">
-            <h1 className="mb-6 text-3xl lg:text-5xl xl:text-6xl duration-500 font-bold font-druk uppercase tracking-wider text-[#F4C542]">
+            <h1 className="mb-6 text-3xl lg:text-5xl xl:text-6xl duration-500 font-bold font-anton uppercase tracking-wider text-[#F4C542]">
               About JURHYTHM&apos;26
             </h1>
           </div>
 
-          <p className="w-full text-center lg:text-left text-gray-200 font-light text-sm lg:text-base xl:text-lg font-pp-neue leading-relaxed">
+          <p className="w-full text-center lg:text-left text-gray-200 font-light text-sm lg:text-base xl:text-lg font-inter leading-relaxed">
             JURHYTHM is more than just a fest—it's a vibrant techno-cultural
             extravaganza that unites the brilliance of technology, the thrill of
             sports, the richness of culture, and the dynamism of media. It's a

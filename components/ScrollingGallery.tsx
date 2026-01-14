@@ -135,20 +135,19 @@ export default function ScrollingGallery() {
         {/* Text description on the right */}
         <div className="w-full lg:w-1/2 text-white">
           <h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-anton font-bold mb-6 leading-tight"
             style={{ 
-              fontFamily: "'New Amsterdam', sans-serif",
               color: "#fbbf24",
               textShadow: "0 0 40px rgba(251, 191, 36, 0.6)"
             }}
           >
             Here are a few glimpses of previous Rhythm
           </h2>
-          <p className="text-neutral-400 text-lg md:text-xl leading-relaxed mb-8 font-pp-neue">
+          <p className="text-neutral-400 text-lg md:text-xl leading-relaxed mb-8 font-inter">
             Experience the energy, creativity, and unforgettable moments that defined our past events. Each photograph
             captures the essence of what makes Rhythm truly special.
           </p>
-          <p className="text-neutral-500 text-base font-pp-neue">
+          <p className="text-neutral-500 text-base font-inter">
             From electrifying performances to intimate backstage moments, these glimpses tell the story of our journey
             together.
           </p>

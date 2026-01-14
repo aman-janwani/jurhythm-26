@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import content from "@/lib/useContent";
 
 const Footer = () => {
+  const { footer, site, social } = content;
+
   return (
     <footer id="footer" className="relative bg-black overflow-hidden">
       {/* Main Footer Content - Three Row Layout */}
@@ -14,70 +17,73 @@ const Footer = () => {
             
             {/* Tagline Section */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-[#fbbf24] text-lg md:text-xl font-druk uppercase tracking-wider mb-4">
-                Carnival of Creativity
+              <h3 className="text-[#fbbf24] text-lg md:text-xl font-anton uppercase tracking-wider mb-4">
+                {footer.tagline}
               </h3>
-              <p className="text-white/80 text-base md:text-lg font-pp-neue leading-relaxed">
-                Join us for the most spectacular festival celebrating innovation, creativity, and cultural diversity. Experience the ultimate celebration where talent meets competition.
+              <p className="text-white/80 text-base md:text-lg font-inter leading-relaxed">
+                {footer.description}
               </p>
             </div>
 
             {/* Links Section */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-[#fbbf24] text-lg md:text-xl font-druk uppercase tracking-wider mb-6">
-                Quick Links
+              <h3 className="text-[#fbbf24] text-lg md:text-xl font-anton uppercase tracking-wider mb-6">
+                {footer.quickLinks.heading}
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-3">
-                  <Link href="/technical" className="text-white/80 hover:text-[#fbbf24] transition-colors font-pp-neue">
-                    Technical
-                  </Link>
-                  <Link href="/cultural" className="text-white/80 hover:text-[#fbbf24] transition-colors font-pp-neue">
-                    Cultural
-                  </Link>
-                  <Link href="/sports" className="text-white/80 hover:text-[#fbbf24] transition-colors font-pp-neue">
-                    Sports
-                  </Link>
-                  <Link href="/media" className="text-white/80 hover:text-[#fbbf24] transition-colors font-pp-neue">
-                    Media
-                  </Link>
+                  {footer.quickLinks.links.slice(0, 4).map((link, index) => (
+                    <Link 
+                      key={index}
+                      href={link.href} 
+                      {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
                 <div className="flex flex-col gap-3">
-                  <Link href="/team" className="text-white/80 hover:text-[#fbbf24] transition-colors font-pp-neue">
-                    Team
-                  </Link>
-                  <Link href="/contact" className="text-white/80 hover:text-[#fbbf24] transition-colors font-pp-neue">
-                    Contact
-                  </Link>
-                  <a href="/Guidelines.pdf" target="_blank" className="text-white/80 hover:text-[#fbbf24] transition-colors font-pp-neue">
-                    Guidelines
-                  </a>
-                  <Link 
-                    href="https://www.instagram.com/jurhythm.ju/"
-                    target="_blank"
-                    className="text-white/80 hover:text-[#fbbf24] transition-colors font-pp-neue flex items-center gap-2"
-                  >
-                    <Image 
-                      src="/images/icons/insta.svg" 
-                      alt="Instagram" 
-                      width={16} 
-                      height={16} 
-                      className="opacity-70" 
-                    />
-                    Instagram
-                  </Link>
+                  {footer.quickLinks.links.slice(4).map((link, index) => (
+                    link.icon ? (
+                      <Link 
+                        key={index}
+                        href={link.href}
+                        {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter flex items-center gap-2"
+                      >
+                        <Image 
+                          src={link.icon} 
+                          alt={link.label}
+                          width={16} 
+                          height={16} 
+                          className="opacity-70" 
+                        />
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <Link 
+                        key={index}
+                        href={link.href}
+                        {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter"
+                      >
+                        {link.label}
+                      </Link>
+                    )
+                  ))}
                 </div>
               </div>
             </div>
 
             {/* Map Section */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-[#fbbf24] text-lg md:text-xl font-druk uppercase tracking-wider mb-6">
-                Find Us
+              <h3 className="text-[#fbbf24] text-lg md:text-xl font-anton uppercase tracking-wider mb-6">
+                {footer.findUs.heading}
               </h3>
               <div className="rounded-xl overflow-hidden border border-white/20 shadow-2xl">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7188.9312881326605!2d75.87389800094068!3d26.776580151088893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc892b8f05399%3A0x43fbca7105eca800!2sJECRC%20University!5e0!3m2!1sen!2sin!4v1757135014600!5m2!1sen!2sin"
+                  src={site.mapEmbedUrl}
                   width="100%"
                   height="200"
                   style={{ border: 0 }}
@@ -87,37 +93,38 @@ const Footer = () => {
                   title="JECRC University Location"
                 ></iframe>
               </div>
-              <p className="text-white/60 text-sm font-pp-neue mt-3 text-center">
-                JECRC University, Jaipur
+              <p className="text-white/60 text-sm font-inter mt-3 text-center">
+                {footer.findUs.locationText}
               </p>
             </div>
           </div>
         </div>
 
-        {/* Second Row - JURHYTHM Large Text */}
-        <div className="relative px-6 md:px-12 lg:px-20 py-16 md:py-20 bg-black flex items-center justify-center">
+        {/* Second Row - JURHYTHM Large Text with Overlap */}
+        <div className="relative px-6 md:px-12 lg:px-20 py-8 md:py-40 bg-black flex items-center justify-center overflow-visible">
           <h1 
-            className="text-6xl md:text-8xl lg:text-[120px] xl:text-[150px] font-druk tracking-wider select-none text-center"
+            className="text-[8rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[24rem] font-anton tracking-wider select-none text-center relative z-10"
             style={{ 
               color: '#fbbf24',
-              opacity: 0.9,
-              lineHeight: 0.9,
+              opacity: 0.95,
+              lineHeight: 0.85,
               textTransform: 'uppercase',
-              textShadow: '0 0 50px rgba(251, 191, 36, 0.3)'
+              textShadow: '0 0 80px rgba(251, 191, 36, 0.5), 0 0 120px rgba(251, 191, 36, 0.3)',
+              WebkitTextStroke: '2px rgba(251, 191, 36, 0.3)'
             }}
           >
-            JURHYTHM
+            {footer.brandText}
           </h1>
         </div>
 
-        {/* Third Row - Silhouette */}
-        <div className="relative w-full h-[200px] md:h-[250px] lg:h-[300px] bg-black">
-          <div className="absolute inset-0">
+        {/* Third Row - Silhouette (overlapped by text above) */}
+        <div className="relative w-full h-[200px] md:h-[250px] lg:h-[300px] bg-black -mt-32 md:-mt-48 lg:-mt-64 xl:-mt-80">
+          <div className="absolute inset-0 z-30">
             <Image
-              src="/rhy.png"
-              alt="JU Rhythm Cityscape"
+              src={footer.silhouetteImage}
+              alt={`${site.name} Cityscape`}
               fill
-              className="object-contain object-bottom opacity-90"
+              className="object-contain object-bottom opacity-100"
               style={{ 
                 filter: 'brightness(1.2) contrast(1.1)',
                 mixBlendMode: 'lighten'
@@ -130,11 +137,11 @@ const Footer = () => {
         {/* Bottom Copyright Bar */}
         <div className="relative bg-black/95 py-4 px-6 md:px-12 border-t border-white/10">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
-            <p className="text-white/60 text-xs md:text-sm font-pp-neue text-center md:text-left">
-              &copy; {new Date().getFullYear()} JU Rhythm, JECRC University. All rights reserved.
+            <p className="text-white/60 text-xs md:text-sm font-inter text-center md:text-left">
+              &copy; {new Date().getFullYear()} {footer.copyright}
             </p>
-            <div className="flex items-center gap-4 text-xs md:text-sm font-pp-neue text-white/60">
-              <span>Made with ❤️ by Student Council</span>
+            <div className="flex items-center gap-4 text-xs md:text-sm font-inter text-white/60">
+              <span>{footer.madeWith}</span>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { BorderBeam } from "@/components/magicui/border-beam";
+import content from "@/lib/useContent";
 
 interface Sponsor {
   id: string;
@@ -11,56 +11,7 @@ interface Sponsor {
   website: string;
 }
 
-const sponsors: Sponsor[] = [
-  {
-    id: "1",
-    name: "Sony",
-    logo: "/sponsors/sony.png",
-    website: "https://www.sony.co.in/",
-  },
-  {
-    id: "2",
-    name: "Jio",
-    logo: "/sponsors/jio.png",
-    website: "https://www.jiosaavn.com",
-  },
-  {
-    id: "3",
-    name: "EaseMyTrip",
-    logo: "/sponsors/easemytrip.svg",
-    website: "https://www.easemytrip.com/",
-  },
-  {
-    id: "4",
-    name: "Utopian Drinks",
-    logo: "/sponsors/utopianDrinks.png",
-    website: "https://example.com",
-  },
-  {
-    id: "5",
-    name: "Internshala",
-    logo: "/sponsors/internshala.png",
-    website: "https://internshala.com/",
-  },
-  {
-    id: "6",
-    name: "Unstop",
-    logo: "/sponsors/unstop.svg",
-    website: "https://unstop.com/",
-  },
-  {
-    id: "7",
-    name: "WS Cube Tech",
-    logo: "/sponsors/wslogo.svg",
-    website: "https://www.wscubetech.com/",
-  },
-  {
-    id: "8",
-    name: "Plum",
-    logo: "/sponsors/plum.png",
-    website: "https://plumgoodness.com/",
-  },
-];
+const sponsors: Sponsor[] = content.sponsors;
 
 const SponsorGrid = () => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -86,17 +37,6 @@ const SponsorGrid = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#fbbf24]/10 via-[#fde68a]/5 to-transparent pointer-events-none" />
               )}
 
-              {/* Border Beam Animation */}
-              <BorderBeam
-                duration={8}
-                delay={parseInt(sponsor.id) * 0.5}
-                size={400}
-                borderWidth={2}
-                className={`from-transparent via-[#fbbf24] to-transparent ${
-                  hoveredId === sponsor.id ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-300`}
-              />
-
               {/* Logo Container */}
               <div className="relative w-full h-full flex items-center justify-center">
                 <div className="relative w-full aspect-video max-w-[280px]">
@@ -113,7 +53,7 @@ const SponsorGrid = () => {
               {/* Sponsor Name Tooltip on Hover */}
               {hoveredId === sponsor.id && (
                 <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white font-pp-neue uppercase tracking-wide text-sm text-center truncate">
+                  <p className="text-white font-inter uppercase tracking-wide text-sm text-center truncate">
                     {sponsor.name}
                   </p>
                 </div>
@@ -152,7 +92,7 @@ const SponsorGrid = () => {
                 footerElement.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 font-druk font-bold tracking-widest py-3 px-8 text-lg rounded-full cursor-pointer transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
+            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 font-anton font-bold tracking-widest py-3 px-8 text-lg rounded-full cursor-pointer transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
           >
             <span>Become a Sponsor</span>
             <svg

@@ -1,18 +1,29 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import VortexDemoSecond from "./vortex-demo-2";
-import FireworksBackground from "./FireworksBackground";
+import content from "@/lib/useContent";
 
 function Hero() {
+  const { site, hero } = content;
+
   return (
     <div className="w-full h-full flex flex-col justify-between items-center relative">
       <div className="w-full h-full flex px-10 py-10 flex-1">
         <div className="absolute inset-0">
-          {/* Background vortex effect */}
-          <div className="absolute inset-0 z-0">
-            <VortexDemoSecond />
-          </div>
+          {/* Background Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          >
+            <source src={site.heroVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          {/* Dark Overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40 z-10" />
 
           {/* Firefly/Jugnoo Lights - Golden Yellow Glowing Particles */}
           <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden">
@@ -40,8 +51,8 @@ function Hero() {
         <div className="flex flex-col z-30 justify-center items-center gap-6 w-full h-full">
           <div className="relative w-full max-w-2xl flex justify-center">
             <Image 
-              src="/jurhythm.png" 
-              alt="JURHYTHM'26" 
+              src={site.logo} 
+              alt={`${site.name}'${site.year}`}
               width={400}
               height={225}
               className="w-full max-w-xl h-auto drop-shadow-[0_0_40px_rgba(244,197,66,0.8)]"
@@ -53,35 +64,41 @@ function Hero() {
           <div className="flex flex-wrap gap-4 justify-center">
             <button 
               onClick={() => {
-                const element = document.getElementById('verticals');
-                if (element) {
-                  const yOffset = -80; // Offset for navbar height
-                  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                  window.scrollTo({ top: y, behavior: 'smooth' });
+                const scrollTo = hero.buttons[0].scrollTo;
+                if (scrollTo) {
+                  const element = document.getElementById(scrollTo);
+                  if (element) {
+                    const yOffset = -80; // Offset for navbar height
+                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  }
                 }
               }}
-              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-druk font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
+              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-anton font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
             >
-              Register for Events
+              {hero.buttons[0].text}
             </button>
             
             <button 
               onClick={() => {
-                const element = document.getElementById('pronite');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                const scrollTo = hero.buttons[1].scrollTo;
+                if (scrollTo) {
+                  const element = document.getElementById(scrollTo);
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }
               }}
-              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-druk font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
+              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-anton font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)]"
             >
-              Book Pronite
+              {hero.buttons[1].text}
             </button>
 
             <a 
-              href="/Guidelines.pdf" 
+              href={hero.buttons[2].href}
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black duration-300 cursor-pointer font-druk font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full inline-flex items-center gap-2 transition-all transform hover:scale-105 uppercase shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"
+              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black duration-300 cursor-pointer font-anton font-bold tracking-widest py-3 px-8 text-base md:text-lg rounded-full inline-flex items-center gap-2 transition-all transform hover:scale-105 uppercase shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"
             >
-              <span>Guidelines</span>
+              <span>{hero.buttons[2].text}</span>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 fill="none" 

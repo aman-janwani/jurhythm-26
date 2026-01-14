@@ -5,16 +5,16 @@ import { MusicCard } from "./music-card"
 
 const cards = [
   {
-    imageSrc: "/posters/jurhythm.png",
-    songName: "Cultural Night",
+    imageSrc: "/placeholder.svg?height=280&width=280",
+    songName: "Running Up That Hill",
   },
   {
-    imageSrc: "/jurhythm.png",
-    songName: "DJ Night",
+    imageSrc: "/placeholder.svg?height=280&width=280",
+    songName: "Blinding Lights",
   },
   {
-    imageSrc: "/posters/jurhythm.png",
-    songName: "Rock Concert",
+    imageSrc: "/placeholder.svg?height=280&width=280",
+    songName: "Levitating",
   },
 ]
 

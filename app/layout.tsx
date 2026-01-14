@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { New_Amsterdam, Delius } from "next/font/google";
+import { Anton, Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-const newAmsterdam = New_Amsterdam({
-  weight: "400",
-  variable: "--font-druk",
-  subsets: ["latin"],
+// Configure Anton font with optimal settings
+const anton = Anton({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-anton',
+  display: 'swap',
+  preload: true,
+  fallback: ['Arial', 'sans-serif'],
 });
 
-const delius = Delius({
-  weight: "400",
-  variable: "--font-pp-neue",
-  subsets: ["latin"],
+// Configure Inter font with multiple weights
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+  preload: true,
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -47,13 +54,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${newAmsterdam.variable} ${delius.variable} antialiased`}
-      >
+    <html lang="en" className={`${anton.variable} ${inter.variable}`}>
+      <body className="antialiased">
         {children}
+        <GoogleAnalytics gaId="G-0JYGXDHYMM" />
       </body>
-      <GoogleAnalytics gaId="G-0JYGXDHYMM" />
     </html>
   );
 }

@@ -1,0 +1,509 @@
+{
+  "site": {
+    "name": "JURHYTHM",
+    "year": "2026",
+    "tagline": "Carnival of Creativity",
+    "description": "Join us for the most spectacular festival celebrating innovation, creativity, and cultural diversity. Experience the ultimate celebration where talent meets competition.",
+    "university": "JECRC University",
+    "location": "Jaipur",
+    "logo": "/jurhythm.png",
+    "heroVideo": "/video/1.mp4",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7188.9312881326605!2d75.87389800094068!3d26.776580151088893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc892b8f05399%3A0x43fbca7105eca800!2sJECRC%20University!5e0!3m2!1sen!2sin!4v1757135014600!5m2!1sen!2sin",
+    "guidelinesUrl": "/Guidelines.pdf",
+    "registrationUrl": "https://pages.razorpay.com/rhythmfest"
+  },
+  "social": {
+    "instagram": {
+      "url": "https://www.instagram.com/jurhythm.ju/",
+      "icon": "/images/icons/insta.svg",
+      "label": "Instagram"
+    }
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/",
+      "icon": "Home"
+    },
+    {
+      "label": "Team",
+      "href": "/team",
+      "icon": "Users"
+    },
+    {
+      "label": "Sponsors",
+      "href": "/sponsors",
+      "icon": "Award"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact",
+      "icon": "Phone"
+    }
+  ],
+  "hero": {
+    "buttons": [
+      {
+        "text": "Register for Events",
+        "type": "primary",
+        "scrollTo": "verticals"
+      },
+      {
+        "text": "Book Pronite",
+        "type": "secondary",
+        "scrollTo": "pronite"
+      },
+      {
+        "text": "Guidelines",
+        "type": "outline",
+        "href": "/Guidelines.pdf",
+        "external": true
+      }
+    ]
+  },
+  "domains": [
+    {
+      "id": 1,
+      "title": "Technical",
+      "description": "Explore cutting-edge technologies and innovative solutions.",
+      "imageUrl": "/posters/1.png",
+      "route": "/technical",
+      "tagline": "Code • Build • Innovate",
+      "marqueeText": "HACKATHON • ROBO WARS • CODE SPRINT • TECH QUIZ • AI/ML CHALLENGE",
+      "marqueeSpeed": 25,
+      "events": [
+        {
+          "name": "Hackathon 24hrs",
+          "description": "### About\n\nCode non-stop for 24 hours! Build innovative solutions to real-world problems. Collaborate with your team and create something amazing. Free food, mentorship, and prizes await!\n\n### Team\n\nTeams of **2-4 participants**. All skill levels welcome.\n\n### Rules and Regulations\n\n1. Duration: **24 hours** continuous coding\n2. Problem statements revealed at start\n3. Any programming language/framework allowed\n4. Internet access permitted for documentation\n5. Pre-written code libraries allowed, but no pre-built solutions\n6. Mentors available for guidance\n7. Final submission via GitHub repository\n\n### Judging Criteria\n\n- Innovation and creativity (30%)\n- Technical complexity (25%)\n- Functionality and completeness (25%)\n- Presentation and pitch (20%)\n\n### Prizes\n\n- 1st Place: ₹40,000 + Trophy + Internship opportunities\n- 2nd Place: ₹25,000 + Trophy\n- 3rd Place: ₹15,000 + Trophy\n- Best UI/UX: ₹5,000\n- Best First-Year Team: ₹5,000",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/codehunt.png"
+        },
+        {
+          "name": "Robo Wars",
+          "description": "### About\n\nBuild battle-ready bots and fight in the arena! Design, construct, and control your robot to destroy opponents. The ultimate test of engineering and strategy.\n\n### Team\n\nTeams of **4-6 members**. Bot weight: **15kg maximum**.\n\n### Rules and Regulations\n\n1. Match duration: **3 minutes**\n2. Remote controlled bots only\n3. Weapons allowed: Hammers, flippers, saws (no flames or liquids)\n4. Bot dimensions: Maximum 75cm x 75cm x 75cm\n5. Voltage limit: 24V DC\n6. Safety measures mandatory\n7. Technical inspection before each match\n\n### Arena Specifications\n\n- Size: 16ft x 16ft\n- Boundary walls included\n- Hazards: Pit zones and arena edges\n\n### Prizes\n\n- Winners: ₹35,000 + Trophy\n- Runners-up: ₹20,000 + Trophy\n- Best Design: ₹5,000\n- Most Destructive Bot: ₹5,000",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/Bid2cote.png"
+        },
+        {
+          "name": "Code Sprint",
+          "description": "### About\n\nFast-paced competitive programming! Solve algorithmic challenges under time pressure. Test your data structures knowledge and problem-solving speed.\n\n### Participation\n\n**Individual event** - Battle it out solo!\n\n### Rules and Regulations\n\n1. Duration: **3 hours**\n2. Platform: Online coding platform (HackerRank/CodeChef)\n3. Languages: C, C++, Java, Python, JavaScript\n4. 8-10 problems of varying difficulty\n5. No external help or collaboration allowed\n6. Internet restricted to coding platform only\n7. Scoring based on correctness and time\n\n### Problem Types\n\n- Array and String manipulation\n- Dynamic Programming\n- Graph algorithms\n- Tree traversal\n- Mathematical puzzles\n\n### Prizes\n\n- 1st Place: ₹15,000 + Trophy\n- 2nd Place: ₹10,000 + Trophy\n- 3rd Place: ₹6,000 + Trophy\n- Top 10: Certificates of Excellence",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/bugbounty.png"
+        },
+        {
+          "name": "Tech Quiz",
+          "description": "### About\n\nTest your technology knowledge across multiple domains! From latest tech trends to historical computing, AI to cybersecurity - prove you're the ultimate tech geek.\n\n### Team\n\nTeams of **2-3 participants**.\n\n### Rules and Regulations\n\n1. **3 rounds**: Preliminary, Semi-final, Final\n2. Preliminary: Written MCQ test (top 8 teams advance)\n3. Semi-final: Buzzer round + visual round\n4. Final: Rapid fire + audience round\n5. No mobile phones or internet access during quiz\n6. Quizmaster's decision is final\n\n### Topics Covered\n\n- Programming languages and frameworks\n- Operating systems and software\n- AI and Machine Learning\n- Cybersecurity\n- Tech startups and innovations\n- Hardware and networking\n\n### Prizes\n\n- Winners: ₹12,000 + Trophy\n- Runners-up: ₹7,000 + Trophy\n- 3rd Place: ₹4,000 + Trophy",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/1.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Cultural",
+      "description": "Immerse yourself in diverse cultural experiences and performances.",
+      "imageUrl": "/posters/2.png",
+      "route": "/cultural",
+      "tagline": "Unleash Your Creativity",
+      "marqueeText": "CLASSICAL DANCE • BATTLE OF BANDS • FASHION SHOW • STREET PLAY • SOLO SINGING",
+      "marqueeSpeed": 27,
+      "events": [
+        {
+          "name": "Classical Dance Competition",
+          "description": "### About\n\nShowcase the beauty of traditional Indian classical dance forms including Bharatanatyam, Kathak, Odissi, and more. Express stories through graceful movements and intricate footwork.\n\n### Team\n\nA team may consist of **1-10 participants**. Solo and group performances are both welcome.\n\n### Rules and Regulations\n\n1. Performance duration: **5-8 minutes**\n2. Participants must bring their own music track (USB/CD)\n3. Traditional costumes and makeup are mandatory\n4. Props are allowed but must be managed by the team\n5. Judges' decision will be final\n\n### Judging Criteria\n\n- Technical proficiency (30%)\n- Expression and abhinaya (25%)\n- Costume and presentation (20%)\n- Stage presence and rhythm (25%)\n\n### Prizes\n\n- 1st Place: ₹15,000 + Trophy\n- 2nd Place: ₹10,000 + Trophy\n- 3rd Place: ₹5,000 + Trophy",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/2.jpg"
+        },
+        {
+          "name": "Battle of Bands",
+          "description": "### About\n\nThe ultimate showdown for musical talent! Bring your band and compete against the best. Rock, pop, metal, indie - any genre is welcome. Let your music speak!\n\n### Team\n\nA band may consist of **3-8 members**. All instruments and vocalists included.\n\n### Rules and Regulations\n\n1. Performance time: **10-15 minutes** (2-3 songs)\n2. Original compositions will get bonus points\n3. Basic sound system will be provided\n4. Bands must bring their own instruments\n5. Vulgar or offensive lyrics are strictly prohibited\n\n### Judging Criteria\n\n- Musicality and composition (35%)\n- Stage presence and energy (25%)\n- Originality (20%)\n- Audience engagement (20%)\n\n### Prizes\n\n- 1st Place: ₹25,000 + Trophy + Recording opportunity\n- 2nd Place: ₹15,000 + Trophy\n- 3rd Place: ₹8,000 + Trophy",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/3.jpg"
+        },
+        {
+          "name": "Fashion Show",
+          "description": "### About\n\nWalk the ramp and set the stage on fire! Showcase your creativity, confidence, and style. Theme-based and freestyle categories available.\n\n### Team\n\nTeams of **6-12 participants** (models, choreographers, designers).\n\n### Rules and Regulations\n\n1. Performance duration: **8-12 minutes**\n2. Minimum 3 outfit changes per team\n3. Music track must be submitted 2 days before the event\n4. Theme adherence is mandatory for theme-based category\n5. Vulgarity in any form will lead to disqualification\n\n### Judging Criteria\n\n- Creativity and design (30%)\n- Choreography and walk (25%)\n- Theme interpretation (20%)\n- Overall presentation (25%)\n\n### Prizes\n\n- 1st Place: ₹20,000 + Trophy + Magazine feature\n- 2nd Place: ₹12,000 + Trophy\n- 3rd Place: ₹6,000 + Trophy\n- Best Model: ₹3,000 + Trophy",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/5.jpg"
+        },
+        {
+          "name": "Street Play Competition",
+          "description": "### About\n\nUse the power of theatre to spread social messages. Perform hard-hitting street plays on contemporary issues. Make your voice heard through powerful performances.\n\n### Team\n\nTeams of **8-15 participants** including actors and support crew.\n\n### Rules and Regulations\n\n1. Performance time: **15-20 minutes**\n2. Play must address a relevant social issue\n3. Minimal props and costumes allowed\n4. Use of microphone not permitted\n5. Script must be submitted 3 days prior\n\n### Judging Criteria\n\n- Message and relevance (30%)\n- Acting and expressions (25%)\n- Script and direction (25%)\n- Audience impact (20%)\n\n### Prizes\n\n- 1st Place: ₹18,000 + Trophy\n- 2nd Place: ₹10,000 + Trophy\n- 3rd Place: ₹6,000 + Trophy\n- Best Actor: ₹2,000",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/1.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Sports",
+      "description": "Engage in thrilling sports events and competitions.",
+      "imageUrl": "/posters/3.png",
+      "route": "/sports",
+      "tagline": "Compete • Conquer • Champion",
+      "marqueeText": "CRICKET TOURNAMENT • BASKETBALL 3V3 • FOOTBALL CHAMPIONSHIP • BADMINTON • CHESS",
+      "marqueeSpeed": 26,
+      "events": [
+        {
+          "name": "Cricket Tournament",
+          "description": "### About\n\nThe ultimate cricket showdown! Compete in this high-energy tournament following T20 format. Show your batting prowess, bowling skills, and fielding excellence.\n\n### Team\n\nA team must consist of **11-15 players** (11 playing + 4 substitutes).\n\n### Rules and Regulations\n\n1. Format: **T20** (20 overs per side)\n2. ICC cricket rules will be followed\n3. Each bowler can bowl maximum 4 overs\n4. Powerplay: First 6 overs\n5. Teams must bring their own cricket gear\n6. Umpire's decision is final\n\n### Tournament Structure\n\n- League Stage: Round-robin format\n- Knockout: Quarter-finals, Semi-finals, Final\n- All matches will be played on turf pitch\n\n### Prizes\n\n- Winners: ₹30,000 + Trophy + Medals\n- Runners-up: ₹18,000 + Trophy\n- Man of the Tournament: ₹5,000\n- Best Bowler & Batsman: ₹3,000 each",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/2.jpg"
+        },
+        {
+          "name": "Basketball 3v3",
+          "description": "### About\n\nFast-paced half-court basketball action! Form your squad and compete in this exciting 3v3 tournament. Quick plays, sharp shooting, and team coordination are key.\n\n### Team\n\nTeams of **4 players** (3 playing + 1 substitute).\n\n### Rules and Regulations\n\n1. Match duration: **10 minutes** or first to 21 points\n2. Shot clock: 12 seconds\n3. Standard FIBA 3x3 basketball rules apply\n4. Only one timeout per team per match\n5. All fouls count, 6 fouls = team penalty\n6. Professional referee will be present\n\n### Tournament Format\n\n- Pool stage followed by knockout rounds\n- Single elimination bracket\n- Finals: 12 minutes or first to 25 points\n\n### Prizes\n\n- Winners: ₹20,000 + Trophy + Jersey\n- Runners-up: ₹12,000 + Trophy\n- MVP: ₹3,000\n- Best Shooter: ₹2,000",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/3.jpg"
+        },
+        {
+          "name": "Football Championship",
+          "description": "### About\n\nThe beautiful game awaits! Showcase your football skills in this thrilling 7-a-side tournament. From precise passes to stunning goals, make your mark on the field.\n\n### Team\n\nTeams of **10 players** (7 playing + 3 substitutes). Goalkeeper mandatory.\n\n### Rules and Regulations\n\n1. Match duration: **Two halves of 20 minutes**\n2. FIFA rules adapted for 7-a-side format\n3. Rolling substitutions allowed\n4. No offside rule\n5. All players must wear shin guards\n6. Qualified referee and linesmen provided\n\n### Tournament Structure\n\n- Group Stage: 4 groups, round-robin\n- Knockout: Semi-finals and Final\n- Penalty shootout if scores tied\n\n### Prizes\n\n- Champions: ₹35,000 + Trophy + Medals\n- Runners-up: ₹20,000 + Trophy\n- Golden Boot: ₹4,000\n- Golden Glove: ₹3,000\n- Best Player: ₹5,000",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/5.jpg"
+        },
+        {
+          "name": "Athletics Meet",
+          "description": "### About\n\nTest your speed, strength, and endurance! Participate in various track and field events. From sprints to long jumps, show your athletic excellence.\n\n### Participation\n\n**Individual events** - open to all students.\n\n### Events\n\n**Track Events:**\n- 100m Sprint\n- 200m Sprint\n- 400m Sprint\n- 4x100m Relay\n\n**Field Events:**\n- Long Jump\n- High Jump\n- Shot Put\n- Javelin Throw\n\n### Rules and Regulations\n\n1. Standard athletics rules apply\n2. Maximum 2 events per participant\n3. Qualifying rounds for track events\n4. Best of 3 attempts for field events\n5. Spike shoes allowed for track events\n\n### Prizes\n\n- Gold (per event): ₹3,000 + Medal\n- Silver (per event): ₹2,000 + Medal\n- Bronze (per event): ₹1,000 + Medal\n- Overall Champion: ₹5,000 + Trophy",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/1.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Media",
+      "description": "Discover the latest trends in digital and traditional media.",
+      "imageUrl": "/posters/1-3.png",
+      "route": "/media",
+      "tagline": "Capture • Create • Communicate",
+      "marqueeText": "PHOTOGRAPHY • SHORT FILM • PODCAST • VIDEO EDITING • GRAPHIC DESIGN",
+      "marqueeSpeed": 28,
+      "events": [
+        {
+          "name": "Photography Contest",
+          "description": "### About\n\nCapture moments, tell stories! Showcase your photography skills across multiple themes. From portraits to landscapes, street photography to abstract art - let your lens speak.\n\n### Participation\n\n**Individual event**. Submit your best shots!\n\n### Categories\n\n1. **Portrait Photography**\n2. **Nature & Landscape**\n3. **Street Photography**\n4. **Abstract & Creative**\n5. **Mobile Photography** (separate category)\n\n### Rules and Regulations\n\n1. Submit **3 photographs** (can be from different categories)\n2. Original, unedited RAW files must be provided if requested\n3. Minimal editing allowed (exposure, contrast, color correction)\n4. No heavy manipulation or compositing\n5. EXIF data must be intact\n6. Submit via online portal by deadline\n7. Copyright remains with photographer\n\n### Judging Criteria\n\n- Composition and framing (30%)\n- Creativity and concept (25%)\n- Technical quality (25%)\n- Visual impact (20%)\n\n### Prizes\n\n- Overall Winner: ₹12,000 + Trophy + Featured exhibition\n- Category Winners (5): ₹3,000 each\n- Runner-up: ₹6,000",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/2.jpg"
+        },
+        {
+          "name": "Short Film Festival",
+          "description": "### About\n\nLights, camera, action! Create compelling short films that move audiences. Any genre welcome - drama, comedy, thriller, documentary. Show your storytelling prowess.\n\n### Team\n\nTeams of **5-15 members** (director, actors, crew, etc.).\n\n### Rules and Regulations\n\n1. Film duration: **5-15 minutes** (including credits)\n2. Any language (English subtitles mandatory if not in English/Hindi)\n3. Original content only, no copyright infringement\n4. Format: MP4/MOV, minimum 1080p\n5. Submit trailer (30 seconds) for screening selection\n6. Film must be submitted 5 days before festival\n7. PG-13 rating maximum\n\n### Technical Requirements\n\n- Minimum resolution: 1920x1080\n- Audio: Clear and balanced\n- Color grading encouraged\n\n### Judging Criteria\n\n- Story and screenplay (35%)\n- Direction and cinematography (25%)\n- Acting performances (20%)\n- Overall production quality (20%)\n\n### Prizes\n\n- Best Film: ₹30,000 + Trophy + Screening at film festival\n- Best Director: ₹8,000\n- Best Actor: ₹5,000\n- Best Cinematography: ₹5,000",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/3.jpg"
+        },
+        {
+          "name": "Podcast Competition",
+          "description": "### About\n\nYour voice matters! Create engaging podcast episodes on topics you're passionate about. From storytelling to interviews, comedy to educational content - make your mark in audio.\n\n### Team\n\n**Individual or team of 2-3 participants**.\n\n### Format Options\n\n1. **Interview Style**: Guest conversations\n2. **Narrative/Storytelling**: Scripted content\n3. **Educational**: Teaching/explainer content\n4. **Comedy/Entertainment**: Humorous content\n\n### Rules and Regulations\n\n1. Episode duration: **10-20 minutes**\n2. Submit one complete episode\n3. Original content with proper attribution\n4. Clear audio quality (minimum 128kbps)\n5. Intro/outro music (royalty-free or original)\n6. Submit as MP3 format\n7. Episode description and artwork required\n\n### Technical Specifications\n\n- Audio format: MP3\n- Bitrate: Minimum 128kbps\n- No background noise or distortion\n\n### Judging Criteria\n\n- Content quality and research (30%)\n- Audio production quality (25%)\n- Engagement and delivery (25%)\n- Creativity and uniqueness (20%)\n\n### Prizes\n\n- Winner: ₹15,000 + Trophy + Feature on college radio\n- Runner-up: ₹8,000 + Trophy\n- 3rd Place: ₹5,000 + Trophy",
+          "link": "https://pages.razorpay.com/rhythmfest",
+          "image": "/posters/5.jpg"
+        }
+      ]
+    }
+  ],
+  "sponsors": [
+    {
+      "id": "1",
+      "name": "Sony",
+      "logo": "/sponsors/sony.png",
+      "website": "https://www.sony.co.in/"
+    },
+    {
+      "id": "2",
+      "name": "Jio",
+      "logo": "/sponsors/jio.png",
+      "website": "https://www.jiosaavn.com"
+    },
+    {
+      "id": "3",
+      "name": "EaseMyTrip",
+      "logo": "/sponsors/easemytrip.svg",
+      "website": "https://www.easemytrip.com/"
+    },
+    {
+      "id": "4",
+      "name": "Utopian Drinks",
+      "logo": "/sponsors/utopianDrinks.png",
+      "website": "https://example.com"
+    },
+    {
+      "id": "5",
+      "name": "Internshala",
+      "logo": "/sponsors/internshala.png",
+      "website": "https://internshala.com/"
+    },
+    {
+      "id": "6",
+      "name": "Unstop",
+      "logo": "/sponsors/unstop.svg",
+      "website": "https://unstop.com/"
+    },
+    {
+      "id": "7",
+      "name": "WS Cube Tech",
+      "logo": "/sponsors/wslogo.svg",
+      "website": "https://www.wscubetech.com/"
+    },
+    {
+      "id": "8",
+      "name": "Plum",
+      "logo": "/sponsors/plum.png",
+      "website": "https://plumgoodness.com/"
+    }
+  ],
+  "sponsorsPage": {
+    "title": "Sponsors",
+    "description": "We are grateful to our sponsors who make JU Rhythm possible. Their support empowers innovation and helps us create an unforgettable experience for all participants.",
+    "marqueeText": "OUR SPONSORS • POWERED BY INNOVATION • CELEBRATING EXCELLENCE • BUILDING TOGETHER",
+    "marqueeSpeed": 30,
+    "ctaButton": {
+      "text": "Become a Sponsor",
+      "action": "scrollToFooter"
+    }
+  },
+  "team": {
+    "title": "Team",
+    "secretaries": {
+      "heading": "Meet the Secretaries",
+      "members": [
+        {
+          "name": "Arjun Mehta",
+          "position": "General Secretary",
+          "image": "/team/1.jpg"
+        },
+        {
+          "name": "Priya Sharma",
+          "position": "Technical Secretary",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Rahul Verma",
+          "position": "Cultural Secretary",
+          "image": "/team/3.jpg"
+        },
+        {
+          "name": "Ananya Singh",
+          "position": "Sports Secretary",
+          "image": "/team/4.jpg"
+        },
+        {
+          "name": "Karan Patel",
+          "position": "Media Secretary",
+          "image": "/team/5.jpg"
+        }
+      ]
+    },
+    "coreTeam": {
+      "heading": "Core Team",
+      "subheading": "The amazing individuals who make everything possible",
+      "members": [
+        {
+          "name": "Sneha Reddy",
+          "position": "Marketing Lead",
+          "image": "/team/6.jpg"
+        },
+        {
+          "name": "Vikram Joshi",
+          "position": "Logistics Head",
+          "image": "/team/7.jpg"
+        },
+        {
+          "name": "Ishita Kapoor",
+          "position": "Finance Head",
+          "image": "/team/8.jpg"
+        },
+        {
+          "name": "Rohan Gupta",
+          "position": "Design Lead",
+          "image": "/team/9.jpg"
+        },
+        {
+          "name": "Aisha Khan",
+          "position": "PR & Communications",
+          "image": "/team/10.jpg"
+        },
+        {
+          "name": "Siddharth Rao",
+          "position": "Sponsorship Head",
+          "image": "/team/11.jpg"
+        },
+        {
+          "name": "Meera Nair",
+          "position": "Hospitality Head",
+          "image": "/team/12.jpg"
+        },
+        {
+          "name": "Dev Kapoor",
+          "position": "Content Head",
+          "image": "/team/1.jpg"
+        },
+        {
+          "name": "Riya Saxena",
+          "position": "Operations Head",
+          "image": "/team/2.jpg"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "marqueeText": "REACH OUT TO US • TECHNICAL • CULTURAL • SPORTS • MEDIA • SPONSORSHIP • PUBLIC RELATIONS",
+    "marqueeSpeed": 28,
+    "verticals": [
+      {
+        "vertical": "Technical",
+        "contacts": [
+          {
+            "name": "Dhruv Tomar",
+            "phone": "+91 8630832729"
+          },
+          {
+            "name": "Garvit Raj Bhati",
+            "phone": "+91 8003204877"
+          },
+          {
+            "name": "Fabian Makhdoomi",
+            "phone": "+91 8700110060"
+          }
+        ]
+      },
+      {
+        "vertical": "Cultural",
+        "contacts": [
+          {
+            "name": "Isha Soni",
+            "phone": "+91 7296804330"
+          },
+          {
+            "name": "Chaitanya Mehta",
+            "phone": "+91 6377031393"
+          },
+          {
+            "name": "Devang Sharma",
+            "phone": "+91 6377031393"
+          }
+        ]
+      },
+      {
+        "vertical": "Sports",
+        "contacts": [
+          {
+            "name": "Akshat Pratap",
+            "phone": "+91 9079806429"
+          },
+          {
+            "name": "Ashish Yadav",
+            "phone": "+91 9928432872"
+          },
+          {
+            "name": "Suhasni Verma",
+            "phone": "+91 9929361100"
+          }
+        ]
+      },
+      {
+        "vertical": "Media",
+        "contacts": [
+          {
+            "name": "Daksh Nagar",
+            "phone": "+91 9079790744"
+          },
+          {
+            "name": "Harsh Kumar",
+            "phone": "+91 9119384811"
+          },
+          {
+            "name": "Jay Atri",
+            "phone": "+91 6375871062"
+          }
+        ]
+      },
+      {
+        "vertical": "Sponsorship",
+        "contacts": [
+          {
+            "name": "Kanishka Choudhary",
+            "phone": "+91 9001524255"
+          },
+          {
+            "name": "Kavya Pareek",
+            "phone": "+91 8000962499"
+          },
+          {
+            "name": "Devansh Verma",
+            "phone": "+91 9988893220"
+          }
+        ]
+      },
+      {
+        "vertical": "Public Relations",
+        "contacts": [
+          {
+            "name": "Jaanvi Pareek",
+            "phone": "+91 6367573171"
+          },
+          {
+            "name": "Bhavishya Chauhan",
+            "phone": "+91 9352565479"
+          },
+          {
+            "name": "Aadil Khan",
+            "phone": "+91 9352565479"
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Carnival of Creativity",
+    "description": "Join us for the most spectacular festival celebrating innovation, creativity, and cultural diversity. Experience the ultimate celebration where talent meets competition.",
+    "quickLinks": {
+      "heading": "Quick Links",
+      "links": [
+        {
+          "label": "Technical",
+          "href": "/technical"
+        },
+        {
+          "label": "Cultural",
+          "href": "/cultural"
+        },
+        {
+          "label": "Sports",
+          "href": "/sports"
+        },
+        {
+          "label": "Media",
+          "href": "/media"
+        },
+        {
+          "label": "Team",
+          "href": "/team"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        },
+        {
+          "label": "Guidelines",
+          "href": "/Guidelines.pdf",
+          "external": true
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/jurhythm.ju/",
+          "external": true,
+          "icon": "/images/icons/insta.svg"
+        }
+      ]
+    },
+    "findUs": {
+      "heading": "Find Us",
+      "locationText": "JECRC University, Jaipur"
+    },
+    "brandText": "JURHYTHM",
+    "silhouetteImage": "/rhy.png",
+    "copyright": "JU Rhythm, JECRC University. All rights reserved.",
+    "madeWith": "Made with ❤️ by Student Council"
+  }
+}

@@ -35,10 +35,10 @@ export const MarqueeBar: React.FC<MarqueeBarProps> = ({
           animationDuration: `${speed}s`,
         }}
       >
-        <span className="bg-gradient-to-b from-[#fbbf24] via-[#fcd34d] to-[#fde68a] bg-clip-text text-transparent font-druk text-3xl md:text-4xl lg:text-5xl font-black tracking-widest uppercase mx-4">
+        <span className="bg-gradient-to-b from-[#fbbf24] via-[#fcd34d] to-[#fde68a] bg-clip-text text-transparent font-anton text-3xl md:text-4xl lg:text-5xl font-black tracking-widest uppercase mx-4">
           {repeatedText}
         </span>
-        <span className="bg-gradient-to-b from-[#fbbf24] via-[#fcd34d] to-[#fde68a] bg-clip-text text-transparent font-druk text-3xl md:text-4xl lg:text-5xl font-black tracking-widest uppercase mx-4">
+        <span className="bg-gradient-to-b from-[#fbbf24] via-[#fcd34d] to-[#fde68a] bg-clip-text text-transparent font-anton text-3xl md:text-4xl lg:text-5xl font-black tracking-widest uppercase mx-4">
           {repeatedText}
         </span>
       </div>

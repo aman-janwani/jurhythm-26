@@ -10,10 +10,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'druk': ['Druk Wide', 'var(--font-new-amsterdam)', 'New Amsterdam', 'sans-serif'],
-        'pp-neue': ['PP Neue Montreal', 'var(--font-delius)', 'Delius', 'sans-serif'],
-        'new-amsterdam': ['var(--font-new-amsterdam)', 'New Amsterdam', 'serif'],
-        delius: ['var(--font-delius)', 'Delius', 'cursive'],
+        'anton': ['var(--font-anton)', 'Arial', 'sans-serif'],
+        'inter': ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        'sans': ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        'heading': ['var(--font-anton)', 'Arial', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))', 
@@ -78,7 +78,20 @@ export default {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
-      }
+      },
+      keyframes: {
+        'border-beam': {
+          '0%': {
+            'offset-distance': '0%',
+          },
+          '100%': {
+            'offset-distance': '100%',
+          },
+        },
+      },
+      animation: {
+        'border-beam': 'border-beam var(--duration) infinite linear',
+      },
     }
   },
   plugins: [require("tailwindcss-animate")],

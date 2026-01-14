@@ -127,7 +127,7 @@ export function AfterMoviesCarousel() {
 
       <div className="container mx-auto px-4 flex-1 flex flex-col">
         <div className="mb-8 text-center">
-          <h2 className="text-5xl md:text-8xl duration-500 font-druk tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase">AFTERMOVIES</h2>
+          <h2 className="text-5xl md:text-8xl duration-500 font-anton tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase">AFTERMOVIES</h2>
         </div>
 
         <div

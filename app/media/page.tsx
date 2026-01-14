@@ -4,8 +4,13 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import MarqueeBar from "@/components/MarqueeBar";
 import React from "react";
+import content from "@/lib/useContent";
 
 const page = () => {
+  const mediaDomain = content.domains.find(d => d.title === "Media");
+  
+  if (!mediaDomain) return null;
+
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
       <Navbar />
@@ -13,155 +18,31 @@ const page = () => {
       <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
         {/* Funky Title with breathing space */}
         <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">
-          <h1 className="text-[#fbbf24] font-druk text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
-            Media
+          <h1 className="text-[#fbbf24] font-anton text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
+            {mediaDomain.title}
           </h1>
-          <p className="text-white font-pp-neue text-2xl sm:text-3xl md:text-4xl text-center tracking-widest uppercase">
-            Capture • Create • Communicate
+          <p className="text-white font-inter text-2xl sm:text-3xl md:text-4xl text-center tracking-widest uppercase">
+            {mediaDomain.tagline}
           </p>
         </div>
 
         {/* Animated Marquee Bar */}
-        <MarqueeBar text="PHOTOGRAPHY • SHORT FILM • PODCAST • VIDEO EDITING • GRAPHIC DESIGN" direction="right" speed={28} />
+        <MarqueeBar text={mediaDomain.marqueeText} direction="right" speed={mediaDomain.marqueeSpeed} />
 
         {/* Cards with better spacing */}
         <div className="w-full px-6 sm:px-8 md:px-12 py-8 mt-12 sm:mt-16 md:mt-24 flex flex-wrap gap-8 sm:gap-10 md:gap-12 justify-center">
-          <Card
-            name="Photography Contest"
-            description={`### About
-
-Capture moments, tell stories! Showcase your photography skills across multiple themes. From portraits to landscapes, street photography to abstract art - let your lens speak.
-
-### Participation
-
-**Individual event**. Submit your best shots!
-
-### Categories
-
-1. **Portrait Photography**
-2. **Nature & Landscape**
-3. **Street Photography**
-4. **Abstract & Creative**
-5. **Mobile Photography** (separate category)
-
-### Rules and Regulations
-
-1. Submit **3 photographs** (can be from different categories)
-2. Original, unedited RAW files must be provided if requested
-3. Minimal editing allowed (exposure, contrast, color correction)
-4. No heavy manipulation or compositing
-5. EXIF data must be intact
-6. Submit via online portal by deadline
-7. Copyright remains with photographer
-
-### Judging Criteria
-
-- Composition and framing (30%)
-- Creativity and concept (25%)
-- Technical quality (25%)
-- Visual impact (20%)
-
-### Prizes
-
-- Overall Winner: ₹12,000 + Trophy + Featured exhibition
-- Category Winners (5): ₹3,000 each
-- Runner-up: ₹6,000`}
-            link="https://pages.razorpay.com/rhythmfest"
-            image="/posters/2.jpg"
-          />
-          <Card
-            name="Short Film Festival"
-            description={`### About
-
-Lights, camera, action! Create compelling short films that move audiences. Any genre welcome - drama, comedy, thriller, documentary. Show your storytelling prowess.
-
-### Team
-
-Teams of **5-15 members** (director, actors, crew, etc.).
-
-### Rules and Regulations
-
-1. Film duration: **5-15 minutes** (including credits)
-2. Any language (English subtitles mandatory if not in English/Hindi)
-3. Original content only, no copyright infringement
-4. Format: MP4/MOV, minimum 1080p
-5. Submit trailer (30 seconds) for screening selection
-6. Film must be submitted 5 days before festival
-7. PG-13 rating maximum
-
-### Technical Requirements
-
-- Minimum resolution: 1920x1080
-- Audio: Clear and balanced
-- Color grading encouraged
-
-### Judging Criteria
-
-- Story and screenplay (35%)
-- Direction and cinematography (25%)
-- Acting performances (20%)
-- Overall production quality (20%)
-
-### Prizes
-
-- Best Film: ₹30,000 + Trophy + Screening at film festival
-- Best Director: ₹8,000
-- Best Actor: ₹5,000
-- Best Cinematography: ₹5,000`}
-            link="https://pages.razorpay.com/rhythmfest"
-            image="/posters/3.jpg"
-          />
-          <Card
-            name="Podcast Competition"
-            description={`### About
-
-Your voice matters! Create engaging podcast episodes on topics you're passionate about. From storytelling to interviews, comedy to educational content - make your mark in audio.
-
-### Team
-
-**Individual or team of 2-3 participants**.
-
-### Format Options
-
-1. **Interview Style**: Guest conversations
-2. **Narrative/Storytelling**: Scripted content
-3. **Educational**: Teaching/explainer content
-4. **Comedy/Entertainment**: Humorous content
-
-### Rules and Regulations
-
-1. Episode duration: **10-20 minutes**
-2. Submit one complete episode
-3. Original content with proper attribution
-4. Clear audio quality (minimum 128kbps)
-5. Intro/outro music (royalty-free or original)
-6. Submit as MP3 format
-7. Episode description and artwork required
-
-### Technical Specifications
-
-- Audio format: MP3
-- Bitrate: Minimum 128kbps
-- No background noise or distortion
-
-### Judging Criteria
-
-- Content quality and research (30%)
-- Audio production quality (25%)
-- Engaging presentation (25%)
-- Creativity and originality (20%)
-
-### Prizes
-
-- Winner: ₹10,000 + Trophy + Podcast equipment
-- Runner-up: ₹6,000 + Trophy
-- Best Production Quality: ₹3,000
-- Audience Favorite: ₹2,000`}
-            link="https://pages.razorpay.com/rhythmfest"
-            image="/posters/5.jpg"
-          />
+          {mediaDomain.events.map((event, index) => (
+            <Card
+              key={index}
+              name={event.name}
+              description={event.description}
+              link={event.link}
+              image={event.image}
+            />
+          ))}
         </div>
       </div>
+
       <Footer />
     </div>
   );

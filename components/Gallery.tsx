@@ -38,18 +38,10 @@ const gridItems = [
 
 export default function Gallery() {
   return (
-    <section id="glimpses" className="relative md:min-h-screen py-24 overflow-hidden">
-      {/* Subtle Glow Background */}
-      <div className="absolute inset-0 -z-10">
-        {/* Radial glows */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#F4C542]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#f7931e]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
-        <div className="absolute top-2/3 left-2/3 w-72 h-72 bg-[#fdc830]/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }} />
-      </div>
-
+    <section id="glimpses" className="relative md:min-h-screen py-24 overflow-hidden bg-black">
       <div className="relative z-10 w-full max-w-[80%] mx-auto flex flex-col gap-16">
         <div className="w-full text-center relative group cursor-pointer">
-          <h2 className="text-5xl md:text-8xl duration-500 font-druk tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase">
+          <h2 className="text-5xl md:text-8xl duration-500 font-anton tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase">
             Glimpse
           </h2>
         </div>

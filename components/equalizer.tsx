@@ -1,15 +1,13 @@
 "use client"
 
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 
 export function Equalizer() {
   const [bars, setBars] = useState<number[]>([])
-  const animationFrameRef = useRef<number | null>(null)
-  const lastUpdateRef = useRef<number>(0)
 
   useEffect(() => {
     const generateBars = () => {
-      const barCount = 100 // Reduced from 400 for better performance
+      const barCount = 200
       const newBars: number[] = []
 
       for (let i = 0; i < barCount; i++) {
@@ -17,12 +15,16 @@ export function Equalizer() {
         let height: number
 
         if (random > 0.94) {
+          // Tall peaks (6% chance) - rare
           height = 55 + Math.random() * 45
         } else if (random > 0.85) {
+          // Medium-tall bars (9% chance)
           height = 30 + Math.random() * 25
         } else if (random > 0.7) {
+          // Small-medium bars (15% chance)
           height = 12 + Math.random() * 18
         } else {
+          // Tiny dots (70% chance) - most common
           height = 2 + Math.random() * 6
         }
 
@@ -34,15 +36,7 @@ export function Equalizer() {
 
     generateBars()
 
-    const updateBars = (timestamp: number) => {
-      // Throttle to 30fps instead of 60fps for better performance
-      if (timestamp - lastUpdateRef.current < 33) {
-        animationFrameRef.current = requestAnimationFrame(updateBars)
-        return
-      }
-
-      lastUpdateRef.current = timestamp
-
+    const interval = setInterval(() => {
       setBars((prev) =>
         prev.map((h) => {
           const variation = (Math.random() - 0.5) * 8
@@ -54,28 +48,19 @@ export function Equalizer() {
           return Math.max(1, Math.min(8, newHeight))
         }),
       )
+    }, 250)
 
-      animationFrameRef.current = requestAnimationFrame(updateBars)
-    }
-
-    animationFrameRef.current = requestAnimationFrame(updateBars)
-
-    return () => {
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current)
-      }
-    }
+    return () => clearInterval(interval)
   }, [])
 
   return (
-    <div className="w-screen flex items-center justify-center gap-[2px] h-24 -mx-[50vw] left-1/2 relative">
+    <div className="w-screen flex items-center justify-center gap-[1px] h-32 -mx-[50vw] left-1/2 relative">
       {bars.map((height, i) => (
         <div
           key={i}
-          className="w-[3px] bg-gradient-to-t from-[#fbbf24] to-[#F4C542] rounded-full transition-all duration-300 ease-out shadow-[0_0_10px_rgba(251,191,36,0.5)]"
+          className="w-[2px] bg-[#fbbf24] rounded-full transition-all duration-300 ease-out"
           style={{
             height: `${height}%`,
-            willChange: 'height', // GPU acceleration hint
           }}
         />
       ))}

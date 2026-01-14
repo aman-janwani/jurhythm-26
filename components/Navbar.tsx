@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Home, Users, Award, Phone, Menu, X } from "lucide-react";
+import content from "@/lib/useContent";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,12 +18,18 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { href: "/", icon: Home, label: "Home" },
-    { href: "/team", icon: Users, label: "Team" },
-    { href: "/sponsors", icon: Award, label: "Sponsors" },
-    { href: "/contact", icon: Phone, label: "Contact" },
-  ];
+  // Map icon names to components
+  const iconMap: { [key: string]: any } = {
+    Home,
+    Users,
+    Award,
+    Phone,
+  };
+
+  const navItems = content.navigation.map(item => ({
+    ...item,
+    icon: iconMap[item.icon] || Home,
+  }));
 
   return (
     <>
@@ -52,7 +59,7 @@ function Navbar() {
                     strokeWidth={2}
                   />
                 </div>
-                <span className="text-[10px] font-druk uppercase tracking-wider text-gray-500 group-hover:text-[#fbbf24] transition-colors duration-300">
+                <span className="text-[10px] font-anton uppercase tracking-wider text-gray-500 group-hover:text-[#fbbf24] transition-colors duration-300">
                   {item.label}
                 </span>
               </Link>
@@ -96,7 +103,7 @@ function Navbar() {
                   className="w-5 h-5 text-gray-400 group-hover:text-[#fbbf24] transition-colors duration-300" 
                   strokeWidth={2}
                 />
-                <span className="text-sm font-druk uppercase tracking-wider text-gray-400 group-hover:text-[#fbbf24] transition-colors duration-300">
+                <span className="text-sm font-anton uppercase tracking-wider text-gray-400 group-hover:text-[#fbbf24] transition-colors duration-300">
                   {item.label}
                 </span>
               </Link>

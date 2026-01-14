@@ -12,7 +12,7 @@ export default function StarsSection() {
       <div className="relative z-20 w-full max-w-7xl mx-auto px-4 flex flex-col items-center">
         {/* PRONITE Headline - Consistent with other sections */}
         <div className="w-fit relative group cursor-pointer mb-8">
-          <h2 className="text-5xl md:text-8xl duration-500 font-druk tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase">
+          <h2 className="text-5xl md:text-8xl duration-500 font-anton tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase">
             Pronite
           </h2>
         </div>

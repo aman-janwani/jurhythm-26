@@ -2,42 +2,24 @@
 
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import content from '@/lib/useContent';
 
-const cards = [
-  {
-    id: 1,
-    title: 'Technical',
-    description: 'Explore cutting-edge technologies and innovative solutions.',
-    imageUrl: '/posters/1.png'
-  },
-  {
-    id: 2,
-    title: 'Cultural',
-    description: 'Immerse yourself in diverse cultural experiences and performances.',
-    imageUrl: '/posters/2.png'
-  },
-  {
-    id: 3,
-    title: 'Sports',
-    description: 'Engage in thrilling sports events and competitions.',
-    imageUrl: '/posters/3.png'
-  },
-  {
-    id: 4,
-    title: 'Media',
-    description: 'Discover the latest trends in digital and traditional media.',
-    imageUrl: '/posters/1-3.png'
-  },
-];
+const cards = content.domains;
 
 export default function ExpandingCards() {
   const [activeId, setActiveId] = useState(1);
+  const router = useRouter();
+
+  const handleExplore = (route: string) => {
+    router.push(route);
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black p-8 font-pp-neue relative overflow-hidden">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black p-8 font-inter relative overflow-hidden">
       {/* Section Title */}
       <div className="w-fit relative group cursor-pointer mb-16">
-        <h2 className="text-5xl md:text-8xl duration-500 font-druk tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase relative z-20">
+        <h2 className="text-5xl md:text-8xl duration-500 font-anton tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase relative z-20">
           Domains
         </h2>
       </div>
@@ -87,11 +69,17 @@ export default function ExpandingCards() {
                     ${isActive ? 'opacity-100 translate-y-0 max-h-40' : 'opacity-0 -translate-y-4 max-h-0'}
                   `}
                 >
-                  <p className="text-gray-300 max-w-sm leading-relaxed text-sm md:text-base mb-4 font-pp-neue">
+                  <p className="text-gray-300 max-w-sm leading-relaxed text-sm md:text-base mb-4 font-inter">
                     {card.description}
                   </p>
                   
-                  <button className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-druk uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.4)]">
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleExplore(card.route);
+                    }}
+                    className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-anton uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.4)]"
+                  >
                     Explore <ArrowUpRight size={14} />
                   </button>
                 </div>
@@ -100,7 +88,7 @@ export default function ExpandingCards() {
                 <div className="relative h-12 md:h-16 w-full">
                   <h2 
                     className={`
-                      text-2xl md:text-4xl font-bold text-[#fbbf24] uppercase tracking-wider whitespace-nowrap font-druk
+                      text-2xl md:text-4xl font-bold text-[#fbbf24] uppercase tracking-wider whitespace-nowrap font-anton
                       absolute bottom-0 left-2 md:left-6 origin-bottom-left
                       transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]
                       drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]
@@ -136,13 +124,16 @@ export default function ExpandingCards() {
 
             {/* Content */}
             <div className="relative z-10 w-full h-full flex flex-col justify-end p-6">
-              <h2 className="text-3xl font-bold text-[#fbbf24] uppercase tracking-wider font-druk mb-3 drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">
+              <h2 className="text-3xl font-bold text-[#fbbf24] uppercase tracking-wider font-anton mb-3 drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">
                 {card.title}
               </h2>
-              <p className="text-gray-300 text-sm leading-relaxed mb-4 font-pp-neue">
+              <p className="text-gray-300 text-sm leading-relaxed mb-4 font-inter">
                 {card.description}
               </p>
-              <button className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-druk uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.4)] w-fit">
+              <button 
+                onClick={() => handleExplore(card.route)}
+                className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-anton uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.4)] w-fit"
+              >
                 Explore <ArrowUpRight size={14} />
               </button>
             </div>

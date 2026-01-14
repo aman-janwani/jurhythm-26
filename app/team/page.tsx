@@ -3,85 +3,16 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { TeamCard } from "@/components/team/TeamCard";
+import content from "@/lib/useContent";
 
 const page = () => {
+  const { team } = content;
+  
   // Secretaries - Top 5 members
-  const secretaries = [
-    {
-      name: "Arjun Mehta",
-      position: "General Secretary",
-      image: "/team/1.jpg",
-    },
-    {
-      name: "Priya Sharma",
-      position: "Technical Secretary",
-      image: "/team/2.jpg",
-    },
-    {
-      name: "Rahul Verma",
-      position: "Cultural Secretary",
-      image: "/team/3.jpg",
-    },
-    {
-      name: "Ananya Singh",
-      position: "Sports Secretary",
-      image: "/team/4.jpg",
-    },
-    {
-      name: "Karan Patel",
-      position: "Media Secretary",
-      image: "/team/5.jpg",
-    },
-  ];
+  const secretaries = team.secretaries.members;
 
   // Core Team Members
-  const coreTeam = [
-    {
-      name: "Sneha Reddy",
-      position: "Marketing Lead",
-      image: "/team/6.jpg",
-    },
-    {
-      name: "Vikram Joshi",
-      position: "Logistics Head",
-      image: "/team/7.jpg",
-    },
-    {
-      name: "Ishita Kapoor",
-      position: "Finance Head",
-      image: "/team/8.jpg",
-    },
-    {
-      name: "Rohan Gupta",
-      position: "Design Lead",
-      image: "/team/9.jpg",
-    },
-    {
-      name: "Aisha Khan",
-      position: "PR & Communications",
-      image: "/team/10.jpg",
-    },
-    {
-      name: "Siddharth Rao",
-      position: "Sponsorship Head",
-      image: "/team/11.jpg",
-    },
-    {
-      name: "Meera Nair",
-      position: "Hospitality Head",
-      image: "/team/12.jpg",
-    },
-    {
-      name: "Dev Kapoor",
-      position: "Content Head",
-      image: "/team/1.jpg",
-    },
-    {
-      name: "Riya Saxena",
-      position: "Operations Head",
-      image: "/team/2.jpg",
-    },
-  ];
+  const coreTeam = team.coreTeam.members;
 
   // State for carousel
   const [currentPage, setCurrentPage] = useState(0);
@@ -127,16 +58,16 @@ const page = () => {
       <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">
         {/* Large Title with proper spacing */}
         <div className="w-full px-6 py-12 md:py-20 flex flex-col items-center gap-8">
-          <h1 className="text-[#fbbf24] font-druk text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
-            Team
+          <h1 className="text-[#fbbf24] font-anton text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-center tracking-widest uppercase leading-none animate-pulse-slow drop-shadow-[0_0_40px_rgba(251,191,36,0.6)]">
+            {team.title}
           </h1>
         </div>
 
       <div className="max-w-6xl mx-auto relative z-10 px-3 pb-20">
         {/* Secretaries Section */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4 font-druk tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
-            Meet the Secretaries
+          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-4 font-anton tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
+            {team.secretaries.heading}
           </h2>
         </div>
 
@@ -158,11 +89,11 @@ const page = () => {
         {/* Core Team Section */}
         <div className="bg-white/10 p-5 rounded-2xl my-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 font-druk tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
-              Core Team
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 font-anton tracking-widest drop-shadow-[0_0_30px_rgba(244,197,66,0.6)]">
+              {team.coreTeam.heading}
             </h2>
-            <p className="text-lg text-gray-400 font-pp-neue">
-              The amazing individuals who make everything possible
+            <p className="text-lg text-gray-400 font-inter">
+              {team.coreTeam.subheading}
             </p>
           </div>
 
@@ -219,7 +150,7 @@ const page = () => {
 
             {/* Page Counter */}
             <div className="text-center mt-4">
-              <span className="text-[#fbbf24] font-druk text-lg tracking-wider">
+              <span className="text-[#fbbf24] font-anton text-lg tracking-wider">
                 Page {currentPage + 1} of {totalPages}
               </span>
             </div>

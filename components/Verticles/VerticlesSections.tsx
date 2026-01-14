@@ -129,7 +129,7 @@ const VerticlesSections = () => {
             />
             <div className="absolute inset-0 bg-black/40" />
             <div className="absolute bottom-0 flex items-center justify-center p-6 w-full text-white">
-              <h2 className="text-4xl font-druk tracking-widest text-[#F4C542] mb-2 uppercase">{i + 1 === 1 ? "Software" : i + 1 === 2 ? "Hardware" : "Esports"}</h2>
+              <h2 className="text-4xl font-anton tracking-widest text-[#F4C542] mb-2 uppercase">{i + 1 === 1 ? "Software" : i + 1 === 2 ? "Hardware" : "Esports"}</h2>
             </div>
           </div>
         ))}

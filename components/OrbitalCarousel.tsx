@@ -42,77 +42,43 @@ export default function OrbitalCarousel() {
   const orbitTiltAngle = 15
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-gradient-to-b from-[#fbbf24] to-[#fbbf24]/90">
-      
-      {/* Fireworks Background */}
-      <Fireworks
-        options={{
-          rocketsPoint: {
-            min: 0,
-            max: 100,
-          },
-          hue: {
-            min: 40,
-            max: 50,
-          },
-          delay: {
-            min: 40,
-            max: 60,
-          },
-          acceleration: 1.01,
-          friction: 0.98,
-          gravity: 0.8,
-          particles: 40,
-          explosion: 4,
-          mouse: {
-            click: false,
-            move: false,
-            max: 1,
-          },
-        }}
-        style={{
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          position: "absolute",
-          zIndex: 1,
-        }}
-      />
+    <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-black py-24 px-4">
+
       
       {/* Back text layer - MPS sits behind cards */}
       <div className="absolute z-10 pointer-events-none select-none">
         <h1 
-          className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-bold leading-none"
+          className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-anton font-bold leading-none"
           style={{ 
-            fontFamily: "'New Amsterdam', sans-serif",
-            color: "#ffffff",
-            textShadow: "0 0 40px rgba(0, 0, 0, 0.8), 0 0 80px rgba(0, 0, 0, 0.5)",
             letterSpacing: "0.15em",
-            WebkitTextStroke: "2px rgba(0, 0, 0, 0.3)"
           }}
         >
-          <span className="invisible">GLI</span>
-          <span>MPS</span>
-          <span className="invisible">E</span>
+          <span className="invisible font-anton">GLI</span>
+          <span className="font-anton text-[#fbbf24]" style={{
+            textShadow: "0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.4)",
+            WebkitTextStroke: "2px rgba(251, 191, 36, 0.3)"
+          }}>MPS</span>
+          <span className="invisible font-anton">E</span>
         </h1>
       </div>
 
       {/* Front text layer - GLI and E sit in front of cards */}
       <div className="absolute z-50 pointer-events-none select-none">
         <h1 
-          className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-bold leading-none"
+          className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-anton font-bold leading-none"
           style={{ 
-            fontFamily: "'New Amsterdam', sans-serif",
-            color: "#000000",
-            textShadow: "0 0 40px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.5)",
             letterSpacing: "0.15em",
-            WebkitTextStroke: "2px rgba(255, 255, 255, 0.3)"
           }}
         >
-          <span>GLI</span>
-          <span className="invisible">MPS</span>
-          <span>E</span>
+          <span className="font-anton text-[#fbbf24]" style={{
+            textShadow: "0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.4)",
+            WebkitTextStroke: "2px rgba(251, 191, 36, 0.3)"
+          }}>GLI</span>
+          <span className="invisible font-anton">MPS</span>
+          <span className="font-anton text-[#fbbf24]" style={{
+            textShadow: "0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.4)",
+            WebkitTextStroke: "2px rgba(251, 191, 36, 0.3)"
+          }}>E</span>
         </h1>
       </div>
 
