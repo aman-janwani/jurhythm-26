@@ -13,6 +13,12 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
   const { site } = content;
 
   useEffect(() => {
+    // Preload the video
+    const video = document.createElement('video');
+    video.src = site.loadingVideo;
+    video.preload = 'auto';
+    video.load();
+
     // Auto complete after video ends or 10 seconds (whichever comes first)
     const timeout = setTimeout(() => {
       if (!isVideoEnded) {
@@ -21,7 +27,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
     }, 10000);
 
     return () => clearTimeout(timeout);
-  }, [isVideoEnded]);
+  }, [isVideoEnded, site.loadingVideo]);
 
   const handleComplete = () => {
     setIsFadingOut(true);
@@ -46,8 +52,9 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
         autoPlay
         muted
         playsInline
+        preload="auto"
         onEnded={handleVideoEnd}
-        className={`w-full h-full object-contain transition-all duration-700 ${
+        className={`w-full h-full object-cover transition-all duration-700 ${
           isFadingOut ? 'blur-lg scale-95' : 'blur-0'
         }`}
       >

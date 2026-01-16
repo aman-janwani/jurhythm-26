@@ -34,7 +34,7 @@ function Navbar() {
   return (
     <>
       {/* Floating Circular Nav - Desktop (One Line) */}
-      <div className="hidden lg:block fixed top-8 right-8 z-50 w-[33vw] max-w-md">
+      <div className="hidden lg:block fixed top-8 right-8 z-[100] w-[33vw] max-w-md">
         <div 
           className={`
             relative rounded-full
@@ -69,7 +69,7 @@ function Navbar() {
       </div>
 
       {/* Mobile Hamburger Menu */}
-      <div className="lg:hidden fixed top-6 right-6 z-50">
+      <div className="lg:hidden fixed top-6 right-6 z-[100]">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="p-3 rounded-full bg-black/80 backdrop-blur-xl border-2 border-[#fbbf24]/50 shadow-[0_0_30px_rgba(251,191,36,0.3)] transition-all duration-300 hover:scale-110"

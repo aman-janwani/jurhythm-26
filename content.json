@@ -12,7 +12,53 @@
     "balloonImage": "/balloon.png",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7188.9312881326605!2d75.87389800094068!3d26.776580151088893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc892b8f05399%3A0x43fbca7105eca800!2sJECRC%20University!5e0!3m2!1sen!2sin!4v1757135014600!5m2!1sen!2sin",
     "guidelinesUrl": "/Guidelines.pdf",
-    "registrationUrl": "https://pages.razorpay.com/rhythmfest"
+    "registrationUrl": "https://pages.razorpay.com/rhythmfest",
+    "razorpayUrl": "https://pages.razorpay.com/rhythmfest"
+  },
+  "glimpse": {
+    "orbitalCarousel": [
+      { "name": "Cultural Night", "image": "/images/portrait-woman-artist-curly-hair.jpg" },
+      { "name": "Tech Fest", "image": "/images/portrait-man-curator-yellow-background.jpg" },
+      { "name": "Sports Day", "image": "/images/portrait-man-artist-vintage-style.jpg" },
+      { "name": "Music Concert", "image": "/images/portrait-woman-artist-brunette.jpg" },
+      { "name": "Art Exhibition", "image": "/images/portrait-man-sculptor-asian.jpg" },
+      { "name": "Dance Performance", "image": "/images/portrait-woman-painter-blonde.jpg" },
+      { "name": "Innovation Meet", "image": "/images/portrait-man-photographer-japanese.jpg" },
+      { "name": "Design Workshop", "image": "/images/portrait-woman-designer-latina.jpg" },
+      { "name": "Hackathon", "image": "/images/portrait-man-illustrator-british.jpg" },
+      { "name": "Drama Festival", "image": "/images/portrait-woman-sculptor-russian.jpg" },
+      { "name": "Startup Pitch", "image": "/images/portrait-man-architect-singapore.jpg" },
+      { "name": "Fashion Show", "image": "/images/portrait-woman-mixed-media-nigerian.jpg" }
+    ],
+    "scrollingGallery": {
+      "column1": [
+        { "src": "/gallery/rhythm-1.jpg", "alt": "Rhythm event performance" },
+        { "src": "/gallery/rhythm-2.jpg", "alt": "Rhythm crowd" },
+        { "src": "/gallery/rhythm-3.jpg", "alt": "Rhythm stage" },
+        { "src": "/gallery/rhythm-4.jpg", "alt": "Rhythm lights" },
+        { "src": "/gallery/rhythm-5.jpg", "alt": "Rhythm dancers" },
+        { "src": "/gallery/rhythm-6.jpg", "alt": "Rhythm venue" },
+        { "src": "/gallery/rhythm-7.jpg", "alt": "Rhythm atmosphere" }
+      ],
+      "column2": [
+        { "src": "/gallery/rhythm-8.jpg", "alt": "Rhythm DJ set" },
+        { "src": "/gallery/rhythm-9.jpg", "alt": "Rhythm audience" },
+        { "src": "/gallery/rhythm-10.jpg", "alt": "Rhythm backstage" },
+        { "src": "/gallery/rhythm-11.jpg", "alt": "Rhythm setup" },
+        { "src": "/gallery/rhythm-12.jpg", "alt": "Rhythm soundcheck" },
+        { "src": "/gallery/rhythm-13.jpg", "alt": "Rhythm artists" },
+        { "src": "/gallery/rhythm-14.jpg", "alt": "Rhythm visuals" }
+      ],
+      "column3": [
+        { "src": "/gallery/rhythm-15.jpg", "alt": "Rhythm opening" },
+        { "src": "/gallery/rhythm-16.jpg", "alt": "Rhythm finale" },
+        { "src": "/gallery/rhythm-17.jpg", "alt": "Rhythm celebration" },
+        { "src": "/gallery/rhythm-18.jpg", "alt": "Rhythm energy" },
+        { "src": "/gallery/rhythm-19.jpg", "alt": "Rhythm moments" },
+        { "src": "/gallery/rhythm-20.jpg", "alt": "Rhythm vibes" },
+        { "src": "/gallery/rhythm-21.jpg", "alt": "Rhythm memories" }
+      ]
+    }
   },
   "social": {
     "instagram": {
@@ -60,6 +106,23 @@
         "type": "outline",
         "href": "/Guidelines.pdf",
         "external": true
+      }
+    ]
+  },
+  "pronite": {
+    "title": "Pronite",
+    "cards": [
+      {
+        "imageSrc": "/placeholder.svg?height=280&width=280",
+        "songName": "Running Up That Hill"
+      },
+      {
+        "imageSrc": "/placeholder.svg?height=280&width=280",
+        "songName": "Blinding Lights"
+      },
+      {
+        "imageSrc": "/placeholder.svg?height=280&width=280",
+        "songName": "Levitating"
       }
     ]
   },

@@ -37,7 +37,7 @@ export function MusicCard({ imageSrc, songName, isFlipped }: MusicCardProps) {
   return (
     <div
       ref={cardRef}
-      className="relative w-[280px] h-[420px] [perspective:1000px]"
+      className="relative w-[200px] md:w-[280px] h-[300px] md:h-[420px] [perspective:1000px]"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -51,40 +51,40 @@ export function MusicCard({ imageSrc, songName, isFlipped }: MusicCardProps) {
         {/* Front - Music Card Content */}
         <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-2xl overflow-hidden bg-gradient-to-b from-[#4a3a3a] to-[#2a1f1f] shadow-2xl shadow-black/50">
           {/* Image container */}
-          <div className="relative w-full h-[280px] overflow-hidden">
+          <div className="relative w-full h-[200px] md:h-[280px] overflow-hidden">
             <Image src={imageSrc || "/placeholder.svg"} alt={songName} fill className="object-cover" />
           </div>
 
           {/* Song info - removed artist name */}
-          <div className="p-4">
-            <h3 className="text-white font-semibold text-xl leading-tight">{songName}</h3>
+          <div className="p-3 md:p-4">
+            <h3 className="text-white font-semibold text-base md:text-xl leading-tight">{songName}</h3>
           </div>
 
           {/* Progress bar */}
-          <div className="absolute bottom-16 left-4 right-4">
+          <div className="absolute bottom-12 md:bottom-16 left-3 md:left-4 right-3 md:right-4">
             <div className="h-1 bg-zinc-700 rounded-full overflow-hidden">
               <div className="h-full w-1/4 bg-white/60 rounded-full" />
             </div>
-            <div className="flex justify-between text-xs text-zinc-500 mt-1">
+            <div className="flex justify-between text-[10px] md:text-xs text-zinc-500 mt-1">
               <span>0:59</span>
               <span>4:59</span>
             </div>
           </div>
 
           {/* Playback controls */}
-          <div className="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-6 px-4">
+          <div className="absolute bottom-2 md:bottom-3 left-0 right-0 flex items-center justify-center gap-4 md:gap-6 px-3 md:px-4">
             <button className="text-zinc-400 hover:text-white transition-colors">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="md:w-5 md:h-5">
                 <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
               </svg>
             </button>
-            <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="black">
+            <button className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="black" className="md:w-6 md:h-6">
                 <path d="M6 4h4v16H6zm8 0h4v16h-4z" />
               </svg>
             </button>
             <button className="text-zinc-400 hover:text-white transition-colors">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="md:w-5 md:h-5">
                 <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
               </svg>
             </button>

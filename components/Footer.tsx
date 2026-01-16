@@ -17,17 +17,17 @@ const Footer = () => {
             
             {/* Tagline Section */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-[#fbbf24] text-lg md:text-xl font-anton uppercase tracking-wider mb-4">
+              <h3 className="text-[#fbbf24] text-sm md:text-lg lg:text-xl font-anton uppercase tracking-wider mb-4">
                 {footer.tagline}
               </h3>
-              <p className="text-white/80 text-base md:text-lg font-inter leading-relaxed">
+              <p className="text-white/80 text-xs md:text-base lg:text-lg font-inter leading-relaxed">
                 {footer.description}
               </p>
             </div>
 
             {/* Links Section */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-[#fbbf24] text-lg md:text-xl font-anton uppercase tracking-wider mb-6">
+              <h3 className="text-[#fbbf24] text-sm md:text-lg lg:text-xl font-anton uppercase tracking-wider mb-6">
                 {footer.quickLinks.heading}
               </h3>
               <div className="grid grid-cols-2 gap-4">
@@ -37,7 +37,7 @@ const Footer = () => {
                       key={index}
                       href={link.href} 
                       {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter"
+                      className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter text-xs md:text-base"
                     >
                       {link.label}
                     </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
                         key={index}
                         href={link.href}
                         {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                        className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter flex items-center gap-2"
+                        className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter flex items-center gap-2 text-xs md:text-base"
                       >
                         <Image 
                           src={link.icon} 
@@ -66,7 +66,7 @@ const Footer = () => {
                         key={index}
                         href={link.href}
                         {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                        className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter"
+                        className="text-white/80 hover:text-[#fbbf24] transition-colors font-inter text-xs md:text-base"
                       >
                         {link.label}
                       </Link>
@@ -78,7 +78,7 @@ const Footer = () => {
 
             {/* Map Section */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-[#fbbf24] text-lg md:text-xl font-anton uppercase tracking-wider mb-6">
+              <h3 className="text-[#fbbf24] text-sm md:text-lg lg:text-xl font-anton uppercase tracking-wider mb-6">
                 {footer.findUs.heading}
               </h3>
               <div className="rounded-xl overflow-hidden border border-white/20 shadow-2xl">
@@ -93,7 +93,7 @@ const Footer = () => {
                   title="JECRC University Location"
                 ></iframe>
               </div>
-              <p className="text-white/60 text-sm font-inter mt-3 text-center">
+              <p className="text-white/60 text-[10px] md:text-sm font-inter mt-3 text-center">
                 {footer.findUs.locationText}
               </p>
             </div>
@@ -103,7 +103,7 @@ const Footer = () => {
         {/* Second Row - JURHYTHM Large Text with Overlap */}
         <div className="relative px-6 md:px-12 lg:px-20 py-8 md:py-40 bg-black flex items-center justify-center overflow-visible">
           <h1 
-            className="text-[8rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[24rem] font-anton tracking-wider select-none text-center relative z-10"
+            className="text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[24rem] font-anton tracking-wider select-none text-center relative z-10"
             style={{ 
               color: '#fbbf24',
               opacity: 0.95,
@@ -137,10 +137,10 @@ const Footer = () => {
         {/* Bottom Copyright Bar */}
         <div className="relative bg-black/95 py-4 px-6 md:px-12 border-t border-white/10">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
-            <p className="text-white/60 text-xs md:text-sm font-inter text-center md:text-left">
+            <p className="text-white/60 text-[10px] md:text-sm font-inter text-center md:text-left">
               &copy; {new Date().getFullYear()} {footer.copyright}
             </p>
-            <div className="flex items-center gap-4 text-xs md:text-sm font-inter text-white/60">
+            <div className="flex items-center gap-4 text-[10px] md:text-sm font-inter text-white/60">
               <span>{footer.madeWith}</span>
             </div>
           </div>

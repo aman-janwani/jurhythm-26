@@ -2,36 +2,9 @@
 
 import { useEffect, useRef } from "react"
 import Image from "next/image"
+import content from "@/lib/useContent"
 
-const galleryImages = {
-  column1: [
-    { src: "/gallery/rhythm-1.jpg", alt: "Rhythm event performance" },
-    { src: "/gallery/rhythm-2.jpg", alt: "Rhythm crowd" },
-    { src: "/gallery/rhythm-3.jpg", alt: "Rhythm stage" },
-    { src: "/gallery/rhythm-4.jpg", alt: "Rhythm lights" },
-    { src: "/gallery/rhythm-5.jpg", alt: "Rhythm dancers" },
-    { src: "/gallery/rhythm-6.jpg", alt: "Rhythm venue" },
-    { src: "/gallery/rhythm-7.jpg", alt: "Rhythm atmosphere" },
-  ],
-  column2: [
-    { src: "/gallery/rhythm-8.jpg", alt: "Rhythm DJ set" },
-    { src: "/gallery/rhythm-9.jpg", alt: "Rhythm audience" },
-    { src: "/gallery/rhythm-10.jpg", alt: "Rhythm backstage" },
-    { src: "/gallery/rhythm-11.jpg", alt: "Rhythm setup" },
-    { src: "/gallery/rhythm-12.jpg", alt: "Rhythm soundcheck" },
-    { src: "/gallery/rhythm-13.jpg", alt: "Rhythm artists" },
-    { src: "/gallery/rhythm-14.jpg", alt: "Rhythm visuals" },
-  ],
-  column3: [
-    { src: "/gallery/rhythm-15.jpg", alt: "Rhythm opening" },
-    { src: "/gallery/rhythm-16.jpg", alt: "Rhythm finale" },
-    { src: "/gallery/rhythm-17.jpg", alt: "Rhythm celebration" },
-    { src: "/gallery/rhythm-18.jpg", alt: "Rhythm energy" },
-    { src: "/gallery/rhythm-19.jpg", alt: "Rhythm moments" },
-    { src: "/gallery/rhythm-20.jpg", alt: "Rhythm vibes" },
-    { src: "/gallery/rhythm-21.jpg", alt: "Rhythm memories" },
-  ],
-}
+const galleryImages = content.glimpse.scrollingGallery
 
 export default function ScrollingGallery() {
   const column1Ref = useRef<HTMLDivElement>(null)
@@ -89,7 +62,7 @@ export default function ScrollingGallery() {
 
   return (
     <section className="bg-black py-20 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-12 lg:gap-20 items-center">
         {/* Gallery columns on the left */}
         <div className="w-full lg:w-1/2 h-[500px] overflow-hidden relative">
           <div className="flex gap-3 h-full">

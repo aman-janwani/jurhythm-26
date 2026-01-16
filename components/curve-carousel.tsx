@@ -2,25 +2,13 @@
 
 import { useEffect, useState, useRef } from "react"
 import { MusicCard } from "./music-card"
-
-const cards = [
-  {
-    imageSrc: "/placeholder.svg?height=280&width=280",
-    songName: "Running Up That Hill",
-  },
-  {
-    imageSrc: "/placeholder.svg?height=280&width=280",
-    songName: "Blinding Lights",
-  },
-  {
-    imageSrc: "/placeholder.svg?height=280&width=280",
-    songName: "Levitating",
-  },
-]
+import content from "@/lib/useContent"
 
 export function CurveCarousel() {
   const [isFlipped, setIsFlipped] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
+  const { site, pronite } = content
+  const cards = pronite.cards
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,19 +33,32 @@ export function CurveCarousel() {
     return () => observer.disconnect()
   }, [])
 
+  // Desktop positions
   const cardPositions = [
     { rotate: -8, translateX: -320, translateY: 30, zIndex: 1 },
     { rotate: 0, translateX: 0, translateY: 0, zIndex: 2 },
     { rotate: 8, translateX: 320, translateY: 30, zIndex: 1 },
   ]
 
+  // Mobile: stacked vertically
+  const mobileCardPositions = [
+    { rotate: -3, translateX: 0, translateY: -100, zIndex: 1 },
+    { rotate: 0, translateX: 0, translateY: 0, zIndex: 2 },
+    { rotate: 3, translateX: 0, translateY: 100, zIndex: 1 },
+  ]
+
+  const handleCardClick = () => {
+    window.open(site.razorpayUrl, '_blank', 'noopener,noreferrer')
+  }
+
   return (
-    <div ref={sectionRef} className="relative w-full h-[550px] flex items-center justify-center">
-      <div className="relative flex items-center justify-center">
+    <div ref={sectionRef} className="relative w-full min-h-[550px] md:h-[550px] flex items-center justify-center py-8 md:py-0">
+      {/* Desktop View */}
+      <div className="hidden md:flex relative items-center justify-center">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="absolute transition-all duration-1000 ease-out"
+            className="absolute transition-all duration-1000 ease-out cursor-pointer"
             style={{
               transform: `
                 translateX(${cardPositions[index].translateX}px) 
@@ -67,6 +68,29 @@ export function CurveCarousel() {
               zIndex: cardPositions[index].zIndex,
               transitionDelay: `${index * 200}ms`,
             }}
+            onClick={handleCardClick}
+          >
+            <MusicCard imageSrc={card.imageSrc} songName={card.songName} isFlipped={isFlipped} />
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile View */}
+      <div className="md:hidden relative flex flex-col items-center justify-center gap-8">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="transition-all duration-1000 ease-out cursor-pointer"
+            style={{
+              transform: `
+                translateX(${mobileCardPositions[index].translateX}px) 
+                translateY(${mobileCardPositions[index].translateY}px) 
+                rotate(${mobileCardPositions[index].rotate}deg)
+              `,
+              zIndex: mobileCardPositions[index].zIndex,
+              transitionDelay: `${index * 200}ms`,
+            }}
+            onClick={handleCardClick}
           >
             <MusicCard imageSrc={card.imageSrc} songName={card.songName} isFlipped={isFlipped} />
           </div>

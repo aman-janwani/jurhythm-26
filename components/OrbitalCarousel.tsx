@@ -3,29 +3,16 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Fireworks } from "@fireworks-js/react"
+import content from "@/lib/useContent"
 
 interface GlimpseCard {
   name: string
   image: string
 }
 
-const glimpseImages: GlimpseCard[] = [
-  { name: "Cultural Night", image: "/images/portrait-woman-artist-curly-hair.jpg" },
-  { name: "Tech Fest", image: "/images/portrait-man-curator-yellow-background.jpg" },
-  { name: "Sports Day", image: "/images/portrait-man-artist-vintage-style.jpg" },
-  { name: "Music Concert", image: "/images/portrait-woman-artist-brunette.jpg" },
-  { name: "Art Exhibition", image: "/images/portrait-man-sculptor-asian.jpg" },
-  { name: "Dance Performance", image: "/images/portrait-woman-painter-blonde.jpg" },
-  { name: "Innovation Meet", image: "/images/portrait-man-photographer-japanese.jpg" },
-  { name: "Design Workshop", image: "/images/portrait-woman-designer-latina.jpg" },
-  { name: "Hackathon", image: "/images/portrait-man-illustrator-british.jpg" },
-  { name: "Drama Festival", image: "/images/portrait-woman-sculptor-russian.jpg" },
-  { name: "Startup Pitch", image: "/images/portrait-man-architect-singapore.jpg" },
-  { name: "Fashion Show", image: "/images/portrait-woman-mixed-media-nigerian.jpg" },
-]
-
 export default function OrbitalCarousel() {
   const [rotation, setRotation] = useState(0)
+  const glimpseImages: GlimpseCard[] = content.glimpse.orbitalCarousel
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -103,9 +90,24 @@ export default function OrbitalCarousel() {
         }}
       />
 
+      {/* Mobile View - GLIMPSE text at start */}
+      <div className="md:hidden absolute top-12 left-4 z-10 pointer-events-none select-none">
+        <h1 
+          className="text-[3.5rem] font-anton font-bold leading-none"
+          style={{ 
+            letterSpacing: "0.15em",
+          }}
+        >
+          <span className="font-anton text-[#fbbf24]" style={{
+            textShadow: "0 0 15px rgba(251, 191, 36, 0.3), 0 0 25px rgba(251, 191, 36, 0.2)",
+            WebkitTextStroke: "1px rgba(251, 191, 36, 0.2)"
+          }}>GLIMPSE</span>
+        </h1>
+      </div>
+
       
-      {/* Back text layer - MPS sits behind cards */}
-      <div className="absolute z-10 pointer-events-none select-none">
+      {/* Back text layer - MPS sits behind cards - Desktop Only */}
+      <div className="hidden md:block absolute z-10 pointer-events-none select-none">
         <h1 
           className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-anton font-bold leading-none"
           style={{ 
@@ -121,8 +123,8 @@ export default function OrbitalCarousel() {
         </h1>
       </div>
 
-      {/* Front text layer - GLI and E sit in front of cards */}
-      <div className="absolute z-50 pointer-events-none select-none">
+      {/* Front text layer - GLI and E sit in front of cards - Desktop Only */}
+      <div className="hidden md:block absolute z-50 pointer-events-none select-none">
         <h1 
           className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-anton font-bold leading-none"
           style={{ 
@@ -214,7 +216,7 @@ export default function OrbitalCarousel() {
       </div>
 
       {/* Mobile View - Simple Grid of Cards */}
-      <div className="md:hidden w-full max-w-md px-4 z-20 grid grid-cols-2 gap-4">
+      <div className="md:hidden w-full max-w-md px-4 z-20 grid grid-cols-2 gap-4 mt-24">
         {glimpseImages.map((item, index) => (
           <div
             key={index}
