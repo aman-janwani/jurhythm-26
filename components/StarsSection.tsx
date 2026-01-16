@@ -2,11 +2,22 @@
 
 import { CurveCarousel } from "@/components/curve-carousel";
 import { Equalizer } from "@/components/equalizer";
+import Image from "next/image";
+import content from "@/lib/useContent";
 
 export default function StarsSection() {
   return (
     <section id="pronite" className="relative min-h-screen bg-black flex flex-col items-center justify-center py-12 overflow-hidden">
-
+      {/* Hot Air Balloon - Floating on the right side */}
+      <div className="hidden md:block absolute right-4 lg:right-8 top-1/4 z-10 animate-float">
+        <Image
+          src={content.site.balloonImage}
+          alt="Hot Air Balloon"
+          width={280}
+          height={340}
+          className="drop-shadow-[0_0_30px_rgba(251,191,36,0.3)]"
+        />
+      </div>
 
       {/* Content - relative to float above background */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-4 flex flex-col items-center">

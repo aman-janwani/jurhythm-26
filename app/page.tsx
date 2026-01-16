@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import dynamic from "next/dynamic"
@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import LazyComponent from "@/components/LazyComponent"
 import MarqueeBar from "@/components/MarqueeBar"
+import LoadingScreen from "@/components/LoadingScreen"
 
 // Lazy load heavy components
 const Footer = dynamic(() => import("@/components/Footer"), {
@@ -44,7 +45,11 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement>(null)
+    const [isLoading, setIsLoading] = useState(true)
 
+    const handleLoadingComplete = () => {
+      setIsLoading(false)
+    }
 
     useEffect(() => {
     const ctx = gsap.context(() => {
@@ -80,14 +85,17 @@ export default function Home() {
 
 
   return (
-    <div className="w-full h-screen bg-black relative">
-      <Navbar />
+    <>
+      {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       
-      {/* Hero Section */}
-      <Hero />
-      
-      {/* Main Content */}
-      <div ref={containerRef} className="w-full min-h-screen bg-black relative transition-colors duration-1000">
+      <div className="w-full h-screen bg-black relative">
+        <Navbar />
+        
+        {/* Hero Section */}
+        <Hero />
+        
+        {/* Main Content */}
+        <div ref={containerRef} className="w-full min-h-screen bg-black relative transition-colors duration-1000">
         
         {/* About Section */}
         <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>
@@ -130,6 +138,7 @@ export default function Home() {
       <LazyComponent fallback={<div className="h-screen bg-black animate-pulse" />}>
         <Footer />
       </LazyComponent>
-    </div>
+      </div>
+    </>
   )
 }
