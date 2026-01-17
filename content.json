@@ -134,7 +134,7 @@
       "imageUrl": "/domain/tech.jpg",
       "route": "/technical",
       "tagline": "Code • Build • Innovate",
-      "marqueeText": "ESPORTS • ROBO WARS • CODE SPRINT • TECH QUIZ • AI/ML CHALLENGE",
+      "marqueeText": "BGMI • ROBOWARS • VALORANT • AMONG BUGS • PROMPTIFY",
       "marqueeSpeed": 25,
       "events": [
         {
@@ -289,7 +289,7 @@
         },
         {
           "name": "Clash of Console",
-          "description": "### About\n\nUse the power of theatre to spread social messages. Perform hard-hitting street plays on contemporary issues. Make your voice heard through powerful performances.\n\n### Team\n\nTeams of **8-15 participants** including actors and support crew.\n\n### Rules and Regulations\n\n1. Performance time: **15-20 minutes**\n2. Play must address a relevant social issue\n3. Minimal props and costumes allowed\n4. Use of microphone not permitted\n5. Script must be submitted 3 days prior\n\n### Judging Criteria\n\n- Message and relevance (30%)\n- Acting and expressions (25%)\n- Script and direction (25%)\n- Audience impact (20%)\n\n### Prizes\n\n- 1st Place: ₹18,000 + Trophy\n- 2nd Place: ₹10,000 + Trophy\n- 3rd Place: ₹6,000 + Trophy\n- Best Actor: ₹2,000",
+          "description": "### ABOUT\n\nClash of Console - DJ War is an intense solo DJ competition designed to test a participant’s technical skills, musical knowledge, creativity, crowd control, and stage presence. The event offers a high-energy platform for DJs to showcase seamless mixing, blending, and transitions while crafting an engaging musical journey for the audience.\n\nParticipants are expected to demonstrate originality in track selection, smooth transitions, beat matching, drops, and overall flow, while maintaining musical discipline and professionalism.\n\n### TEAM\n\n1. Only one participant is allowed per entry.\n\n### EVENT STRUCTURE\n\n**Preliminary Round**\n1. Performance duration: 5 to 7 minutes.\n2. Participants must perform a prepared DJ set within the allotted time.\n3. Judges will evaluate performances based on skills, creativity, and overall impact.\n4. Selected participants will qualify for the Final Round.\n\n**Final Round**\n1. Performance duration: 7 to 10 minutes.\n2. Participants may perform an upgraded or entirely new set.\n3. Higher technical complexity, refined transitions, and stronger crowd engagement are expected.\n4. Final rankings will be decided based on overall performance quality.\n\n### GENERAL RULES AND GUIDELINES\n\n1. This is a solo event; group participation is not allowed.\n2. Setup time and soundcheck may be provided before performances, subject to availability.\n3. Music content must be clean and appropriate.\n4. Explicit, abusive, offensive, or inappropriate content is strictly prohibited.\n5. Participants must bring their own DJ equipment unless specified otherwise by the organizers.\n6. Use of illegal or pirated software or content is strictly prohibited.\n7. Participants must strictly adhere to the allotted time limits.\n8. Exceeding the time limit may result in marks deduction or disqualification.\n9. Any damage caused to stage or sound equipment will be the responsibility of the participant.\n10. Proper stage discipline and professional behavior must be maintained throughout the event.\n11. Any form of misbehavior or misconduct on campus will lead to immediate disqualification.\n\n### JUDGING CRITERIA\n\n1. Track selection – quality, relevance, and flow of music.\n2. Mixing and transitions – smoothness, beat matching, and timing.\n3. Creativity and innovation – unique drops, effects, and originality.\n4. Technical skills – control over equipment and sound handling.\n5. Stage presence – confidence, energy, and crowd engagement.\n6. Overall impact – structure, consistency, and performance quality.\n\n### REPORTING AND PARTICIPATION\n\n1. Participants must report to the venue at least 30 minutes prior to their scheduled performance.\n2. Failure to report on time may result in disqualification.\n3. Performance order will be decided by the organizers.\n4. Participants must follow all instructions given by event coordinators and technical staff.\n\n### RIGHTS AND DECISIONS\n\n1. The organizing committee reserves the right to modify rules if required.\n2. Judges’ decisions shall be final and binding.\n3. The organizers’ decision in all matters related to the event shall be final.\n\n### IMPORTANT NOTES\n\n1. Organizers will not be responsible for loss, theft, or damage of personal equipment.\n2. Participants must ensure their equipment and music files are ready and functional.\n3. Participation certificates will be provided to all registered participants.\n\n**Violation of any of the above rules will lead to immediate disqualification**",
           "link": "https://pages.razorpay.com/rhythmfest",
           "image": "/posters/1.png"
         },
@@ -320,7 +320,7 @@
       "imageUrl": "/domain/sports.jpg",
       "route": "/sports",
       "tagline": "Compete • Conquer • Champion",
-      "marqueeText": "CRICKET TOURNAMENT • BASKETBALL 3V3 • FOOTBALL CHAMPIONSHIP • BADMINTON • CHESS",
+      "marqueeText": "CRICKET • BASKETBALL • FOOTBALL • BADMINTON • PICKLEBALL",
       "marqueeSpeed": 26,
       "events": [
         {
@@ -422,23 +422,23 @@
       "imageUrl": "/domain/media.png",
       "route": "/media",
       "tagline": "Capture • Create • Communicate",
-      "marqueeText": "PHOTOGRAPHY • SHORT FILM • PODCAST • VIDEO EDITING • GRAPHIC DESIGN",
+      "marqueeText": "REEL MAKING • SHORT FILM COMPETITION • VLOGGING • VIDEO EDITING",
       "marqueeSpeed": 28,
       "events": [
         {
-          "name": "Photography Contest",
+          "name": "Reelomania",
           "description": "### About\n\nCapture moments, tell stories! Showcase your photography skills across multiple themes. From portraits to landscapes, street photography to abstract art - let your lens speak.\n\n### Participation\n\n**Individual event**. Submit your best shots!\n\n### Categories\n\n1. **Portrait Photography**\n2. **Nature & Landscape**\n3. **Street Photography**\n4. **Abstract & Creative**\n5. **Mobile Photography** (separate category)\n\n### Rules and Regulations\n\n1. Submit **3 photographs** (can be from different categories)\n2. Original, unedited RAW files must be provided if requested\n3. Minimal editing allowed (exposure, contrast, color correction)\n4. No heavy manipulation or compositing\n5. EXIF data must be intact\n6. Submit via online portal by deadline\n7. Copyright remains with photographer\n\n### Judging Criteria\n\n- Composition and framing (30%)\n- Creativity and concept (25%)\n- Technical quality (25%)\n- Visual impact (20%)\n\n### Prizes\n\n- Overall Winner: ₹12,000 + Trophy + Featured exhibition\n- Category Winners (5): ₹3,000 each\n- Runner-up: ₹6,000",
           "link": "https://pages.razorpay.com/rhythmfest",
           "image": "/posters/2.jpg"
         },
         {
-          "name": "Short Film Festival",
+          "name": "Rhythm Diaries",
           "description": "### About\n\nLights, camera, action! Create compelling short films that move audiences. Any genre welcome - drama, comedy, thriller, documentary. Show your storytelling prowess.\n\n### Team\n\nTeams of **5-15 members** (director, actors, crew, etc.).\n\n### Rules and Regulations\n\n1. Film duration: **5-15 minutes** (including credits)\n2. Any language (English subtitles mandatory if not in English/Hindi)\n3. Original content only, no copyright infringement\n4. Format: MP4/MOV, minimum 1080p\n5. Submit trailer (30 seconds) for screening selection\n6. Film must be submitted 5 days before festival\n7. PG-13 rating maximum\n\n### Technical Requirements\n\n- Minimum resolution: 1920x1080\n- Audio: Clear and balanced\n- Color grading encouraged\n\n### Judging Criteria\n\n- Story and screenplay (35%)\n- Direction and cinematography (25%)\n- Acting performances (20%)\n- Overall production quality (20%)\n\n### Prizes\n\n- Best Film: ₹30,000 + Trophy + Screening at film festival\n- Best Director: ₹8,000\n- Best Actor: ₹5,000\n- Best Cinematography: ₹5,000",
           "link": "https://pages.razorpay.com/rhythmfest",
           "image": "/posters/3.jpg"
         },
         {
-          "name": "Podcast Competition",
+          "name": "Short Film",
           "description": "### About\n\nYour voice matters! Create engaging podcast episodes on topics you're passionate about. From storytelling to interviews, comedy to educational content - make your mark in audio.\n\n### Team\n\n**Individual or team of 2-3 participants**.\n\n### Format Options\n\n1. **Interview Style**: Guest conversations\n2. **Narrative/Storytelling**: Scripted content\n3. **Educational**: Teaching/explainer content\n4. **Comedy/Entertainment**: Humorous content\n\n### Rules and Regulations\n\n1. Episode duration: **10-20 minutes**\n2. Submit one complete episode\n3. Original content with proper attribution\n4. Clear audio quality (minimum 128kbps)\n5. Intro/outro music (royalty-free or original)\n6. Submit as MP3 format\n7. Episode description and artwork required\n\n### Technical Specifications\n\n- Audio format: MP3\n- Bitrate: Minimum 128kbps\n- No background noise or distortion\n\n### Judging Criteria\n\n- Content quality and research (30%)\n- Audio production quality (25%)\n- Engagement and delivery (25%)\n- Creativity and uniqueness (20%)\n\n### Prizes\n\n- Winner: ₹15,000 + Trophy + Feature on college radio\n- Runner-up: ₹8,000 + Trophy\n- 3rd Place: ₹5,000 + Trophy",
           "link": "https://pages.razorpay.com/rhythmfest",
           "image": "/posters/5.jpg"
@@ -512,27 +512,27 @@
       "heading": "Meet the Secretaries",
       "members": [
         {
-          "name": "Arjun Mehta",
+          "name": "Bhavishya Chauhan",
           "position": "General Secretary",
           "image": "/team/1.jpg"
         },
         {
-          "name": "Priya Sharma",
+          "name": "Saksham Saraogi",
           "position": "Technical Secretary",
           "image": "/team/2.jpg"
         },
         {
-          "name": "Rahul Verma",
+          "name": "Vedika Bhargav",
           "position": "Cultural Secretary",
           "image": "/team/3.jpg"
         },
         {
-          "name": "Ananya Singh",
+          "name": "Ashish Yadav",
           "position": "Sports Secretary",
           "image": "/team/4.jpg"
         },
         {
-          "name": "Karan Patel",
+          "name": "Farhan Khan",
           "position": "Media Secretary",
           "image": "/team/5.jpg"
         }
@@ -543,48 +543,163 @@
       "subheading": "The amazing individuals who make everything possible",
       "members": [
         {
-          "name": "Sneha Reddy",
-          "position": "Marketing Lead",
+          "name": "Rajyawardhan Saxena",
+          "position": "Technical Head",
           "image": "/team/6.jpg"
         },
         {
-          "name": "Vikram Joshi",
-          "position": "Logistics Head",
+          "name": "Karan Yadav",
+          "position": "Technical Head",
           "image": "/team/7.jpg"
         },
         {
-          "name": "Ishita Kapoor",
-          "position": "Finance Head",
+          "name": "Abhinav Jangid",
+          "position": "Technical Head",
           "image": "/team/8.jpg"
         },
         {
-          "name": "Rohan Gupta",
-          "position": "Design Lead",
+          "name": "Aryan Kalra",
+          "position": "Technical Head",
           "image": "/team/9.jpg"
         },
         {
-          "name": "Aisha Khan",
-          "position": "PR & Communications",
+          "name": "Vansh Mohnani",
+          "position": "Technical Head",
           "image": "/team/10.jpg"
         },
         {
-          "name": "Siddharth Rao",
-          "position": "Sponsorship Head",
+          "name": "Tanvi Dadhich",
+          "position": "Technical Head",
           "image": "/team/11.jpg"
         },
         {
-          "name": "Meera Nair",
-          "position": "Hospitality Head",
+          "name": "Lakshya Khatri",
+          "position": "Cultural Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Palak",
+          "position": "Cultural Head",
           "image": "/team/12.jpg"
         },
         {
-          "name": "Dev Kapoor",
-          "position": "Content Head",
+          "name": "Granth Sen",
+          "position": "Cultural Head",
           "image": "/team/1.jpg"
         },
         {
-          "name": "Riya Saxena",
-          "position": "Operations Head",
+          "name": "Sanjana Ashwani",
+          "position": "Cultural Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Krish Gandotra",
+          "position": "Cultural Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Ushana Lalwani",
+          "position": "Hospitality Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Seerat Arora",
+          "position": "Hospitality Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Harsh Soni",
+          "position": "Hospitality Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Kuldeep Gaur",
+          "position": "Hospitality Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Om Soni",
+          "position": "Hospitality Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Rohan Gupta",
+          "position": "Hospitality Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Chirag Chaudhary",
+          "position": "Logistics Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Ajay Chaudhary",
+          "position": "Logistics Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Harsh Badiwal",
+          "position": "Logistics Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Naitik",
+          "position": "Logistics Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Radhika Agarwal",
+          "position": "Admin Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Gargi",
+          "position": "Admin Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Dhruv Sharma",
+          "position": "Admin & Sponsorship Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Niyati Jain",
+          "position": "Sponsorship Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Rushil",
+          "position": "Sponsorship Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Ishita Ahluwalia",
+          "position": "PR Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Govind Jayswal",
+          "position": "Sports Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Chaitanya",
+          "position": "Sports Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Punit Kaswan",
+          "position": "Sports Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Piyush Bhagchandani",
+          "position": "Graphics Head",
+          "image": "/team/2.jpg"
+        },
+        {
+          "name": "Mansha Chandok",
+          "position": "Graphics Head",
           "image": "/team/2.jpg"
         }
       ]
@@ -599,15 +714,15 @@
         "vertical": "Technical",
         "contacts": [
           {
-            "name": "Dhruv Tomar",
+            "name": "Rajyawardhan Saxena",
             "phone": "+91 8630832729"
           },
           {
-            "name": "Garvit Raj Bhati",
+            "name": "Karan Yadav",
             "phone": "+91 8003204877"
           },
           {
-            "name": "Fabian Makhdoomi",
+            "name": "Abhinav Jangid",
             "phone": "+91 8700110060"
           }
         ]
@@ -616,15 +731,15 @@
         "vertical": "Cultural",
         "contacts": [
           {
-            "name": "Isha Soni",
+            "name": "Lakshya Khatri",
             "phone": "+91 7296804330"
           },
           {
-            "name": "Chaitanya Mehta",
+            "name": "Palak",
             "phone": "+91 6377031393"
           },
           {
-            "name": "Devang Sharma",
+            "name": "Krish Gandotra",
             "phone": "+91 6377031393"
           }
         ]
@@ -633,15 +748,15 @@
         "vertical": "Sports",
         "contacts": [
           {
-            "name": "Akshat Pratap",
+            "name": "Govind Jayswal",
             "phone": "+91 9079806429"
           },
           {
-            "name": "Ashish Yadav",
+            "name": "Chaitanya",
             "phone": "+91 9928432872"
           },
           {
-            "name": "Suhasni Verma",
+            "name": "Punit Kaswan",
             "phone": "+91 9929361100"
           }
         ]
@@ -650,7 +765,7 @@
         "vertical": "Media",
         "contacts": [
           {
-            "name": "Daksh Nagar",
+            "name": "Farhan Khan",
             "phone": "+91 9079790744"
           },
           {
@@ -667,16 +782,16 @@
         "vertical": "Sponsorship",
         "contacts": [
           {
-            "name": "Kanishka Choudhary",
+            "name": "Niyati Jain",
             "phone": "+91 9001524255"
           },
           {
-            "name": "Kavya Pareek",
+            "name": "Dhruv Sharma",
             "phone": "+91 8000962499"
           },
           {
-            "name": "Devansh Verma",
-            "phone": "+91 9988893220"
+            "name": "Saksham Saraogi",
+            "phone": "+91 8619964199"
           }
         ]
       },
