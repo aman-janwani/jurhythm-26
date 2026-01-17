@@ -114,15 +114,13 @@ export default function ScrollingGallery() {
               textShadow: "0 0 40px rgba(251, 191, 36, 0.6)"
             }}
           >
-            Here are a few glimpses of previous Rhythm
+            {content.scrollingGallery.heading}
           </h2>
           <p className="text-neutral-400 text-lg md:text-xl leading-relaxed mb-8 font-inter">
-            Experience the energy, creativity, and unforgettable moments that defined our past events. Each photograph
-            captures the essence of what makes Rhythm truly special.
+            {content.scrollingGallery.description}
           </p>
           <p className="text-neutral-500 text-base font-inter">
-            From electrifying performances to intimate backstage moments, these glimpses tell the story of our journey
-            together.
+            {content.scrollingGallery.subtext}
           </p>
         </div>
       </div>

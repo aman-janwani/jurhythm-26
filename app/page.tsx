@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import dynamic from "next/dynamic"
+import content from "@/lib/useContent"
 
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
@@ -103,7 +104,12 @@ export default function Home() {
         </LazyComponent>
         
         {/* Animated Marquee Bar 1 */}
-        <MarqueeBar text="9TH - 11TH OCTOBER • JECRC UNIVERSITY • JAIPUR" direction="left" speed={25} className="my-12" />
+        <MarqueeBar 
+          text={content.marquee.primary.text} 
+          direction={content.marquee.primary.direction as "left" | "right"} 
+          speed={content.marquee.primary.speed} 
+          className="my-12" 
+        />
         
         {/* Stars Section */}
         <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>
@@ -116,7 +122,12 @@ export default function Home() {
         </LazyComponent>
         
         {/* Animated Marquee Bar 2 */}
-        <MarqueeBar text="CULTURAL • TECHNICAL • SPORTS • MEDIA • JOIN THE CELEBRATION" direction="right" speed={28} className="my-12" />
+        <MarqueeBar 
+          text={content.marquee.secondary.text} 
+          direction={content.marquee.secondary.direction as "left" | "right"} 
+          speed={content.marquee.secondary.speed} 
+          className="my-12" 
+        />
         
         {/* Glimpse Section - Orbital Carousel */}
         <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>

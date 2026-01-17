@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import { motion, useMotionValue, animate, type PanInfo } from "framer-motion"
 import Image from "next/image"
+import content from "@/lib/useContent"
 
 interface AfterMovie {
   id: number
@@ -12,30 +13,7 @@ interface AfterMovie {
   description: string
 }
 
-const afterMovies: AfterMovie[] = [
-  {
-    id: 1,
-    title: "Summer Festival",
-    year: "2024",
-    image: "/placeholder.svg?height=400&width=600",
-    description: "An unforgettable night of music and memories",
-  },
-  {
-    id: 2,
-    title: "Winter Gala",
-    year: "2024",
-    image: "/placeholder.svg?height=400&width=600",
-    description: "Elegance meets celebration",
-  },
-  {
-    id: 3,
-    title: "Spring Concert",
-    year: "2023",
-    image: "/placeholder.svg?height=400&width=600",
-    description: "Where spring blossoms meet rhythm",
-  },
-]
-
+const afterMovies: AfterMovie[] = content.afterMovies.movies
 
 export function AfterMoviesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)

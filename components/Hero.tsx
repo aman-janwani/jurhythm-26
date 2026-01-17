@@ -74,7 +74,7 @@ function Hero() {
                   }
                 }
               }}
-              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-anton font-bold tracking-widest py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] w-full sm:w-auto text-center"
+              className="bg-gradient-to-r from-[#fbbf24] to-[#fde68a] text-black border-2 border-[#fbbf24] hover:from-[#fde68a] hover:to-[#fbbf24] duration-300 cursor-pointer font-semibold tracking-wide py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(251,191,36,0.5)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] w-full sm:w-auto text-center"
             >
               {hero.buttons[0].text}
             </button>
@@ -87,7 +87,7 @@ function Hero() {
                   if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-anton font-bold tracking-widest py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full transition-all transform hover:scale-105 uppercase shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] w-full sm:w-auto text-center"
+              className="bg-transparent text-white border-2 border-[#fbbf24] hover:bg-gradient-to-r hover:from-[#fbbf24] hover:to-[#fde68a] hover:text-black duration-300 cursor-pointer font-semibold tracking-wide py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] w-full sm:w-auto text-center"
             >
               {hero.buttons[1].text}
             </button>
@@ -96,7 +96,7 @@ function Hero() {
               href={hero.buttons[2].href}
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black duration-300 cursor-pointer font-anton font-bold tracking-widest py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full inline-flex items-center justify-center gap-2 transition-all transform hover:scale-105 uppercase shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] w-full sm:w-auto"
+              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black duration-300 cursor-pointer font-semibold tracking-wide py-2.5 sm:py-3 px-6 sm:px-8 text-sm sm:text-base md:text-lg rounded-full inline-flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] w-full sm:w-auto"
             >
               <span>{hero.buttons[2].text}</span>
               <svg 
