@@ -128,7 +128,7 @@
   },
   "marquee": {
     "primary": {
-      "text": "9TH - 11TH OCTOBER • JECRC UNIVERSITY • JAIPUR",
+      "text": "25TH - 27TH FEBRUARY • JECRC UNIVERSITY • JAIPUR",
       "direction": "left",
       "speed": 25
     },
@@ -139,30 +139,30 @@
     }
   },
   "scrollingGallery": {
-    "heading": "Here are a few glimpses of previous Rhythm",
+    "heading": "EVENT GLIMPSES",
     "description": "Experience the energy, creativity, and unforgettable moments that defined our past events. Each photograph captures the essence of what makes Rhythm truly special.",
-    "subtext": "From electrifying performances to intimate backstage moments, these glimpses tell the story of our journey together."
+    "subtext": ""
   },
   "afterMovies": {
     "title": "After Movies",
     "movies": [
       {
         "id": 1,
-        "title": "Summer Festival",
-        "year": "2024",
+        "title": "RHYTHM 2025",
+        "year": "2025",
         "image": "/placeholder.svg?height=400&width=600",
         "description": "An unforgettable night of music and memories"
       },
       {
         "id": 2,
-        "title": "Winter Gala",
+        "title": "RHYTHM 2024",
         "year": "2024",
         "image": "/placeholder.svg?height=400&width=600",
         "description": "Elegance meets celebration"
       },
       {
         "id": 3,
-        "title": "Spring Concert",
+        "title": "RHYTHM 2023",
         "year": "2023",
         "image": "/placeholder.svg?height=400&width=600",
         "description": "Where spring blossoms meet rhythm"
