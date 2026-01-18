@@ -9,8 +9,7 @@ interface AfterMovie {
   id: number
   title: string
   year: string
-  image?: string
-  video?: string
+  image: string
   description: string
 }
 
@@ -154,24 +153,13 @@ export function AfterMoviesCarousel() {
                   }}
                 >
                   <div className="relative w-[340px] md:w-[580px] lg:w-[680px] aspect-[16/10] rounded-sm overflow-hidden bg-[#1a1a1a]">
-                    {movie.videoId && isActive && !isDragging ? (
-                      <iframe
-                        src={`https://www.youtube.com/embed/${movie.videoId}?autoplay=1&mute=1&rel=0&playsinline=1`}
-                        title={movie.title}
-                        className="absolute inset-0 w-full h-full"
-                        frameBorder="0"
-                        allow="autoplay; encrypted-media; picture-in-picture"
-                        allowFullScreen
-                      />
-                    ) : (
-                      <Image
-                        src={movie.image || "/placeholder.svg"}
-                        alt={movie.title}
-                        fill
-                        className="object-cover"
-                        draggable={false}
-                      />
-                    )}
+                    <Image
+                      src={movie.image || "/placeholder.svg"}
+                      alt={movie.title}
+                      fill
+                      className="object-cover"
+                      draggable={false}
+                    />
 
                     {isActive && !isDragging && (
                       <div className="absolute inset-0 flex items-center justify-center">
