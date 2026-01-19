@@ -1,8 +1,10 @@
 "use client";
+import Image from "next/image";
 import Card from "@/components/domainscomponents/Card";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import MarqueeBar from "@/components/MarqueeBar";
+import GlowingDots from "@/components/GlowingDots";
 import React from "react";
 import content from "@/lib/useContent";
 
@@ -13,6 +15,17 @@ const page = () => {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
+      <GlowingDots count={60} />
+      
+      {/* Balloon decoration */}
+      <Image 
+        src="/balloon.png"
+        alt=""
+        width={300}
+        height={300}
+        className="absolute right-16 bottom-24 w-60 h-60 opacity-35 animate-float pointer-events-none z-10"
+      />
+      
       <Navbar />
       
       <div className="w-full pt-24 sm:pt-32 md:pt-16 flex flex-col items-center min-h-screen pb-16 relative z-20">

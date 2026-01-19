@@ -4,10 +4,12 @@ import { CurveCarousel } from "@/components/curve-carousel";
 import { Equalizer } from "@/components/equalizer";
 import Image from "next/image";
 import content from "@/lib/useContent";
+import GlowingDots from "@/components/GlowingDots";
 
 export default function StarsSection() {
   return (
     <section id="pronite" className="relative min-h-screen bg-black flex flex-col items-center justify-center py-12 overflow-hidden">
+      <GlowingDots count={50} />
       {/* Hot Air Balloon - Floating on the right side */}
       <div className="hidden md:block absolute right-4 lg:right-8 top-1/4 z-10 animate-float">
         <Image

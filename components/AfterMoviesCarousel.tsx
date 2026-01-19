@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import { motion, useMotionValue, animate, type PanInfo } from "framer-motion"
 import Image from "next/image"
 import content from "@/lib/useContent"
+import GlowingDots from "@/components/GlowingDots"
 
 interface AfterMovie {
   id: number
@@ -11,6 +12,7 @@ interface AfterMovie {
   year: string
   image: string
   description: string
+  youtubeUrl?: string
 }
 
 const afterMovies: AfterMovie[] = content.afterMovies.movies
@@ -19,6 +21,7 @@ export function AfterMoviesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showHighlight, setShowHighlight] = useState(true)
   const [isDragging, setIsDragging] = useState(false)
+  const [isHovering, setIsHovering] = useState(false)
   const constraintsRef = useRef(null)
   const x = useMotionValue(0)
 
@@ -101,7 +104,18 @@ export function AfterMoviesCarousel() {
 
   return (
     <section className="relative min-h-screen bg-black py-8 overflow-hidden flex flex-col">
-    
+      <GlowingDots count={50} />
+      
+      {/* Balloon - Bottom right */}
+      <div className="hidden md:block absolute right-12 bottom-20 z-10 animate-float">
+        <Image
+          src={content.site.balloonImage}
+          alt="Hot Air Balloon"
+          width={180}
+          height={220}
+          className="drop-shadow-[0_0_30px_rgba(251,191,36,0.3)] opacity-50"
+        />
+      </div>
 
       <div className="container mx-auto px-4 flex-1 flex flex-col">
         <div className="mb-8 text-center">
@@ -140,6 +154,8 @@ export function AfterMoviesCarousel() {
                 dragElastic={0.6}
                 onDragStart={() => setIsDragging(true)}
                 onDragEnd={handleDragEnd}
+                onMouseEnter={() => isActive && setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
                 style={isActive ? { x } : undefined}
               >
                 <div
@@ -153,16 +169,26 @@ export function AfterMoviesCarousel() {
                   }}
                 >
                   <div className="relative w-[340px] md:w-[580px] lg:w-[680px] aspect-[16/10] rounded-sm overflow-hidden bg-[#1a1a1a]">
-                    <Image
-                      src={movie.image || "/placeholder.svg"}
-                      alt={movie.title}
-                      fill
-                      className="object-cover"
-                      draggable={false}
-                    />
+                    {isActive && movie.youtubeUrl ? (
+                      <iframe
+                        src={`${movie.youtubeUrl}?autoplay=1&mute=1&controls=1&rel=0`}
+                        title={movie.title}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <Image
+                        src={movie.image || "/placeholder.svg"}
+                        alt={movie.title}
+                        fill
+                        className="object-cover"
+                        draggable={false}
+                      />
+                    )}
 
-                    {isActive && !isDragging && (
-                      <div className="absolute inset-0 flex items-center justify-center">
+                    {isActive && !isDragging && isHovering && (
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                         <motion.div
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}

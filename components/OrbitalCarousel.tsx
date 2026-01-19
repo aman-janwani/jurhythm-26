@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Fireworks } from "@fireworks-js/react"
 import content from "@/lib/useContent"
+import GlowingDots from "@/components/GlowingDots"
 
 interface GlimpseCard {
   name: string
@@ -30,6 +31,19 @@ export default function OrbitalCarousel() {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-black py-24 px-4">
+      <GlowingDots count={55} />
+      
+      {/* Balloon - Center bottom */}
+      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 bottom-12 z-10 animate-float">
+        <Image
+          src={content.site.balloonImage}
+          alt="Hot Air Balloon"
+          width={200}
+          height={240}
+          className="drop-shadow-[0_0_30px_rgba(251,191,36,0.3)] opacity-60"
+        />
+      </div>
+      
       {/* Fireworks Background */}
       <Fireworks
         options={{

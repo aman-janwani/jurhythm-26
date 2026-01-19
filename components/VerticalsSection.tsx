@@ -1,11 +1,24 @@
 "use client";
 
+import Image from "next/image";
 import { Fireworks } from "@fireworks-js/react";
 import ExpandingCards from "./ExpandingCards";
+import GlowingDots from "./GlowingDots";
 
 export default function VerticalsSection() {
   return (
     <section id="verticals" className="relative z-0 min-h-screen">
+      <GlowingDots count={55} />
+      
+      {/* Balloon decoration */}
+      <Image 
+        src="/balloon.png"
+        alt=""
+        width={300}
+        height={300}
+        className="absolute left-16 top-32 w-52 h-52 opacity-50 animate-float pointer-events-none z-0"
+      />
+      
       {/* Fireworks Background - Covering whole section */}
       <Fireworks
         options={{

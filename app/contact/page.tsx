@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GlowingDots from "@/components/GlowingDots";
 import MarqueeBar from "@/components/MarqueeBar";
 import content from "@/lib/useContent";
 
@@ -10,6 +12,17 @@ export default function ContactUs() {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
+      <GlowingDots count={55} />
+      
+      {/* Balloon decoration - Top left */}
+      <Image 
+        src="/balloon.png"
+        alt=""
+        width={220}
+        height={220}
+        className="absolute left-16 top-24 w-44 h-44 opacity-48 animate-float pointer-events-none z-10"
+      />
+      
       <Navbar />
       
       {/* Twinkling Stars Background */}

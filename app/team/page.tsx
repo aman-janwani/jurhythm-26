@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GlowingDots from "@/components/GlowingDots";
 import { TeamCard } from "@/components/team/TeamCard";
 import content from "@/lib/useContent";
 
@@ -35,6 +37,17 @@ const page = () => {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
+      <GlowingDots count={55} />
+      
+      {/* Balloon decoration - Top left */}
+      <Image 
+        src="/balloon.png"
+        alt=""
+        width={200}
+        height={200}
+        className="absolute left-8 top-32 w-40 h-40 opacity-50 animate-float pointer-events-none z-10"
+      />
+      
       <Navbar />
       
       {/* Twinkling Stars Background */}

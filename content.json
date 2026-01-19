@@ -94,12 +94,7 @@
       {
         "text": "Register for Events",
         "type": "primary",
-        "scrollTo": "verticals"
-      },
-      {
-        "text": "Book Pronite",
-        "type": "secondary",
-        "scrollTo": "pronite"
+        "scrollTo": "domains"
       },
       {
         "text": "Guidelines",
@@ -151,21 +146,24 @@
         "title": "Summer Festival",
         "year": "2024",
         "image": "/placeholder.svg?height=400&width=600",
-        "description": "An unforgettable night of music and memories"
+        "description": "An unforgettable night of music and memories",
+        "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
       },
       {
         "id": 2,
         "title": "Winter Gala",
         "year": "2024",
         "image": "/placeholder.svg?height=400&width=600",
-        "description": "Elegance meets celebration"
+        "description": "Elegance meets celebration",
+        "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
       },
       {
         "id": 3,
         "title": "Spring Concert",
         "year": "2023",
         "image": "/placeholder.svg?height=400&width=600",
-        "description": "Where spring blossoms meet rhythm"
+        "description": "Where spring blossoms meet rhythm",
+        "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
       }
     ]
   },

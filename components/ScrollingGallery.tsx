@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import Image from "next/image"
 import content from "@/lib/useContent"
+import GlowingDots from "@/components/GlowingDots"
 
 const galleryImages = content.glimpse.scrollingGallery
 
@@ -61,7 +62,8 @@ export default function ScrollingGallery() {
   }, [])
 
   return (
-    <section className="bg-black py-20 px-6 md:px-12 lg:px-20">
+    <section className="bg-black py-20 px-6 md:px-12 lg:px-20 relative">
+      <GlowingDots count={45} />
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-12 lg:gap-20 items-center">
         {/* Gallery columns on the left */}
         <div className="w-full lg:w-1/2 h-[500px] overflow-hidden relative">

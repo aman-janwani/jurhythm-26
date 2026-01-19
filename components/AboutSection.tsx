@@ -1,10 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import GlowingDots from "./GlowingDots";
 
 export default function AboutSection() {
   return (
     <section id="about" className="relative md:min-h-screen">
+      <GlowingDots count={50} />
+      
+
+      
       <div className="relative z-10 flex flex-col lg:flex-row md:min-h-screen items-center w-full px-6 lg:px-20 py-10 justify-between gap-10 lg:gap-16">
         {/* Left Side - Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start space-y-6">

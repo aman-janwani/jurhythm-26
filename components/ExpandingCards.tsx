@@ -16,7 +16,7 @@ export default function ExpandingCards() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black p-8 font-inter relative overflow-hidden">
+    <div id="domains" className="flex flex-col items-center justify-center min-h-screen bg-black p-8 font-inter relative overflow-hidden">
       {/* Section Title */}
       <div className="w-fit relative group cursor-pointer mb-16">
         <h2 className="text-5xl md:text-8xl duration-500 font-anton tracking-wide font-bold text-center text-[#fbbf24] drop-shadow-[0_0_40px_rgba(251,191,36,0.6)] uppercase relative z-20">
@@ -53,7 +53,7 @@ export default function ExpandingCards() {
               {/* Gradient Overlay */}
               <div 
                 className={`
-                  absolute inset-0 bg-gradient-to-t from-black/90 via-[#fbbf24]/20 to-transparent
+                  absolute inset-0 bg-gradient-to-t from-black/90 to-transparent
                   transition-opacity duration-500
                   ${isActive ? 'opacity-100' : 'opacity-70'}
                 `} 
@@ -78,7 +78,7 @@ export default function ExpandingCards() {
                       e.stopPropagation();
                       handleExplore(card.route);
                     }}
-                    className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-anton uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.4)]"
+                    className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-anton uppercase tracking-wider"
                   >
                     Explore <ArrowUpRight size={14} />
                   </button>
@@ -91,7 +91,6 @@ export default function ExpandingCards() {
                       text-2xl md:text-4xl font-bold text-[#fbbf24] uppercase tracking-wider whitespace-nowrap font-anton
                       absolute bottom-0 left-2 md:left-6 origin-bottom-left
                       transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]
-                      drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]
                       ${isActive ? 'rotate-0' : '-rotate-90'}
                     `}
                   >
@@ -120,11 +119,11 @@ export default function ExpandingCards() {
             />
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-[#fbbf24]/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
 
             {/* Content */}
             <div className="relative z-10 w-full h-full flex flex-col justify-end p-6">
-              <h2 className="text-3xl font-bold text-[#fbbf24] uppercase tracking-wider font-anton mb-3 drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]">
+              <h2 className="text-3xl font-bold text-[#fbbf24] uppercase tracking-wider font-anton mb-3">
                 {card.title}
               </h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-4 font-inter">
@@ -132,7 +131,7 @@ export default function ExpandingCards() {
               </p>
               <button 
                 onClick={() => handleExplore(card.route)}
-                className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-anton uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.4)] w-fit"
+                className="flex items-center gap-2 text-black bg-gradient-to-r from-[#fbbf24] to-[#fde68a] hover:from-[#fde68a] hover:to-[#fbbf24] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 text-xs font-anton uppercase tracking-wider w-fit"
               >
                 Explore <ArrowUpRight size={14} />
               </button>

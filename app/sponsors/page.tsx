@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GlowingDots from "@/components/GlowingDots";
 import SponsorGrid from "@/components/sponsers/SponsorGrid";
 import MarqueeBar from "@/components/MarqueeBar";
 import content from "@/lib/useContent";
@@ -11,6 +13,17 @@ const SponsorsPage = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <GlowingDots count={55} />
+      
+      {/* Balloon decoration - Top right */}
+      <Image 
+        src="/balloon.png"
+        alt=""
+        width={180}
+        height={180}
+        className="absolute right-12 top-28 w-36 h-36 opacity-55 animate-float pointer-events-none z-10"
+      />
+      
       <Navbar />
       
       <div className="w-full pt-20 sm:pt-28 md:pt-8 flex flex-col items-center min-h-screen bg-black pb-8">
