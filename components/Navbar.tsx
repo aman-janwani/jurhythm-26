@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Home, Users, Award, Phone, Menu, X, Layers } from "lucide-react";
+import { Home, Users, Award, Phone, Menu, X } from "lucide-react";
 import content from "@/lib/useContent";
 
 function Navbar() {
@@ -24,7 +24,6 @@ function Navbar() {
     Users,
     Award,
     Phone,
-    Layers,
   };
 
   const navItems = content.navigation.map(item => ({

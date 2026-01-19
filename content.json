@@ -74,11 +74,6 @@
       "icon": "Home"
     },
     {
-    "label": "Verticals",
-    "href": "/#verticals",
-    "icon": "Layers"
-    },
-    {
       "label": "Team",
       "href": "/team",
       "icon": "Users"
@@ -363,7 +358,7 @@
       "id": 3,
       "title": "Sports",
       "description": "Engage in thrilling sports events and competitions.",
-      "imageUrl": "/domain/sports.png",
+      "imageUrl": "/domain/sports.jpg",
       "route": "/sports",
       "tagline": "Compete • Conquer • Champion",
       "marqueeText": "CRICKET • BASKETBALL • FOOTBALL • BADMINTON • PICKLEBALL",
