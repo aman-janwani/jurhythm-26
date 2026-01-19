@@ -74,6 +74,11 @@
       "icon": "Home"
     },
     {
+    "label": "Domains",
+    "href": "/#domains",
+    "icon": "Layers"
+    },
+    {
       "label": "Team",
       "href": "/team",
       "icon": "Users"
