@@ -26,9 +26,8 @@ const StarsSection = dynamic(() => import("@/components/StarsSection"), {
   loading: () => <div className="h-96 bg-black animate-pulse" />
 })
 
-const VerticalsSection = dynamic(() => import("@/components/VerticalsSection"), {
-  loading: () => <div className="h-96 bg-black animate-pulse" />
-})
+// Load VerticalsSection eagerly since users can scroll to it via Register button
+import VerticalsSection from "@/components/VerticalsSection"
 
 const OrbitalCarousel = dynamic(() => import("@/components/OrbitalCarousel"), {
   loading: () => <div className="h-96 bg-black animate-pulse" />
@@ -126,9 +125,7 @@ export default function Home() {
         </LazyComponent>
         
         {/* Verticals Section */}
-        <LazyComponent fallback={<div className="h-96 bg-black animate-pulse" />}>
-          <VerticalsSection />
-        </LazyComponent>
+        <VerticalsSection />
         
         {/* Animated Marquee Bar 2 */}
         <MarqueeBar 

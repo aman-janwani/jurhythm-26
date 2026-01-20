@@ -84,14 +84,14 @@ const page = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 mb-16">
           {secretaries.map((member, index) => (
             <TeamCard
               key={index}
               name={member.name}
               position={member.position}
               image={member.image}
-              className={`min-h-56 max-h-56 md:min-h-72 md:max-h-72 aspect-[3/4] ${
+              className={`h-48 sm:h-56 md:h-64 lg:h-72 aspect-[3/4] ${
                 // Mobile layout: 2-1-2
                 index === 2 ? 'col-span-2 sm:col-span-1 justify-self-center' : ''
               }`}
@@ -113,14 +113,14 @@ const page = () => {
           {/* Carousel Container */}
           <div className="relative">
             {/* Cards Grid - 3 columns, 2 rows */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto mb-8">
               {getCurrentPageItems().map((member, index) => (
                 <TeamCard
                   key={`${currentPage}-${index}`}
                   name={member.name}
                   position={member.position}
                   image={member.image}
-                  className="h-40 min-h-40 max-h-40 md:max-h-64 md:min-h-64 aspect-square"
+                  className="h-40 sm:h-48 md:h-56 lg:h-64 aspect-square"
                 />
               ))}
             </div>
